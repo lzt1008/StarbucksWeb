@@ -21,7 +21,6 @@ html {
         height: 100%;
         background: #f7f7f7;
         letter-spacing: 0.4px;
-        
     }
 }
 
@@ -43,7 +42,8 @@ html {
     }
 }
 
-a,a:hover {
+a,
+a:hover {
     color: initial;
     text-decoration: none;
 }
@@ -51,7 +51,6 @@ a,a:hover {
 .navbar-brand {
     padding: 0;
 }
-
 
 .left-box {
     left: 0;
@@ -91,13 +90,11 @@ a,a:hover {
             }
         }
     }
-    .main {
-        // transition: ;
-    }
     .overlay {
         height: 100%;
         width: 100%;
         overflow-y: auto;
+        overflow-x: hidden;
         visibility: hidden;
         opacity: 0;
         position: absolute;
@@ -204,7 +201,6 @@ a,a:hover {
 
 .right-box {
     width: 70% !important;
-    
 }
 
 .star-club {
