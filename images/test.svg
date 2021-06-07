@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg class="expends" width="13px" height="25px" viewBox="14 1 27 26" version="1.1">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" >
+        <g id="Line-+-Line-+-Line-Copy" stroke="#897A6C" stroke-width="3"
+            stroke-linecap="round">
+            <path stroke="#2f2f2f" class="nav-search-button-path" d="M15,1 L27,13" id="Line"
+                ></path>
+                <path stroke="#2f2f2f" class="nav-search-button-path"
+                d="M14.8878434,13.1064688 L26.8878434,25.1064688" id="Line-Copy"
+                transform="translate(20.887843, 19.106469) rotate(-90.000000) translate(-20.887843, -19.106469) ">
+            </path>
+        </g>
+    </g>
+</svg>

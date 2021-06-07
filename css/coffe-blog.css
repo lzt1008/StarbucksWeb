@@ -1,0 +1,553 @@
+@charset "UTF-8";
+body {
+  margin: 0%;
+  padding: 0%;
+  line-height: 160%;
+  font-size: 18px;
+  background: #edebe9;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Avenir Next", Helvetica, Arial, "Hiragino Sans GB", 冬青黑体, "Microsoft YaHei New", "Microsoft Yahei", 微软雅黑, 宋体, SimSun, STXihei, 华文细黑, sans-serif;
+}
+
+footer,
+header,
+menu,
+nav,
+section {
+  display: block;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+p,
+pre {
+  margin: 0 0 24px;
+}
+
+li {
+  text-align: -webkit-match-parent;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 52px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: 24px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #111111;
+  font-family: "Brandon Grotesque", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  line-height: 120%;
+  margin: 0 0 24px;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1040px;
+  padding: 0 36px;
+  text-align: left;
+  width: 100%;
+}
+.wrapper::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("/fonts/brandongrotesque-bold.woff");
+}
+@font-face {
+  font-family: "icon";
+  src: url("/fonts/icon.woff");
+}
+#header #header-box {
+  background: #fff;
+  padding: 12px;
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 24px;
+  text-align: center;
+  z-index: 9999;
+  transition-duration: 0.2s;
+  transition-property: right, left;
+}
+#header #header-box.fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+#header #header-box .search,
+#header #header-box .language {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: #e5e4e4;
+  box-sizing: border-box;
+  font-family: "Brandon Grotesque", Helvetica, Arial, sans-serif;
+  padding: 24px 0;
+  height: 60px;
+  width: 60px;
+  top: 0;
+  transition-duration: 0.4s;
+}
+#header #header-box .search {
+  left: 0;
+}
+#header #header-box .search img {
+  height: 20px;
+}
+#header #header-box .language {
+  right: 0;
+  color: #111111;
+  font-size: 14px;
+}
+#header #header-box .wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1040px;
+  padding: 0 36px;
+  text-align: left;
+  width: 100%;
+}
+#header #header-box .wrapper .starbucks {
+  height: 32px;
+}
+#header #header-box .wrapper .starbucks img {
+  width: 32px;
+}
+#header #header-box .line {
+  display: inline-block;
+  height: 24px;
+  width: 1px;
+  background-color: #ccc;
+  margin: 0 15px;
+}
+#header #header-box .home {
+  display: inline-block;
+  position: relative;
+}
+#header #header-box .home img {
+  display: block;
+  height: 36px;
+}
+#header #header-box #progress {
+  background: #166e50;
+  height: 3px;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+}
+
+.cover {
+  background: center center no-repeat;
+  background-size: cover;
+  height: 0;
+  padding-top: 40%;
+  position: relative;
+  width: 100%;
+}
+.cover:after {
+  color: #fff;
+  content: "→";
+  display: table;
+  font-family: "icons";
+  font-size: 52px;
+  height: auto;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+}
+.cover:before {
+  background: #ff4136;
+  content: "";
+}
+
+.cover:after,
+.cover:before {
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition-duration: 0.2s;
+  transition-property: opacity;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1040px;
+  padding: 0 36px;
+  text-align: left;
+  width: 100%;
+}
+
+#content {
+  color: #2f2f2f;
+}
+#content h1 + p {
+  font-family: "ACaslonPro", Georgia, Times, "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: normal;
+  line-height: 140%;
+}
+#content .hero {
+  position: relative;
+}
+#content .hero .text {
+  bottom: 0;
+  color: #fff;
+  left: 10%;
+  position: absolute;
+  right: 10%;
+}
+#content .hero .text * {
+  color: inherit;
+}
+#content .hero .text small {
+  font-size: 12px;
+  font-family: "Brandon Grotesque", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+#content .grid.front {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin: 24px 0;
+}
+#content .grid.front:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+#content .grid.front > * {
+  box-sizing: border-box;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 50%;
+}
+#content .grid.featured li,
+#content .grid.front li {
+  padding: 12px;
+}
+#content .header {
+  background: #fff;
+  padding-bottom: 48px;
+  margin-top: -36px;
+  padding: 36px;
+  position: relative;
+  text-align: center;
+  z-index: 999;
+}
+#content .header p {
+  line-height: 140%;
+  margin: 0;
+}
+#content .header,
+#content .header h1,
+#content .header h2 {
+  color: #36342f;
+}
+#content .header h1 {
+  display: block;
+  font-size: 52px;
+  line-height: 120%;
+  margin: 0 0 24px 0;
+}
+#content .header p {
+  font-family: "ACaslonPro", Georgia, Times, "Times New Roman", serif;
+  line-height: 140%;
+  margin: 0;
+  font-size: 28px;
+  font-weight: 300;
+}
+#content .breadcrumb {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 100;
+  background: #fff;
+}
+#content .breadcrumb a {
+  padding: 0 15px;
+  color: #000;
+}
+#content .breadcrumb span {
+  padding: 0 10px;
+  color: #166e50;
+}
+#content .body {
+  line-height: 180%;
+  padding: 48px 10%;
+  text-align: left;
+  width: 80%;
+  background-color: #fff;
+  margin-bottom: 48px;
+}
+#content .body p img {
+  display: block;
+  margin: 0 auto;
+}
+#content img + em {
+  display: block;
+  background: #c3c3c3;
+  font-style: normal;
+  padding: 8px;
+  line-height: 1.4;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+#content .full {
+  width: 100%;
+}
+#content blockquote {
+  color: #000;
+  font-style: italic;
+  border-left: 6px solid #eee;
+  margin: 0 24px 24px;
+  padding-left: 24px;
+}
+#content blockquote p:before,
+#content blockquote p:after {
+  font-family: "icon";
+  color: #7f7f7f;
+}
+#content blockquote p:before {
+  content: "";
+  margin-right: 8px;
+}
+#content blockquote p:after {
+  content: "";
+  margin-left: 8px;
+}
+#content small {
+  font-size: 14px;
+}
+#content .footer {
+  background: #e6e6e6;
+  padding: 48px 0;
+}
+#content .footer h3 {
+  color: #166e50;
+  font-family: "Brandon Grotesque", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  line-height: 120%;
+  margin: 0 0 24px;
+}
+#content .footer h3:before {
+  content: "★";
+  display: block;
+  border-bottom: 4px solid #166e50;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: 1;
+  margin: 0 auto 24px;
+  text-align: center;
+  width: 48px;
+}
+#content .grid {
+  margin: -12px;
+  margin-top: 24px;
+}
+#content .grid li a {
+  background: #fff;
+  color: inherit;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+#content .grid li a:hover .cover {
+  transform: scale(1.1);
+}
+#content .grid li a .image {
+  overflow: hidden;
+}
+#content .grid li a .text {
+  padding: 24px;
+  height: 188px;
+}
+#content .grid li a .text h3 {
+  margin-bottom: 12px;
+}
+#content .grid li a .text p {
+  font-size: 16px;
+  font-family: "ACaslonPro", Georgia, Times, "Times New Roman", serif;
+  margin-bottom: 0;
+  text-align: center;
+}
+#content .grid li a .tag {
+  position: absolute;
+  right: -8px;
+  top: 16px;
+}
+#content .grid li a .tag .label {
+  background: #166e50;
+  color: #fff;
+  font-size: 12px;
+  font-family: "Brandon Grotesque", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.2em;
+  line-height: 120%;
+  padding: 4px 12px;
+  position: relative;
+  text-transform: uppercase;
+}
+#content .grid li a .tag .label:after,
+#content .grid li a .tag .label:before {
+  content: "";
+  position: absolute;
+}
+#content .grid li a .tag .label:before {
+  border-top: 0 solid #125840;
+  bottom: 0;
+  border-left: 0 solid transparent;
+  left: 0;
+}
+#content .grid li a .tag .label:after {
+  border-top: 8px solid #125840;
+  bottom: -8px;
+  border-right: 8px solid transparent;
+  right: 0;
+}
+#content .grid li a .cover {
+  transition-duration: 1.2s;
+  transition-property: transform;
+}
+#content .grid.front {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin: 24px 0;
+}
+#content .grid.featured {
+  padding: 12px 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#content .grid.featured > * {
+  box-sizing: border-box;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 33.3333333333%;
+}
+#content .grid.featured li {
+  padding: 12px;
+}
+#content .grid.featured li a .image {
+  overflow: hidden;
+}
+#content .grid.featured li a .text {
+  height: 250px;
+}
+#content .grid.featured li a .cover {
+  height: 100px;
+  object-fit: cover;
+}
+#content .grid.featured:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+#content .card {
+  opacity: 0.1;
+  transition-duration: 0.4s;
+  transition-property: opacity, transform;
+  transform: translateY(96px);
+}
+#content .card.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+#content .card .horizontal {
+  transform: translateX(96px);
+}
+#content .card .horizontal.active {
+  transform: translateX(0);
+}
+#content .wrapper {
+  text-align: center;
+}
+
+#footer {
+  background: #36342f;
+  color: #c2c2c2;
+  font-family: "ACaslonPro", Georgia, Times, "Times New Roman", serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  padding: 24px 0;
+}
+#footer .wrapper {
+  line-height: 100%;
+  text-align: right;
+}
+#footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#footer ul li {
+  display: inline-block;
+  margin: 0 24px 0 0;
+}
+#footer .links {
+  float: left;
+}
+#footer a {
+  color: inherit;
+}
+#footer .organization,
+#footer .legal {
+  font-family: "Brandon Grotesque", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+#footer .organization {
+  color: #fff;
+}
+
+/*# sourceMappingURL=coffe-blog.css.map */
