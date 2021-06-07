@@ -480,8 +480,8 @@ label, .label {
   width: 52.8px;
   transform: scale(0);
   position: absolute;
-  left: -10px;
-  top: -14px;
+  left: -12px;
+  top: -16px;
   transition: all 0.1s ease;
 }
 .join-form .warpper .checkbox p a {
@@ -490,6 +490,7 @@ label, .label {
 }
 .join-form .warpper .actions {
   margin-top: 30px;
+  margin-bottom: 30px;
   text-align: right;
 }
 .join-form .warpper .actions button:active::after {
@@ -507,6 +508,7 @@ label, .label {
   color: white;
   border: none;
   outline: none;
+  transition: 0.2s;
 }
 .join-form .warpper .actions button span {
   font-size: 16px;
@@ -519,14 +521,41 @@ label, .label {
 .join-form .warpper .actions button:after {
   border-radius: 50%;
   content: "";
+  opacity: 0.6;
   background: black;
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   transform: scale(0);
   position: absolute;
-  left: -24px;
-  top: -30px;
-  transition: all 0.1s ease;
+  left: 0px;
+  top: -15px;
+  transition: all 0.2s ease;
+}
+
+.account-join {
+  background-color: #009688;
+  color: white;
+}
+.account-join .wrapper {
+  padding: 40px 0 70px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 150px;
+}
+.account-join .wrapper h2 {
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+.account-join .wrapper p {
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+.account-join .wrapper button {
+  font-size: 16px;
+  color: #C2A661;
+  border: 1px solid #C2A661;
+  border-radius: 48px;
+  padding: 6px 18px;
 }
 
 body.lang-zh .header {
