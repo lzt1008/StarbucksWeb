@@ -51,6 +51,20 @@ html body {
   font-weight: 400;
   font-style: normal;
 }
+@keyframes ripple2 {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 0.1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
 .shadow {
   box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
 }
@@ -69,6 +83,10 @@ a,
 a:hover {
   color: initial;
   text-decoration: none;
+}
+
+label, .label {
+  color: rgba(0, 0, 0, 0.56);
 }
 
 .navbar-brand {
@@ -341,8 +359,174 @@ a:hover {
   font-size: 16px;
 }
 
+.account-welcome {
+  margin-bottom: 8px;
+}
 .account-welcome img {
   max-width: 100%;
+}
+
+.join-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  text-align: center;
+}
+.join-form .warpper {
+  margin-top: 20px;
+  width: 480px;
+}
+.join-form .warpper .form-field {
+  position: relative;
+}
+.join-form .warpper .form-field .ok {
+  padding-top: 25px;
+  position: relative;
+}
+.join-form .warpper .form-field input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 4px 0;
+  outline: none;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  transition-property: border;
+  transition-duration: 0.2s;
+}
+.join-form .warpper .form-field input:active, .join-form .warpper .form-field input:hover {
+  border-color: #00a862;
+}
+.join-form .warpper .form-field input:placeholder-shown:not(:focus) + label {
+  top: 28px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.38);
+}
+.join-form .warpper .form-field label {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.56);
+  left: 0;
+  transition-duration: 0.2s;
+  transition-property: color, font-size, top;
+}
+.join-form .warpper .form-field .password-group-field {
+  margin-top: 10px;
+}
+.join-form .warpper .checkbox {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  margin-top: 28px;
+  margin-bottom: 18px;
+}
+.join-form .warpper .checkbox input {
+  position: absolute;
+  opacity: 0;
+}
+.join-form .warpper .checkbox input:focus + label span:before {
+  animation-name: ripple2;
+  animation-duration: 0.3s;
+}
+.join-form .warpper .checkbox input:checked + label:before {
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.12);
+}
+.join-form .warpper .checkbox input:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+.join-form .warpper .checkbox label {
+  font-size: 14px;
+  position: relative;
+  display: inline-block;
+}
+.join-form .warpper .checkbox label:before {
+  border: 1px solid #00a862;
+  border-radius: 8px;
+  content: "";
+  opacity: 1;
+  float: left;
+  height: 30px;
+  margin: -6px 8px 0 0;
+  width: 30px;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.12);
+}
+.join-form .warpper .checkbox label:after {
+  transition: all 0.1s ease;
+  transform: scale(0);
+  border-radius: 7px;
+  background: #00a862 url(/images/icon-checked.svg) no-repeat center center;
+  clear: both;
+  content: "";
+  display: table;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: -6px;
+  left: 0;
+}
+.join-form .warpper .checkbox label span {
+  display: block;
+  padding-left: 40px;
+}
+.join-form .warpper .checkbox label span:before {
+  border-radius: 50%;
+  content: "";
+  background: #00A862;
+  height: 52.8px;
+  width: 52.8px;
+  transform: scale(0);
+  position: absolute;
+  left: -10px;
+  top: -14px;
+  transition: all 0.1s ease;
+}
+.join-form .warpper .checkbox p a {
+  font-size: 16px;
+  color: #00A862;
+}
+.join-form .warpper .actions {
+  margin-top: 30px;
+  text-align: right;
+}
+.join-form .warpper .actions button:active::after {
+  animation-name: ripple2;
+  animation-duration: 0.3s;
+}
+.join-form .warpper .actions button {
+  position: relative;
+  overflow: hidden;
+  border-radius: 48px;
+  padding: 12px 24px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.38);
+  margin-bottom: 4px;
+  background-color: #00A862;
+  color: white;
+  border: none;
+  outline: none;
+}
+.join-form .warpper .actions button span {
+  font-size: 16px;
+}
+.join-form .warpper .actions button:disabled {
+  background: #f7f7f7;
+  color: rgba(0, 0, 0, 0.38);
+  cursor: not-allowed;
+}
+.join-form .warpper .actions button:after {
+  border-radius: 50%;
+  content: "";
+  background: black;
+  height: 100px;
+  width: 100px;
+  transform: scale(0);
+  position: absolute;
+  left: -24px;
+  top: -30px;
+  transition: all 0.1s ease;
 }
 
 body.lang-zh .header {

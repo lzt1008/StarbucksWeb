@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="/jquery-3.5.1.min.js"></script>
-    <script src="/bootstrap-4.5.0-dist/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
+<body class="lang-zh">
     <div class="container-fluid">
         <div class="row no-gutter justify-content-end">
 
@@ -21,16 +21,16 @@
                 <div class="main">
                     <!-- 导航栏 -->
                     <header class="navbar header">
-                        <a href="#" class="navbar-brand logo"><img src="/images/logo.svg"></a>
+                        <a href="/" class="navbar-brand logo"><img src="/images/logo.svg"></a>
                         <ul class="nav mr-auto">
                             <li class="nav-item">
                                 <a href="#" class="nav-link text-dark font-weight-bold">门店</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link text-dark font-weight-bold">我的账户</a>
+                                <a href="/html/account/index.html" class="nav-link text-dark font-weight-bold">我的账户</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link text-dark font-weight-bold">菜单</a>
+                                <a href="/html/menu/index.html" class="nav-link text-dark font-weight-bold">菜单</a>
                             </li>
                         </ul>
                         <span class="icon menu"><img src="/images/icon-hamburger.svg"></span>
@@ -41,9 +41,9 @@
                         <div class="">
                             <span class="h2 font-weight-bold py-3">心情惬意，来杯咖啡吧 ☕</span>
                             <div class="mt-5">
-                                <a href="/account/index.html"><button
+                                <a href="/html/account/index.html"><button
                                         class="btn btn-outline-success btn-lg btn-outline-success ml-2 register">登录</button></a>
-                                <a href="/account/register.html"><button href="#"
+                                <a href="/html/account/register.html"><button href="#"
                                         class="btn btn-outline-success btn-lg btn-outline-success ml-4 register">注册</button></a>
                             </div>
                         </div>
@@ -68,11 +68,11 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a id="account-overlay" href="/account/starbucks-rewards.html"><span
+                                        <a id="account-overlay" href="/html/account/starbucks-rewards.html"><span
                                                 class="">星享俱乐部</span></a>
                                     </li>
                                     <li>
-                                        <a id="menu-overlay" href="/menu/index.html">
+                                        <a id="menu-overlay" href="/html/menu/index.html">
                                             菜单
                                         </a>
                                     </li>
@@ -80,27 +80,27 @@
                                         <hr>
                                     </li>
                                     <li>
-                                        <a id="apps-overlay" href="/apps/index.html">
+                                        <a id="apps-overlay" href="#">
                                             星巴克移动应用
                                         </a>
                                     </li>
                                     <li>
-                                        <a id="svc-overlay" href="/starbucks-gift-card/index.html">
+                                        <a id="svc-overlay" href="#">
                                             星礼卡
                                         </a>
                                     </li>
                                     <li>
-                                        <a id="starbucks_reserve-overlay" href="/starbucks-reserve/index.html">
+                                        <a id="starbucks_reserve-overlay" href="#">
                                             星巴克臻选™
                                         </a>
                                     </li>
                                     <li>
-                                        <a id="starbucks_mop-overlay" href="/starbucks-now/index.html">
+                                        <a id="starbucks_mop-overlay" href="/html/starbucks-now/index.html">
                                             啡快™ － 在线点 到店取
                                         </a>
                                     </li>
                                     <li>
-                                        <a id="starbucks_delivery-overlay" href="/starbucks-delivers-info/index.html">
+                                        <a id="starbucks_delivery-overlay" href="#">
                                             专星送™
                                         </a>
                                     </li>
@@ -110,18 +110,17 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a id="roastery-overlay" href="https://roastery.starbucks.com.cn/"
-                                            target="_blank">
+                                        <a id="roastery-overlay" href="#" target="_blank">
                                             上海烘焙工坊
                                         </a>
                                     </li>
                                     <li>
-                                        <a id="about-overlay" href="/about.html">
+                                        <a id="about-overlay" href="#">
                                             关于星巴克
                                         </a>
                                     </li>
                                     <li>
-                                        <a id="help-overlay" href="/help.html">
+                                        <a id="help-overlay" href="/help/index.html">
                                             帮助中心
                                         </a>
                                     </li>
@@ -131,9 +130,9 @@
                                 </ul>
                                 <footer class="account">
                                     <div class="">
-                                        <a href="/account/index.html"><button
+                                        <a href="/html/account/index.html"><button
                                                 class="btn btn-outline-success btn-lg register">登录</button></a>
-                                        <a href="/account/index.html"><button href="/account/register.html"
+                                        <a href="/html/account/register.html"><button href="/account/register.html"
                                                 class="btn btn-outline-success btn-lg register">注册</button></a>
                                     </div>
                                 </footer>
@@ -141,8 +140,7 @@
                         </section>
                         <footer class="footer">
                             <div class="holder">
-                                <a id="en-collapse" class="lang"
-                                    href="javascript:void(window.location.pathname = &quot;/en/&quot;)">
+                                <a id="en-collapse" class="lang" href="/html/index-en.html">
                                     English
                                 </a>
                                 |
@@ -173,26 +171,48 @@
                     <div class="warpper">
                         <div class="login-form">
                             <div class="form-field">
-                                <div class="ok"><input type="text" id="username" name="username" placeholder="用户名或者电子邮箱"
+                                <div class="ok"><input type="text" id="username" name="username" placeholder=" "
                                         value="" autocomplete="new-password"><label>用户名或者电子邮箱</label>
                                 </div>
                                 <div class="password-group-field">
-                                    <div class="ok"><input type="password" name="password" placeholder="密码" value=""
+                                    <div class="ok"><input type="password" name="password" value="" placeholder=" "
                                             autocomplete="new-password"><label>密码</label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="field checkbox"><input type="checkbox" id="login-remember" value="on"><label
-                                    for="login-remember"><span>下次自动登录</span></label></div>
-                            <p><a id="sign-in-forgot-password" href="/account/forgot-password"
-                                    class="link"><span>忘记密码？</span></a></p>
-                            <div class="actions"><button class="button large" disabled=""><span>登录</span></button></div>
+                            <div class="field checkbox"><input type="checkbox" id="login-remember" value="on">
+                                <label for="login-remember"><span>下次自动登录</span></label>
+                                <p><a id="sign-in-forgot-password" href="/account/forgot-password"
+                                        class="link"><span>忘记密码？</span></a></p>
+                            </div>
+
+                            <div class="actions">
+                                <button class="" >
+                                    <span>登录</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </section>
             </div>
         </div>
     </div>
+    <script>
+        var menuBtn = document.querySelector('.icon.menu')
+        var closeBtn = document.querySelector('.icon.close')
+        var menu = document.querySelector('.overlay')
+        var main = document.querySelector('.main')
+        menuBtn.addEventListener('click', () => {
+            menu.classList.add('active')
+            // main.style.opacity = '0'
+        })
+
+        closeBtn.addEventListener('click', () => {
+            console.log('close')
+            menu.classList.remove('active')
+            // main.style.opacity = '1'
+        })
+    </script>
 </body>
 
 </html>
