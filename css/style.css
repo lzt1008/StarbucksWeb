@@ -51,32 +51,57 @@ html body {
   font-weight: 400;
   font-style: normal;
 }
-@keyframes ripple2 {
+@-webkit-keyframes ripple2 {
   0% {
     opacity: 0;
-    transform: scale(0);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   50% {
     opacity: 0.1;
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   100% {
     opacity: 0;
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes ripple2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    opacity: 0.1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 .shadow {
-  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
 .float-card {
-  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
+  -webkit-transition: 0.2s;
   transition: 0.2s;
   box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
 }
 .float-card:hover {
-  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.22);
-  transform: translateY(-3px);
+  -webkit-box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.22);
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
 }
 
 a,
@@ -85,7 +110,8 @@ a:hover {
   text-decoration: none;
 }
 
-label, .label {
+label,
+.label {
   color: rgba(0, 0, 0, 0.56);
 }
 
@@ -97,7 +123,8 @@ label, .label {
   left: 0;
   width: 30% !important;
   height: 100%;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
   z-index: 100;
 }
 .left-box .header {
@@ -109,19 +136,23 @@ label, .label {
 }
 .left-box .header .icon {
   opacity: 0.8;
+  -webkit-transition: 0.2s;
   transition: 0.2s;
   cursor: pointer;
 }
 .left-box .header .icon:hover {
   opacity: 1;
+  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 .left-box .header .icon:active {
   opacity: 0.6;
-  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 .left-box .header .icon.close {
   outline: none;
+  -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
   width: 48px;
   height: 60px;
@@ -137,17 +168,27 @@ label, .label {
   position: absolute;
   top: 0;
   background-color: white;
+  -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
   z-index: 10000;
 }
 .left-box .overlay .menu {
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .left-box .overlay .body {
-  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
 .left-box .overlay .body .middle {
@@ -168,7 +209,10 @@ label, .label {
   color: inherit;
   display: block;
   padding: 8px 0;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .left-box .overlay .body .middle .account {
   margin-top: 20px;
@@ -180,7 +224,8 @@ label, .label {
   background: rgba(0, 0, 0, 0.12);
   border: 0;
   height: 1px;
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   margin-bottom: 12px;
   margin-top: 12px;
 }
@@ -205,11 +250,16 @@ label, .label {
   opacity: 1;
 }
 .left-box .overlay.active .body {
-  transform: scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 .left-box .login {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: 84px;
   margin-right: 24px;
   height: calc(100vh - 70px);
@@ -228,20 +278,70 @@ label, .label {
 .left-box .register:hover {
   color: white;
 }
+.left-box .main .tabs-title {
+  margin-bottom: 12px;
+  line-height: 140%;
+  font-size: 26px;
+  font-weight: 700;
+}
+.left-box .main .tabs-wrapper {
+  padding-left: 2px;
+}
+.left-box .main .tabs-wrapper .subcategories {
+  width: 100%;
+  display: inline-block;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+.left-box .main .tabs-wrapper .subcategories li {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.left-box .main .tabs-wrapper .subcategories a {
+  display: inline-block;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.56);
+  padding: 6px 0;
+  line-height: 160%;
+}
+.left-box .main .tabs-wrapper .subcategories a.active {
+  border-bottom: 3px solid #00a862;
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: 700;
+  padding-bottom: 3px;
+  margin-bottom: 2px;
+  padding-bottom: 1px;
+}
+.left-box .main .tabs-wrapper .subcategories a span {
+  font-size: inherit;
+}
 
 .right-box {
   width: 70% !important;
 }
 
 .star-club {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: white;
 }
 .star-club .club-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 36px 0;
 }
 .star-club .club-text h2 {
@@ -324,14 +424,25 @@ label, .label {
   overflow: hidden;
 }
 .star-lecture .lecture-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 24px;
 }
 .star-lecture .lecture-card a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: relative;
   padding: 18px;
   margin-right: 16px;
@@ -354,6 +465,8 @@ label, .label {
   top: 6px;
 }
 .star-lecture .lecture-card a h4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 18px;
   font-size: 16px;
@@ -367,11 +480,37 @@ label, .label {
 }
 
 .join-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: white;
   text-align: center;
+  position: relative;
+}
+.join-form .qrcode-login-tip {
+  width: 100px;
+  height: 100px;
+  background: url(/images/qrcode-login-tip.png) no-repeat;
+  background-size: contain;
+  margin-bottom: 24px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.join-form .qrcode-login-tip p {
+  line-height: 26px;
+  padding-right: 12px;
+  text-align: right;
+  font-size: 12px;
+  white-space: nowrap;
 }
 .join-form .warpper {
   margin-top: 20px;
@@ -393,11 +532,23 @@ label, .label {
   font-size: 16px;
   font-weight: 700;
   line-height: 26px;
+  -webkit-transition-property: border;
   transition-property: border;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 .join-form .warpper .form-field input:active, .join-form .warpper .form-field input:hover {
   border-color: #00a862;
+}
+.join-form .warpper .form-field input:-moz-placeholder-shown:not(:focus) + label {
+  top: 28px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.38);
+}
+.join-form .warpper .form-field input:-ms-input-placeholder:not(:focus) + label {
+  top: 28px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.38);
 }
 .join-form .warpper .form-field input:placeholder-shown:not(:focus) + label {
   top: 28px;
@@ -410,15 +561,21 @@ label, .label {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.56);
   left: 0;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: color, font-size, top;
   transition-property: color, font-size, top;
 }
 .join-form .warpper .form-field .password-group-field {
   margin-top: 10px;
 }
 .join-form .warpper .checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   text-align: left;
   margin-top: 28px;
   margin-bottom: 18px;
@@ -428,15 +585,19 @@ label, .label {
   opacity: 0;
 }
 .join-form .warpper .checkbox input:focus + label span:before {
-  animation-name: ripple2;
-  animation-duration: 0.3s;
+  -webkit-animation-name: ripple2;
+          animation-name: ripple2;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
 }
 .join-form .warpper .checkbox input:checked + label:before {
-  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.12);
 }
 .join-form .warpper .checkbox input:checked + label:after {
   opacity: 1;
-  transform: scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 .join-form .warpper .checkbox label {
   font-size: 14px;
@@ -452,11 +613,14 @@ label, .label {
   height: 30px;
   margin: -6px 8px 0 0;
   width: 30px;
-  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.12);
 }
 .join-form .warpper .checkbox label:after {
+  -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
-  transform: scale(0);
+  -webkit-transform: scale(0);
+          transform: scale(0);
   border-radius: 7px;
   background: #00a862 url(/images/icon-checked.svg) no-repeat center center;
   clear: both;
@@ -478,10 +642,12 @@ label, .label {
   background: #00A862;
   height: 52.8px;
   width: 52.8px;
-  transform: scale(0);
+  -webkit-transform: scale(0);
+          transform: scale(0);
   position: absolute;
   left: -12px;
   top: -16px;
+  -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
 }
 .join-form .warpper .checkbox p a {
@@ -489,25 +655,29 @@ label, .label {
   color: #00A862;
 }
 .join-form .warpper .actions {
-  margin-top: 30px;
+  margin-top: 50px;
   margin-bottom: 30px;
   text-align: right;
 }
 .join-form .warpper .actions button:active::after {
-  animation-name: ripple2;
-  animation-duration: 0.3s;
+  -webkit-animation-name: ripple2;
+          animation-name: ripple2;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
 }
 .join-form .warpper .actions button {
   position: relative;
   overflow: hidden;
   border-radius: 48px;
   padding: 12px 24px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.38);
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.38);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.38);
   margin-bottom: 4px;
   background-color: #00A862;
   color: white;
   border: none;
   outline: none;
+  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 .join-form .warpper .actions button span {
@@ -525,21 +695,29 @@ label, .label {
   background: black;
   height: 80px;
   width: 80px;
-  transform: scale(0);
+  -webkit-transform: scale(0);
+          transform: scale(0);
   position: absolute;
   left: 0px;
   top: -15px;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
 .account-join {
-  background-color: #009688;
+  background-color: #15767c;
   color: white;
+  margin-bottom: 20px;
 }
 .account-join .wrapper {
   padding: 40px 0 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-left: 150px;
 }
 .account-join .wrapper h2 {
@@ -549,6 +727,8 @@ label, .label {
 .account-join .wrapper p {
   margin-bottom: 24px;
   font-size: 16px;
+  color: #d8d8d8;
+  margin-bottom: 32px;
 }
 .account-join .wrapper button {
   font-size: 16px;
@@ -568,5 +748,4 @@ body.lang-zh .header {
 .lang-en .lecture-card h4 {
   font-weight: 400;
 }
-
 /*# sourceMappingURL=style.css.map */

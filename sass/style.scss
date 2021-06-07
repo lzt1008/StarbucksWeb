@@ -89,7 +89,8 @@ a:hover {
     color: initial;
     text-decoration: none;
 }
-label, .label {
+label,
+.label {
     color: rgba(0, 0, 0, 0.56);
 }
 
@@ -136,6 +137,7 @@ label, .label {
             }
         }
     }
+
     .overlay {
         height: 100%;
         width: 100%;
@@ -242,6 +244,47 @@ label, .label {
         // }
         &:hover {
             color: white;
+        }
+    }
+    .main {
+        .tabs-title {
+            margin-bottom: 12px;
+            line-height: 140%;
+            font-size: 26px;
+            font-weight: 700;
+        }
+        .tabs-wrapper {
+            padding-left: 2px;
+            .subcategories {
+                width: 100%;
+                display: inline-block;
+                margin: 0;
+                list-style: none;
+                padding: 0;
+                li {
+                    display: block;
+                    margin: 0;
+                    padding: 0;
+                }
+                a {
+                    display: inline-block;
+                    font-size: 16px;
+                    color: rgba(0, 0, 0, 0.56);
+                    padding: 6px 0;
+                    line-height: 160%;
+                    &.active {
+                        border-bottom: 3px solid #00a862;
+                        color: rgba(0, 0, 0, 0.87);
+                        font-weight: 700;
+                        padding-bottom: 3px;
+                        margin-bottom: 2px;
+                        padding-bottom: 1px;
+                    }
+                    span {
+                        font-size: inherit;
+                    }
+                }
+            }
         }
     }
 }
@@ -392,7 +435,25 @@ label, .label {
     align-items: center;
     background-color: white;
     text-align: center;
-    
+    position: relative;
+    .qrcode-login-tip {
+        width: 100px;
+        height: 100px;
+        background: url(/images/qrcode-login-tip.png) no-repeat;
+        background-size: contain;
+        margin-bottom: 24px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        p {
+            line-height: 26px;
+            padding-right: 12px;
+            text-align: right;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+    }
     .warpper {
         // overflow: hidden;
         margin-top: 20px;
@@ -515,10 +576,10 @@ label, .label {
             }
         }
         .actions {
-            margin-top: 30px;
+            margin-top: 50px;
             margin-bottom: 30px;
             text-align: right;
-            button:active::after{
+            button:active::after {
                 animation-name: ripple2;
                 animation-duration: 0.3s;
             }
@@ -533,7 +594,7 @@ label, .label {
                 color: white;
                 border: none;
                 outline: none;
-                transition: .2s;
+                transition: 0.2s;
                 span {
                     font-size: 16px;
                 }
@@ -542,28 +603,29 @@ label, .label {
                     color: rgba(0, 0, 0, 0.38);
                     cursor: not-allowed;
                 }
-                
+
                 &:after {
-                        border-radius: 50%;
-                        content: "";
-                        opacity: 0.6;
-                        background: black;
-                        height: 80px;
-                        width: 80px;
-                        transform: scale(0);
-                        position: absolute;
-                        left: 0px;
-                        top: -15px;
-                        transition: all 0.2s ease;
-                    }
+                    border-radius: 50%;
+                    content: "";
+                    opacity: 0.6;
+                    background: black;
+                    height: 80px;
+                    width: 80px;
+                    transform: scale(0);
+                    position: absolute;
+                    left: 0px;
+                    top: -15px;
+                    transition: all 0.2s ease;
+                }
             }
         }
     }
 }
 
 .account-join {
-    background-color: #009688;
+    background-color: #15767c;
     color: white;
+    margin-bottom: 20px;
     .wrapper {
         padding: 40px 0 70px;
         display: flex;
@@ -576,6 +638,8 @@ label, .label {
         p {
             margin-bottom: 24px;
             font-size: 16px;
+            color: #d8d8d8;
+            margin-bottom: 32px;
         }
         button {
             font-size: 16px;
