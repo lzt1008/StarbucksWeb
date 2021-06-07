@@ -43,7 +43,8 @@ html {
     }
 }
 
-a {
+a,a:hover {
+    color: initial;
     text-decoration: none;
 }
 

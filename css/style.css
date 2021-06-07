@@ -30,25 +30,21 @@ html body {
 }
 
 .shadow {
-  -webkit-box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
-          box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
 .float-card {
-  -webkit-box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
-          box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
-  -webkit-transition: 0.2s;
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
   transition: 0.2s;
   box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
 }
 .float-card:hover {
-  -webkit-box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.22);
-          box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.22);
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.22);
+  transform: translateY(-3px);
 }
 
-a {
+a, a:hover {
+  color: initial;
   text-decoration: none;
 }
 
@@ -60,8 +56,7 @@ a {
   left: 0;
   width: 30% !important;
   height: 100%;
-  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
-          box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
   z-index: 100;
 }
 .left-box .header {
@@ -73,23 +68,19 @@ a {
 }
 .left-box .header .icon {
   opacity: 0.8;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
   cursor: pointer;
 }
 .left-box .header .icon:hover {
   opacity: 1;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 .left-box .header .icon:active {
   opacity: 0.6;
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
+  transform: scale(0.8);
 }
 .left-box .header .icon.close {
   outline: none;
-  -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
   width: 48px;
   height: 60px;
@@ -99,33 +90,22 @@ a {
   height: 100%;
   width: 100%;
   overflow-y: auto;
-  overflow-x: hidden;
   visibility: hidden;
   opacity: 0;
   position: absolute;
   top: 0;
   background-color: white;
-  -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
   z-index: 10000;
 }
 .left-box .overlay .menu {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .left-box .overlay .body {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-transition: all 0.1s linear;
+  transform: scale(1.2);
   transition: all 0.1s linear;
 }
 .left-box .overlay .body .middle {
@@ -146,10 +126,7 @@ a {
   color: inherit;
   display: block;
   padding: 8px 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 .left-box .overlay .body .middle .account {
   margin-top: 20px;
@@ -161,8 +138,7 @@ a {
   background: rgba(0, 0, 0, 0.12);
   border: 0;
   height: 1px;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   margin-bottom: 12px;
   margin-top: 12px;
 }
@@ -187,16 +163,11 @@ a {
   opacity: 1;
 }
 .left-box .overlay.active .body {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
 .left-box .login {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-left: 84px;
   margin-right: 24px;
   height: calc(100vh - 70px);
@@ -222,25 +193,14 @@ a {
 }
 
 .star-club {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-evenly;
+  align-items: center;
   background-color: white;
 }
 .star-club .club-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding: 36px 0;
 }
 .star-club .club-text h2 {
@@ -323,25 +283,14 @@ a {
   overflow: hidden;
 }
 .star-lecture .lecture-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin-top: 24px;
 }
 .star-lecture .lecture-card a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   padding: 18px;
   margin-right: 16px;
@@ -364,8 +313,6 @@ a {
   top: 6px;
 }
 .star-lecture .lecture-card a h4 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 18px;
   font-size: 16px;
@@ -374,4 +321,5 @@ a {
 .account-welcome img {
   max-width: 100%;
 }
+
 /*# sourceMappingURL=style.css.map */
