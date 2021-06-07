@@ -9,17 +9,10 @@
 </head>
 
 <body>
-    <nav calss="menu-overlay">
+    <div class="menu-overlay">
         <header class="header">
-            <button class="icon close" rel="menu-overlay">
-                <img class="nonie-black" id="ds-top-menu-close-black"
-                    src="https://www.starbucks.com.cn/design-studio/assets/icons/icon-close.svg" alt="Close"
-                    title="Close">
-                <img class="ie-white" id="ds-top-menu-close-white"
-                    src="https://www.starbucks.com.cn/design-studio/assets/icons/icon-close-white.svg" alt="Close"
-                    title="Close">
-                <span>Close</span>
-            </button>
+            <img class="icon close" id="ds-top-menu-close-black"
+                src="https://www.starbucks.com.cn/design-studio/assets/icons/icon-close-white.svg" alt="Close">
         </header>
         <div class="body">
             <a class="stores" href="https://www.starbucks.com.cn/design-studio/stores/" id="ds-top-menu-stores">门店展示</a>
@@ -30,7 +23,7 @@
             <a href="https://www.starbucks.com.cn/design-studio/en/" id="ds-language" class="language">English</a>
 
         </div>
-    </nav>
+    </div>
     <div id="content">
         <header id="header">
             <a class="logo" href="https://www.starbucks.com.cn/design-studio/en/">
@@ -286,8 +279,7 @@
         </div>
         <footer id="footer">
             <div class="legal">
-                <span class="copyright">© 2018 Starbucks Corporation.</span>
-                <a class="icp" href="http://www.miitbeian.gov.cn/">沪ICP备17003747号</a>
+                <span class="copyright">© 2021 LZT</span>
             </div>
         </footer>
     </div>
@@ -383,8 +375,17 @@
             swipe(minorSwipper, true, 0.25)
         }
         window.onload = () => {
-            swipe(mainSwipper)
-            swipe(minorSwipper, true, 0.25)
+            // swipe(mainSwipper)
+            // swipe(minorSwipper, true, 0.25)
+        }
+
+        var menuBtn = document.querySelector('.icon.menu')
+        var closeBtn = document.querySelector('.icon.close')
+        menuBtn.onclick = () => {
+            document.querySelector('.menu-overlay').classList.add('active')
+        }
+        closeBtn.onclick = () => {
+            document.querySelector('.menu-overlay').classList.remove('active')
         }
     </script>
 </body>
