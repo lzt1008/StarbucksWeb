@@ -28,6 +28,84 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
+#content {
+  position: relative;
+}
+#content::after {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  content: "";
+}
+
+.menu-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  z-index: 100;
+  visibility: hidden;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.menu-overlay .body {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin: auto;
+  max-width: 960px;
+  padding: 0 48px;
+  -webkit-transform: scale(1.8);
+          transform: scale(1.8);
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+.menu-overlay .body a {
+  color: rgba(255, 255, 255, 0.8);
+  display: block;
+  font-size: 24px;
+  font-size: 2.4rem;
+  letter-spacing: 4px;
+  padding: 48px;
+  line-height: 120%;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: color;
+  transition-property: color;
+}
+.menu-overlay.active + #content::after {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.menu-overlay.active {
+  visibility: visible;
+}
+.menu-overlay.active .body {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 .swipper {
   position: fixed;
   display: -webkit-box;
