@@ -7,7 +7,7 @@
 
 html {
     width: 100%;
-    font-size: 62.5% !important;
+    font-size: 62.5%;
     -webkit-text-size-adjust: 100%;
     body {
         -webkit-font-smoothing: antialiased;
@@ -16,12 +16,39 @@ html {
         letter-spacing: 1px;
         font-family: "Gotham", Helvetica, Arial, PingFangSC-Regular, "Microsoft YaHei", "WenQuanYi Micro Hei",
             sans-serif;
-        font-size: 16px;
+        font-size: 12px;
         line-height: 160%;
         height: 100%;
         background: #f7f7f7;
         letter-spacing: 0.4px;
     }
+}
+
+/*** FONTS ***/
+@font-face {
+    font-family: "Gotham";
+    src: url("/fonts/gotham-bold.eot");
+    src: url("/fonts/gotham-bold.eot?#iefix") format("embedded-opentype"), url("/fonts/gotham-bold.woff") format("woff"),
+        url("/fonts/gotham-bold.ttf") format("truetype"), url("/fonts/gotham-bold.svg#Icons") format("svg");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Gotham";
+    src: url("/fonts/gotham-medium.eot");
+    src: url("/fonts/gotham-medium.eot?#iefix") format("embedded-opentype"),
+        url("/fonts/gotham-medium.woff") format("woff"), url("/fonts/gotham-medium.ttf") format("truetype"),
+        url("/fonts/gotham-medium.svg#Icons") format("svg");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Gotham";
+    src: url("/fonts/gotham-book.eot");
+    src: url("/fonts/gotham-book.eot?#iefix") format("embedded-opentype"), url("/fonts/gotham-book.woff") format("woff"),
+        url("/fonts/gotham-book.ttf") format("truetype"), url("/fonts/gotham-book.svg#Icons") format("svg");
+    font-weight: 400;
+    font-style: normal;
 }
 
 @mixin shadow() {
@@ -60,6 +87,7 @@ a:hover {
     z-index: 100;
     .header {
         padding: 24px;
+
         .logo img {
             outline: none;
             width: 36px;
@@ -120,6 +148,7 @@ a:hover {
                     font-size: 2.6rem;
                     font-weight: 700;
                     font-size: 18px;
+
                     font-size: 1.8rem;
                     line-height: 120%;
                     a {
@@ -184,7 +213,7 @@ a:hover {
     }
     .register {
         height: 31px;
-        width: 59px;
+        // width: 59px;
         padding: 2px 12px;
         font-size: 16px;
         border-radius: 15px;
@@ -264,7 +293,7 @@ a:hover {
     a {
         text-decoration: none;
         width: 162px;
-        height: 196px;
+        // height: 196px;
         &:hover span {
             opacity: 1;
         }
@@ -282,6 +311,7 @@ a:hover {
         span {
             opacity: 0.7;
             font-size: 12px;
+            display: block;
         }
 
         img {
@@ -334,5 +364,22 @@ a:hover {
 .account-welcome {
     img {
         max-width: 100%;
+    }
+}
+
+body.lang-zh {
+    .header {
+        font-size: 1.6rem;
+    }
+}
+.lang-en {
+    .selected-card > ul a {
+        h4 {
+            min-height: 48px;
+        }
+        
+    }
+    .lecture-card h4 {
+        font-weight: 400;
     }
 }
