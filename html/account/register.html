@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="lang-zh">
+    <div class="container-fluid">
+        <div class="row no-gutter justify-content-end">
+
+            <!-- 左边内容 -->
+            <div class="position-fixed left-box bg-white">
+                <div class="main">
+                    <!-- 导航栏 -->
+                    <header class="navbar header">
+                        <a href="/" class="navbar-brand logo"><img src="/images/logo.svg"></a>
+                        <ul class="nav mr-auto">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link text-dark font-weight-bold">门店</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/html/account/index.html" class="nav-link text-dark font-weight-bold">我的账户</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/html/menu/index.html" class="nav-link text-dark font-weight-bold">菜单</a>
+                            </li>
+                        </ul>
+                        <span class="icon menu"><img src="/images/icon-hamburger.svg"></span>
+                    </header>
+
+                    <!-- 标题与登录注册 -->
+                    <div class="login">
+                        <div class="">
+                            <div class="tabs-title">
+                                <span>登录或创建一个新帐户 🌟</span>
+                            </div>
+                            <div class="tabs-wrapper">
+                                <ul class="subcategories">
+                                    <li><a class="false" href="/html/account/index.html"><span>登录</span></a></li>
+                                    <li><a class="active" href="/html/account/register.html"><span>注册</span></a></li>
+                                    <li><a class="false"
+                                            href="/html/account/starbucks-rewards.html"><span>关于星享俱乐部</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 菜单 -->
+                <div class="overlay" id="nav-overlay">
+                    <div class="menu">
+                        <header class="header">
+                            <a class="logo" href="/">
+                                <img src="/images/logo.svg" alt="星巴克">
+                            </a>
+                            <button class="icon close"><img src="/images/icon-close.svg" alt=""></button>
+                        </header>
+                        <section class="body">
+                            <div class="middle">
+                                <ul>
+                                    <li>
+                                        <a id="stores-overlay" href="#">
+                                            门店
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="account-overlay" href="/html/account/starbucks-rewards.html"><span
+                                                class="">星享俱乐部</span></a>
+                                    </li>
+                                    <li>
+                                        <a id="menu-overlay" href="/html/menu/index.html">
+                                            菜单
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <hr>
+                                    </li>
+                                    <li>
+                                        <a id="apps-overlay" href="#">
+                                            星巴克移动应用
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="svc-overlay" href="#">
+                                            星礼卡
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="starbucks_reserve-overlay" href="#">
+                                            星巴克臻选™
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="starbucks_mop-overlay" href="/html/starbucks-now/index.html">
+                                            啡快™ － 在线点 到店取
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="starbucks_delivery-overlay" href="#">
+                                            专星送™
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="coffeehouse-overlay" href="/html/coffee-blog/index.html" target="_blank">
+                                            咖啡星讲堂
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="roastery-overlay" href="#" target="_blank">
+                                            上海烘焙工坊
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="about-overlay" href="#">
+                                            关于星巴克
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="help-overlay" href="/help/index.html">
+                                            帮助中心
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <hr>
+                                    </li>
+                                </ul>
+                                <footer class="account">
+                                    <div class="">
+                                        <a href="/html/account/index.html"><button
+                                                class="btn btn-outline-success btn-lg register">登录</button></a>
+                                        <a href="/html/account/register.html"><button href="/account/register.html"
+                                                class="btn btn-outline-success btn-lg register">注册</button></a>
+                                    </div>
+                                </footer>
+                            </div>
+                        </section>
+                        <footer class="footer">
+                            <div class="holder">
+                                <a id="en-collapse" class="lang" href="/html/index-en.html">
+                                    English
+                                </a>
+                                |
+                                <a id="privacy-collapse" href="/help/legal/privacy-policy">
+                                    隐私政策
+                                </a>
+                                |
+                                <a id="terms-collapse" href="/help/legal/terms-of-starbucks-website/">
+                                    使用条款
+                                </a>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右边内容 -->
+            <div class="right-box">
+                <section class="account-welcome">
+                    <a href="/account/register.html">
+                        <img src="/images/header_cn_2020_06_02.jpg" alt="" />
+                    </a>
+                </section>
+                <section class="join-form">
+                    <div class="qrcode-login-tip">
+                        <p><span>扫码登录</span></p>
+                    </div>
+                    <div class="warpper">
+                        <div class="login-form">
+                            <form action="/html/account/view.html" method="GET">
+                                <div class="form-field">
+                                    <div class="ok"><input type="text" id="username" name="username" placeholder=" "
+                                            value="" autocomplete="new-password"><label>用户名</label>
+                                    </div>
+                                    <div class="ok"><input type="email" id="email" name="username" placeholder=" "
+                                            value="" autocomplete="new-password"><label>电子邮箱</label>
+                                    </div>
+                                    <div class="ok"><input type="tel" id="phone" name="phone" placeholder=" " value=""
+                                            autocomplete="new-password"><label>手机号码</label>
+                                        <p><a id="send-verify-code" class="link"><span>发送验证码</span></a></p>
+
+                                    </div>
+                                    <div class="ok"><input type="text" id="verify-code" name="verify-code" 
+                                            placeholder=" " value="" autocomplete="new-password"><label>验证码</label>
+                                    </div>
+                                    <div class="password-group-field">
+                                        <div class="ok"><input type="password" id="password" name="password" value=""
+                                                placeholder=" " autocomplete="new-password"><label>密码</label>
+                                        </div>
+                                        <div class="ok"><input type="password" id="re-password" name="password" value=""
+                                                placeholder=" " autocomplete="new-password"><label>确认密码</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="field checkbox"><input type="checkbox" name="remember" id="register-agree"
+                                        >
+                                    <label for="register-agree"><span>我已同意 <a href="/html/help/privacy-policy.html"
+                                                target="_blank">隐私政策</a> 与 <a
+                                                href="/html/help/terms-of-starbucks-website.html"
+                                                target="_blank">使用条款</a></span></label>
+                                    <p><a id="sign-in-forgot-password" href="/html/account/index.html"
+                                            class="link"><span>已有帐号？直接登录 ></span></a></p>
+                                </div>
+                                <div class="actions">
+                                    <button class="register" disabled>
+                                        <span>注册</span>
+                                    </button>
+                                </div>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </section>
+                <section class="account-join">
+                    <div class="wrapper">
+                        <div>
+                            <h2>
+                                加入星享俱乐部
+                            </h2>
+                            <p>
+                                只需几分钟，便可成功注册星享俱乐部帐户，成为“星”会员，立即开启集星之旅。
+                            </p>
+                            <a href="/html/account/register.html">
+                                <button class="btn btn-lg creact-account">
+                                    注册
+                                </button>
+                            </a>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script>
+        var menuBtn = document.querySelector('.icon.menu')
+        var closeBtn = document.querySelector('.icon.close')
+        var menu = document.querySelector('.overlay')
+        var main = document.querySelector('.main')
+        menuBtn.addEventListener('click', () => {
+            menu.classList.add('active')
+            // main.style.opacity = '0'
+        })
+
+        closeBtn.addEventListener('click', () => {
+            console.log('close')
+            menu.classList.remove('active')
+            // main.style.opacity = '1'
+        })
+        var actionForm = document.querySelector('form')
+        var txtUser = actionForm.querySelector('#username')
+        var txtEmail = actionForm.querySelector('#email')
+        var txtPasswd = actionForm.querySelector('#password')
+        var txtRePasswd = actionForm.querySelector('#re-password')
+        var txtVerify = actionForm.querySelector('#verify-code')
+        var registerAgree = actionForm.querySelector('#register-agree')
+        var loginBtn = actionForm.querySelector('.actions .login')
+        var registerBtn = actionForm.querySelector('.actions .register')
+        judgeLoginEnabled = () => {
+            if (loginBtn.attributes['disabled']) {
+                if (txtUser.value !== '' && txtPasswd.value !== '') {
+                    loginBtn.attributes.removeNamedItem('disabled')
+                }
+            } else if (txtUser.value === '' || txtPasswd.value === '') {
+                loginBtn.setAttribute('disabled', '')
+            }
+        }
+
+        judgeRegisterEnabled = () => {
+            if (registerBtn.attributes['disabled'] && txtUser.value !== '' && txtEmail.value !== '' && txtPasswd.value.length >= 6 && txtPasswd.value === txtRePasswd.value && txtVerify.value.length >= 6 && registerAgree.checked) {
+                registerBtn.attributes.removeNamedItem('disabled')
+            } else if (registerBtn.attributes['disabled']) {
+
+            } else {
+                registerBtn.setAttribute('disabled', '')
+            }
+        }
+
+
+        if (txtRePasswd) {
+            txtEmail.addEventListener('input', judgeRegisterEnabled)
+            txtRePasswd.addEventListener('input', judgeRegisterEnabled)
+            txtVerify.addEventListener('input', judgeRegisterEnabled)
+            txtPasswd.addEventListener('input', judgeRegisterEnabled)
+            txtUser.addEventListener('input', judgeRegisterEnabled)
+        } else {
+            txtPasswd.addEventListener('input', judgeLoginEnabled)
+            txtUser.addEventListener('input', judgeLoginEnabled)
+        }
+
+        var codeSender = document.querySelector('#send-verify-code')
+        codeSender.addEventListener('click', () => {
+
+            if (!codeSender.classList.contains('disabled')) {
+                codeSender.classList.add('disabled')
+                var dispalyer = codeSender.querySelector('span')
+                let i = 60
+                dispalyer.style.color = 'gray'
+                setTimeout(() => codeSender.classList.remove('disabled'), 60000)
+                setInterval(() => {
+                    dispalyer.innerText = `${i--}秒后重试`
+                }, 1000)
+
+            }
+        })
+    </script>
+</body>
+
+</html>
