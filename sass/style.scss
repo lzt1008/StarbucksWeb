@@ -407,6 +407,7 @@ img {
                 margin: -18px;
                 margin-bottom: 0;
                 border-radius: 2px;
+                max-width: unset;
             }
             span {
                 position: absolute;
@@ -1498,9 +1499,6 @@ table {
             content: "";
             display: block;
             padding-top: 100%;
-        }
-        &.float-card:hover + strong {
-            transform: translateY(-4px);
         }
     }
     hr {
