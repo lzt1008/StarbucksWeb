@@ -16,14 +16,21 @@ a {
 }
 
 #header .controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 #content {
   overflow: hidden;
 }
 #content::after {
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   content: "";
 }
@@ -36,12 +43,19 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   z-index: 99999;
   visibility: hidden;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 .menu-overlay .header {
@@ -53,9 +67,11 @@ a {
 .menu-overlay .header img {
   opacity: 0.5;
   cursor: pointer;
+  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 .menu-overlay .header img:hover {
+  -webkit-transition: 0.2s;
   transition: 0.2s;
   opacity: 1;
 }
@@ -66,9 +82,14 @@ a {
   margin: auto;
   max-width: 960px;
   padding: 0 48px;
-  transform: scale(1.8);
-  transition-duration: 0.2s;
+  -webkit-transform: scale(1.8);
+          transform: scale(1.8);
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
   transition-property: transform;
+  transition-property: transform, -webkit-transform;
 }
 .menu-overlay .body a {
   color: rgba(255, 255, 255, 0.8);
@@ -77,34 +98,47 @@ a {
   letter-spacing: 4px;
   padding: 48px;
   line-height: 120%;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: color;
   transition-property: color;
 }
 .menu-overlay .body a:hover {
   color: white;
 }
 .menu-overlay.active {
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   visibility: visible;
   opacity: 1;
 }
 .menu-overlay.active + #content::after {
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
 }
 .menu-overlay.active .body {
-  transform: scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .swipper {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: linear 50s;
   transition: linear 50s;
   cursor: pointer;
 }
@@ -139,7 +173,9 @@ a {
   bottom: 0;
   left: 0;
   opacity: 0;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.7)));
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
 }
 .store .image .store-overlay span {
@@ -159,6 +195,7 @@ a {
 }
 .store .image img {
   height: 100%;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .store .holder {
@@ -204,8 +241,12 @@ body {
 }
 
 #header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 24px 48px;
 }
 #header a {
@@ -215,7 +256,9 @@ body {
 #header .logo {
   opacity: 0.2;
   padding: 3px 0;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: opacity;
   transition-property: opacity;
 }
 #header .logo img {
@@ -232,11 +275,12 @@ body {
 #header .icon img {
   height: 18px;
   opacity: 0.3;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: opacity;
   transition-property: opacity;
 }
 #header .icon img:hover {
   opacity: 0.7;
 }
-
 /*# sourceMappingURL=design-studio.css.map */

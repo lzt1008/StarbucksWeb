@@ -93,6 +93,9 @@ label,
 .label {
     color: rgba(0, 0, 0, 0.56);
 }
+img {
+    max-width: 100%;
+}
 
 .navbar-brand {
     padding: 0;
@@ -1224,16 +1227,39 @@ table {
 }
 
 .about-star-rewards {
-    overflow-y: scroll;
-    .hero{
+    overflow: hidden;
+    overflow-x: hidden !important;
+    .hero {
         width: 100%;
         img {
             width: 100%;
         }
     }
+    .footer {
+        background: url(/images/footer-new.jpg) no-repeat #013529;
+        background-size: cover;
+        margin-top: 0;
+        color: white;
+        .desc {
+            text-align: center;
+            left: 0;
+            width: 100%;
+            padding-top: 48px;
+            padding-bottom: 60px;
+            max-width: 640px;
+            margin: 0 auto;
+            a {
+                color: white;
+            }
+        }
+    }
     .welcome {
+        position: relative;
+        width: 100%;
+        padding: 48px 0 60px;
+        background-color: #023529;
         &:before {
-            content: ' ';
+            content: " ";
             position: absolute;
             top: 0;
             left: 50%;
@@ -1242,6 +1268,137 @@ table {
             border-width: 14px;
             border-style: solid;
             border-color: #14767c transparent transparent transparent;
+        }
+        .tips {
+            left: 0;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            bottom: 16px;
+            font-size: 12px;
+            padding: 0 16px;
+            line-height: 140%;
+            box-sizing: border-box;
+            p {
+                color: white;
+                a {
+                    color: color.$green;
+                }
+            }
+        }
+        .wrapper {
+            max-width: unset;
+            .title {
+                // width: 640px;
+                // height: auto;
+                margin: auto;
+                margin-bottom: 24px;
+                color: #ffffff;
+                text-align: center;
+                img {
+                    height: 28px;
+                }
+            }
+            .grid {
+                display: flex;
+                align-items: flex-start;
+                width: 100%;
+                justify-content: space-around;
+                .padded {
+                    padding: 0 12px;
+                    box-sizing: border-box;
+                }
+                .image {
+                    width: 100%;
+                    display: inline-block;
+                    text-align: center;
+                    margin: 0 auto;
+                    text-align: center;
+                    img {
+                        width: 120px;
+                    }
+                }
+                .item {
+                    color: white;
+                    text-align: center;
+                    .content {
+                        h2 {
+                            font-size: 18px;
+                            color: #ffffff;
+                            text-align: center;
+                            margin: 0;
+                        }
+                        p {
+                            font-size: 0.55vw;
+                            line-height: 140%;
+                            margin: 6px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .member-join {
+        background-color: #ebf3f5;
+        padding-bottom: 48px;
+        .title {
+            text-align: center;
+            margin-bottom: 24px;
+            img {
+                height: 28px;
+                width: auto;
+            }
+        }
+        .tips {
+            display: block;
+            margin-top: 24px;
+            width: 100%;
+            text-align: center;
+            font-size: 12px;
+            padding: 0 16px;
+            line-height: 140%;
+            box-sizing: border-box;
+            p {
+                color: #000000de;
+                a {
+                    color: color.$green;
+                }
+            }
+        }
+        .grid {
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            .warpper {
+                position: relative;
+            }
+            .item {
+                text-align: center;
+                h2 {
+                    font-size: 22px;
+                    font-weight: 500;
+                    display: block;
+                    margin-bottom: 18px;
+                }
+                p {
+                    font-size: 16px;
+                    text-align: center;
+                    line-height: 140%;
+                    max-width: 350px;
+                    margin: 0 auto 24px;
+                    display: block;
+                }
+                &::after {
+                    content: " ";
+                    display: block;
+                    position: absolute;
+                    height: 100%;
+                    width: 1px;
+                    top: 0px;
+                    background-color: rgba(0, 0, 0, 0.56);
+                    left: 50%;
+                }
+            }
         }
     }
 }

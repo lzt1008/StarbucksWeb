@@ -86,7 +86,8 @@ h6 {
     src: url("/fonts/icon.woff");
 }
 
-#header {
+
+    // position: relative;
     #header-box {
         &.fixed {
             position: fixed;
@@ -94,7 +95,7 @@ h6 {
             right: 0;
             top: 0;
         }
-        background: #fff;
+        background: #ffffffDF;
         padding: 12px;
         position: absolute;
         left: 10%;
@@ -104,6 +105,8 @@ h6 {
         z-index: 9999;
         transition-duration: 0.2s;
         transition-property: right, left;
+        backdrop-filter: blur(50px);
+        
         .search,
         .language {
             display: flex;
@@ -167,7 +170,6 @@ h6 {
         }
         #progress {
             background: #166e50;
-            // display: none;
             height: 3px;
             position: absolute;
             bottom: -3px;
@@ -175,7 +177,7 @@ h6 {
             width: 0;
         }
     }
-}
+
 
 .cover {
     background: center center no-repeat;

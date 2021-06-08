@@ -65,7 +65,8 @@ h6 {
 }
 
 .wrapper {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0 auto;
   max-width: 1040px;
   padding: 0 36px;
@@ -86,8 +87,8 @@ h6 {
   font-family: "icon";
   src: url("/fonts/icon.woff");
 }
-#header #header-box {
-  background: #fff;
+#header-box {
+  background: #ffffffDF;
   padding: 12px;
   position: absolute;
   left: 10%;
@@ -95,75 +96,97 @@ h6 {
   top: 24px;
   text-align: center;
   z-index: 9999;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: right, left;
   transition-property: right, left;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
 }
-#header #header-box.fixed {
+#header-box.fixed {
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
 }
-#header #header-box .search,
-#header #header-box .language {
+#header-box .search,
+#header-box .language {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   background: #e5e4e4;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Brandon Grotesque", Helvetica, Arial, sans-serif;
   padding: 24px 0;
   height: 60px;
   width: 60px;
   top: 0;
-  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
 }
-#header #header-box .search {
+#header-box .search {
   left: 0;
 }
-#header #header-box .search img {
+#header-box .search img {
   height: 20px;
 }
-#header #header-box .language {
+#header-box .language {
   right: 0;
   color: #111111;
   font-size: 14px;
 }
-#header #header-box .wrapper {
+#header-box .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0 auto;
   max-width: 1040px;
   padding: 0 36px;
   text-align: left;
   width: 100%;
 }
-#header #header-box .wrapper .starbucks {
+#header-box .wrapper .starbucks {
   height: 32px;
 }
-#header #header-box .wrapper .starbucks img {
+#header-box .wrapper .starbucks img {
   width: 32px;
 }
-#header #header-box .line {
+#header-box .line {
   display: inline-block;
   height: 24px;
   width: 1px;
   background-color: #ccc;
   margin: 0 15px;
 }
-#header #header-box .home {
+#header-box .home {
   display: inline-block;
   position: relative;
 }
-#header #header-box .home img {
+#header-box .home img {
   display: block;
   height: 36px;
 }
-#header #header-box #progress {
+#header-box #progress {
   background: #166e50;
   height: 3px;
   position: absolute;
@@ -204,12 +227,15 @@ h6 {
   position: absolute;
   right: 0;
   top: 0;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: opacity;
   transition-property: opacity;
 }
 
 .wrapper {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0 auto;
   max-width: 1040px;
   padding: 0 36px;
@@ -257,7 +283,8 @@ h6 {
   display: table;
 }
 #content .grid.front > * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   float: left;
   margin: 0;
   padding: 0;
@@ -299,10 +326,19 @@ h6 {
   font-weight: 300;
 }
 #content .breadcrumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 16px;
   font-weight: 100;
   background: #fff;
@@ -400,7 +436,8 @@ h6 {
   width: 100%;
 }
 #content .grid li a:hover .cover {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 #content .grid li a .image {
   overflow: hidden;
@@ -452,8 +489,12 @@ h6 {
   right: 0;
 }
 #content .grid li a .cover {
-  transition-duration: 1.2s;
+  -webkit-transition-duration: 1.2s;
+          transition-duration: 1.2s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
   transition-property: transform;
+  transition-property: transform, -webkit-transform;
 }
 #content .grid.front {
   list-style: none;
@@ -468,7 +509,8 @@ h6 {
   padding: 0;
 }
 #content .grid.featured > * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   float: left;
   margin: 0;
   padding: 0;
@@ -485,7 +527,8 @@ h6 {
 }
 #content .grid.featured li a .cover {
   height: 100px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #content .grid.featured:after {
   clear: both;
@@ -494,19 +537,27 @@ h6 {
 }
 #content .card {
   opacity: 0.1;
-  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
   transition-property: opacity, transform;
-  transform: translateY(96px);
+  transition-property: opacity, transform, -webkit-transform;
+  -webkit-transform: translateY(96px);
+          transform: translateY(96px);
 }
 #content .card.active {
   opacity: 1;
-  transform: translateY(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 #content .card .horizontal {
-  transform: translateX(96px);
+  -webkit-transform: translateX(96px);
+          transform: translateX(96px);
 }
 #content .card .horizontal.active {
-  transform: translateX(0);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 #content .wrapper {
   text-align: center;
@@ -549,5 +600,4 @@ h6 {
 #footer .organization {
   color: #fff;
 }
-
 /*# sourceMappingURL=coffe-blog.css.map */
