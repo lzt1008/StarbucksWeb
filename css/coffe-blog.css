@@ -65,8 +65,7 @@ h6 {
 }
 
 .wrapper {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0 auto;
   max-width: 1040px;
   padding: 0 36px;
@@ -88,7 +87,7 @@ h6 {
   src: url("/fonts/icon.woff");
 }
 #header-box {
-  background: #ffffffDF;
+  background: rgba(255, 255, 255, 0.75);
   padding: 12px;
   position: absolute;
   left: 10%;
@@ -96,12 +95,10 @@ h6 {
   top: 24px;
   text-align: center;
   z-index: 9999;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-  -webkit-transition-property: right, left;
+  transition-duration: 0.2s;
   transition-property: right, left;
-  -webkit-backdrop-filter: blur(50px);
-          backdrop-filter: blur(50px);
+  backdrop-filter: blur(40px);
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.04);
 }
 #header-box.fixed {
   position: fixed;
@@ -111,26 +108,18 @@ h6 {
 }
 #header-box .search,
 #header-box .language {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   background: #e5e4e4;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "Brandon Grotesque", Helvetica, Arial, sans-serif;
   padding: 24px 0;
   height: 60px;
   width: 60px;
   top: 0;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  transition-duration: 0.4s;
 }
 #header-box .search {
   left: 0;
@@ -144,21 +133,11 @@ h6 {
   font-size: 14px;
 }
 #header-box .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
   margin: 0 auto;
   max-width: 1040px;
   padding: 0 36px;
@@ -227,15 +206,12 @@ h6 {
   position: absolute;
   right: 0;
   top: 0;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-  -webkit-transition-property: opacity;
+  transition-duration: 0.2s;
   transition-property: opacity;
 }
 
 .wrapper {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0 auto;
   max-width: 1040px;
   padding: 0 36px;
@@ -283,8 +259,7 @@ h6 {
   display: table;
 }
 #content .grid.front > * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   float: left;
   margin: 0;
   padding: 0;
@@ -326,19 +301,10 @@ h6 {
   font-weight: 300;
 }
 #content .breadcrumb {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   font-size: 16px;
   font-weight: 100;
   background: #fff;
@@ -436,8 +402,7 @@ h6 {
   width: 100%;
 }
 #content .grid li a:hover .cover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 #content .grid li a .image {
   overflow: hidden;
@@ -489,12 +454,8 @@ h6 {
   right: 0;
 }
 #content .grid li a .cover {
-  -webkit-transition-duration: 1.2s;
-          transition-duration: 1.2s;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
+  transition-duration: 1.2s;
   transition-property: transform;
-  transition-property: transform, -webkit-transform;
 }
 #content .grid.front {
   list-style: none;
@@ -509,8 +470,7 @@ h6 {
   padding: 0;
 }
 #content .grid.featured > * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   float: left;
   margin: 0;
   padding: 0;
@@ -527,8 +487,7 @@ h6 {
 }
 #content .grid.featured li a .cover {
   height: 100px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #content .grid.featured:after {
   clear: both;
@@ -537,27 +496,19 @@ h6 {
 }
 #content .card {
   opacity: 0.1;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
-  -webkit-transition-property: opacity, -webkit-transform;
-  transition-property: opacity, -webkit-transform;
+  transition-duration: 0.4s;
   transition-property: opacity, transform;
-  transition-property: opacity, transform, -webkit-transform;
-  -webkit-transform: translateY(96px);
-          transform: translateY(96px);
+  transform: translateY(96px);
 }
 #content .card.active {
   opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
 }
 #content .card .horizontal {
-  -webkit-transform: translateX(96px);
-          transform: translateX(96px);
+  transform: translateX(96px);
 }
 #content .card .horizontal.active {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
 }
 #content .wrapper {
   text-align: center;
@@ -600,4 +551,5 @@ h6 {
 #footer .organization {
   color: #fff;
 }
+
 /*# sourceMappingURL=coffe-blog.css.map */
