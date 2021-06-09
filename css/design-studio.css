@@ -1,22 +1,19 @@
 /*** FONTS ***/
 @font-face {
   font-family: "Gotham";
-  src: url("/fonts/gotham-bold.eot");
-  src: url("/fonts/gotham-bold.eot?#iefix") format("embedded-opentype"), url("/fonts/gotham-bold.woff") format("woff"), url("/fonts/gotham-bold.ttf") format("truetype"), url("/fonts/gotham-bold.svg#Icons") format("svg");
+  src: url("/fonts/gotham-bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Gotham";
-  src: url("/fonts/gotham-medium.eot");
-  src: url("/fonts/gotham-medium.eot?#iefix") format("embedded-opentype"), url("/fonts/gotham-medium.woff") format("woff"), url("/fonts/gotham-medium.ttf") format("truetype"), url("/fonts/gotham-medium.svg#Icons") format("svg");
+  src: url("/fonts/gotham-medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Gotham";
-  src: url("/fonts/gotham-book.eot");
-  src: url("/fonts/gotham-book.eot?#iefix") format("embedded-opentype"), url("/fonts/gotham-book.woff") format("woff"), url("/fonts/gotham-book.ttf") format("truetype"), url("/fonts/gotham-book.svg#Icons") format("svg");
+  src: url("/fonts/gotham-book.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -39,18 +36,11 @@ a {
 }
 
 #header .controls {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 #header .controls .icon {
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
@@ -58,33 +48,25 @@ a {
   overflow: hidden;
 }
 #content::after {
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   content: "";
 }
 
 .menu-overlay {
   opacity: 0;
-  background-color: rgba(0, 0, 0, 0.92);
+  background-color: rgba(0, 0, 0, 0.85);
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   z-index: 99999;
   visibility: hidden;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 .menu-overlay .header {
@@ -96,11 +78,9 @@ a {
 .menu-overlay .header img {
   opacity: 0.5;
   cursor: pointer;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 .menu-overlay .header img:hover {
-  -webkit-transition: 0.2s;
   transition: 0.2s;
   opacity: 1;
 }
@@ -111,14 +91,9 @@ a {
   margin: auto;
   max-width: 960px;
   padding: 0 48px;
-  -webkit-transform: scale(1.8);
-          transform: scale(1.8);
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
+  transform: scale(1.8);
+  transition-duration: 0.2s;
   transition-property: transform;
-  transition-property: transform, -webkit-transform;
 }
 .menu-overlay .body a {
   color: rgba(255, 255, 255, 0.8);
@@ -127,16 +102,13 @@ a {
   letter-spacing: 4px;
   padding: 48px;
   line-height: 120%;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-  -webkit-transition-property: color;
+  transition-duration: 0.2s;
   transition-property: color;
 }
 .menu-overlay .body a:hover {
   color: white;
 }
 .menu-overlay.active {
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   visibility: visible;
   opacity: 1;
@@ -144,26 +116,17 @@ a {
   width: 100%;
   height: 100%;
   top: 0;
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  backdrop-filter: blur(30px);
 }
 .menu-overlay.active .body {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
 
 .swipper {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: linear 50s;
+  justify-content: center;
+  align-items: center;
   transition: linear 50s;
   cursor: pointer;
 }
@@ -198,9 +161,7 @@ a {
   bottom: 0;
   left: 0;
   opacity: 0;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.7)));
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
 }
 .store .image .store-overlay span {
@@ -220,7 +181,6 @@ a {
 }
 .store .image img {
   height: 100%;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .store .holder {
@@ -264,12 +224,8 @@ body {
 }
 
 #header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 24px 48px;
 }
 #header a {
@@ -279,12 +235,14 @@ body {
 #header .logo {
   opacity: 0.2;
   padding: 3px 0;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
 #header .logo img {
   width: 226px;
   height: 12px;
+}
+#header .logo:hover {
+  opacity: 0.7;
 }
 #header .icon {
   border: none;
@@ -294,6 +252,11 @@ body {
 #header .icon img {
   height: 18px;
   opacity: 0.3;
+  transition-duration: 0.2s;
+  transition-property: opacity;
+}
+#header .icon img:hover {
+  opacity: 0.7;
 }
 
 body.page-about {
@@ -304,10 +267,8 @@ body.page-about #header .logo:hover {
   opacity: 1;
 }
 body.page-about #header img {
-  -webkit-transition: 0.2s;
   transition: 0.2s;
-  -webkit-filter: invert(1);
-          filter: invert(1);
+  filter: invert(1);
 }
 body.page-about:before {
   bottom: 0;
@@ -330,8 +291,7 @@ body.page-about #content {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   letter-spacing: 1px;
   color: rgba(255, 255, 255, 0.8);
   font-size: 16px;
@@ -359,8 +319,7 @@ body.page-about #content .joinus {
 }
 .grid > * {
   position: relative;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   clear: none;
   float: left;
   margin: 0;
@@ -392,8 +351,7 @@ body.page-about #content .joinus {
   z-index: 998;
   background: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
   opacity: 0;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
+  transition-duration: 0.2s;
   visibility: hidden;
   bottom: 0;
   content: "";
@@ -416,10 +374,8 @@ body.page-about #content .joinus {
   bottom: auto;
   opacity: 0;
   top: 50%;
-  -webkit-transform: translate(-50%, -75%);
-          transform: translate(-50%, -75%);
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
+  transform: translate(-50%, -75%);
+  transition-duration: 0.2s;
   visibility: hidden;
 }
 .grid > * .cover:hover:before, .grid > * .cover:hover h2 {
@@ -427,8 +383,7 @@ body.page-about #content .joinus {
   visibility: visible;
 }
 .grid > * .cover:hover h2 {
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .cover {
@@ -453,15 +408,12 @@ body.page-about #content .joinus {
 
 .card {
   opacity: 0;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-  -webkit-transform: translateY(48px);
-          transform: translateY(48px);
+  transition-duration: 0.2s;
+  transform: translateY(48px);
 }
 .card.revealed {
   opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
 }
 
 .page-stores .grid > * {
@@ -470,4 +422,5 @@ body.page-about #content .joinus {
 .page-stores .grid > * .cover {
   padding-top: 100%;
 }
+
 /*# sourceMappingURL=design-studio.css.map */
