@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/design-studio.css">
+</head>
+
+<body class="page-stores">
+    <div class="menu-overlay">
+        <header class="header">
+            <img class="icon close" id="ds-top-menu-close-black"
+                src="https://www.starbucks.com.cn/design-studio/assets/icons/icon-close-white.svg" alt="Close">
+        </header>
+        <div class="body">
+            <a class="stores" href="https://www.starbucks.com.cn/design-studio/stores/" id="ds-top-menu-stores">门店展示</a>
+            <a class="stores" href="https://www.starbucks.com.cn/design-studio/inspirations/"
+                id="ds-top-menu-inspiration">全部灵感</a>
+            <a class="stores" href="https://www.starbucks.com.cn/design-studio/about/" id="ds-top-menu-about">关于我们</a>
+
+            <a href="https://www.starbucks.com.cn/design-studio/en/" id="ds-language" class="language">English</a>
+
+        </div>
+    </div>
+    <header id="header">
+        <a class="logo" href="https://www.starbucks.com.cn/design-studio/en/">
+            <img class="nonie-black" src="https://www.starbucks.com.cn/design-studio/assets/logo.svg" alt="">
+        </a>
+
+        <div class="controls">
+            <button class="icon trigger wechat-share mobile-hidden">
+                <img class="nonie-black" id="ds-wechat-black"
+                    src="https://www.starbucks.com.cn/design-studio/assets/icons/icon-wechat.svg" alt="" title="">
+            </button>
+
+            <button class="icon search trigger" rel="search-overlay">
+                <img class="nonie-black" id="ds-search-box-black"
+                    src="https://www.starbucks.com.cn/design-studio/assets/icons/icon-search.svg" alt="" title="">
+            </button>
+
+
+            <button class="icon menu trigger" rel="menu-overlay">
+                <img class="nonie-black" id="ds-top-menu-open-black"
+                    src="https://www.starbucks.com.cn/design-studio/assets/icons/icon-menu.svg" alt="" title="">
+            </button>
+        </div>
+
+    </header>
+
+    <div id="content">
+        <div class="city-filter">
+            <a id="city-toggle" class="active" data-city="toggle">
+                <span>所有门店</span>
+                <img src="https://www.starbucks.com.cn/design-studio/assets/icons/icon-dropdown.svg">
+            </a>
+            <ul class="cities">
+                <li><a id="all" data-city="all">所有门店</a></li>
+                <li><a id="上海" data-city="上海">上海门店</a></li>
+                <li><a id="北京" data-city="北京">北京门店</a></li>
+                <li><a id="天津" data-city="天津">天津门店</a></li>
+                <li><a id="广州" data-city="广州">广州门店</a></li>
+                <li><a id="成都" data-city="成都">成都门店</a></li>
+                <li><a id="杭州" data-city="杭州">杭州门店</a></li>
+                <li><a id="武汉" data-city="武汉">武汉门店</a></li>
+                <li><a id="深圳" data-city="深圳">深圳门店</a></li>
+                <li><a id="苏州" data-city="苏州">苏州门店</a></li>
+                <li><a id="长沙" data-city="长沙">长沙门店</a></li>
+            </ul>
+        </div>
+        <ul class="grid columns-3 padded stores featured">
+  
+            <li class="card revealed" data-city="北京" style="transition-delay: 0s">
+              
+              <a href="https://www.starbucks.com.cn/design-studio/stores/BJFUN/" class="cover" style="background-image: url(https://www.starbucks.com.cn/design-studio/images/BJFUN_FACADE.jpg);">
+                <h2>北京坊旗舰店</h2>
+              </a>
+            </li>
+            
+            <li class="card revealed" data-city="天津" style="transition-delay: 0.1s">
+              
+              <a href="https://www.starbucks.com.cn/design-studio/stores/TJDYC/" class="cover" style="background-image: url(https://www.starbucks.com.cn/design-studio/images/TJJOYCITY_FACADE.jpg)">
+                <h2>天津大悦城店</h2>
+              </a>
+            </li>
+            
+            <li class="card revealed" data-city="深圳" style="transition-delay: 0.2s">
+              
+              <a href="https://www.starbucks.com.cn/design-studio/stores/SZ/" class="cover" style="background-image: url(https://www.starbucks.com.cn/design-studio/images/SZCC_FACADE.JPG)">
+                <h2>深圳海岸城店</h2>
+              </a>
+            </li>
+            
+            <li class="card revealed" data-city="长沙" style="transition-delay: 0.30000000000000004s">
+              
+              <a href="https://www.starbucks.com.cn/design-studio/stores/changshaifs/" class="cover" style="background-image: url(https://www.starbucks.com.cn/design-studio/images/IMG_5856.jpg)">
+                <h2>长沙IFS店</h2>
+              </a>
+            </li>
+            
+            <li class="card revealed" data-city="上海" style="transition-delay: 0.4s">
+              
+              <a href="https://www.starbucks.com.cn/design-studio/stores/shanghai-disney/" class="cover" style="background-image: url(https://www.starbucks.com.cn/design-studio/images/01-ShanghaiDisney/small/1.jpg)">
+                <h2>上海迪士尼小镇店</h2>
+              </a>
+            </li>
+            
+            <li class="card revealed" data-city="北京" style="transition-delay: 0.5s">
+              
+              <a href="https://www.starbucks.com.cn/design-studio/stores/bj-798/" class="cover" style="background-image: url(https://www.starbucks.com.cn/design-studio/images/02-BJ798/small/7.jpg)">
+                <h2>北京798店</h2>
+              </a>
+            </li>
+            
+            <li class="card revealed" data-city="广州" style="transition-delay: 0s">
+              
+              <a href="https://www.starbucks.com.cn/design-studio/stores/guangzhou-zhongshan/" class="cover" style="background-image: url(https://www.starbucks.com.cn/design-studio/images/03-GZZhongshan/small/2.jpg)">
+                <h2>广州中山三路店</h2>
+              </a>
+            </li>
+            
+            <li class="card revealed" data-city="武汉" style="transition-delay: 0.1s">
+              
+              <a href="https://www.starbucks.com.cn/design-studio/stores/wuhan-tiandi/" class="cover" style="background-image: url(https://www.starbucks.com.cn/design-studio/images/04-WuhanTiandi/small/1.jpg)">
+                <h2>武汉天地店</h2>
+              </a>
+            </li>
+            
+            <li class="card revealed" data-city="北京" style="transition-delay: 0.2s">
+              
+              <a href="https://www.starbucks.com.cn/design-studio/stores/bj-airport/" class="cover" style="background-image: url(https://www.starbucks.com.cn/design-studio/images/05-BJAirport/small/3.jpg)">
+                <h2>北京机场十一店</h2>
+              </a>
+            </li>
+            
+            <li class="card revealed" data-city="成都" style="transition-delay: 0s">
+              
+              <a href="https://www.starbucks.com.cn/design-studio/stores/chengdu-tkl/" class="cover" style="background-image: url(https://www.starbucks.com.cn/design-studio/images/09-ChengduTKL/small/1.jpg)">
+                <h2>成都太古里店</h2>
+              </a>
+            </li>
+            
+            <li class="card revealed" data-city="北京" style="transition-delay: 0.1s">
+              
+              <a href="https://www.starbucks.com.cn/design-studio/stores/bj-kerry/" class="cover" style="background-image: url(https://www.starbucks.com.cn/design-studio/images/13-BJKerry/small/2.jpg)">
+                <h2>北京嘉里中心店</h2>
+              </a>
+            </li>
+            
+            <li class="card revealed" data-city="北京" style="transition-delay: 0.2s">
+              
+              <a href="https://www.starbucks.com.cn/design-studio/stores/bj-tkl/" class="cover" style="background-image: url(https://www.starbucks.com.cn/design-studio/images/14-BJTKL/small/1.jpg)">
+                <h2>北京太古里店</h2>
+              </a>
+            </li>
+            
+            <li class="card revealed" data-city="杭州" style="transition-delay: 0.30000000000000004s">
+              
+              <a href="https://www.starbucks.com.cn/design-studio/stores/hangzhou-gda/" class="cover" style="background-image: url(https://www.starbucks.com.cn/design-studio/images/15-HangzhouGDA/small/2.jpg)">
+                <h2>杭州国大店</h2>
+              </a>
+            </li>
+            
+            <li class="card revealed" data-city="广州" style="transition-delay: 0.4s">
+              <a href="https://www.starbucks.com.cn/design-studio/stores/guangzhou-jxxj/" class="cover" style="background-image: url(https://www.starbucks.com.cn/design-studio/images/16-GuangzhouJXXJ/small/1.jpg)">
+                <h2>广州锦绣香江店</h2>
+              </a>
+            </li>
+            
+            <li class="card revealed" data-city="苏州" style="transition-delay: 0.5s">
+              <a href="https://www.starbucks.com.cn/design-studio/stores/Suzhouflagship/" class="cover" style="background-image: url(https://www.starbucks.com.cn/design-studio/images/17-suzhouFlagShip/RED0068.jpg)">
+                <h2>苏州中心旗舰店</h2>
+              </a>
+            </li>
+            
+            <li class="card revealed" data-city="深圳" style="transition-delay: 0s">
+              <a href="https://www.starbucks.com.cn/design-studio/stores/Shenzhen/" class="cover" style="background-image: url(https://www.starbucks.com.cn/design-studio/images/18-shenzhenMixCityWorld/NI3A8507.jpg)">
+                <h2>深圳万象天地店</h2>
+              </a>
+            </li>
+            
+            <li class="card revealed" data-city="上海" style="transition-delay: 0.1s">
+              
+              <a href="https://www.starbucks.com.cn/design-studio/stores/sinan/" class="cover" style="background-image: url(https://www.starbucks.com.cn/design-studio/images/08-Sinan/small/5.jpg)">
+                <h2>上海思南公馆店</h2>
+              </a>
+            </li>
+            
+            <li class="card revealed" data-city="上海" style="transition-delay: 0.2s">
+              
+              <a href="https://www.starbucks.com.cn/design-studio/stores/corporateave/" class="cover" style="background-image: url(https://www.starbucks.com.cn/design-studio/images/12-CorporateAve/small/3.jpg)">
+                <h2>上海企业天地店</h2>
+              </a>
+            </li>
+            
+          </ul>
+    </div>
+    </div>
+
+    <footer id="footer">
+        <div class="legal">
+            <span class="copyright">© 2021 LZT</span>
+        </div>
+    </footer>
+    </div>
+    <script>
+        var menuBtn = document.querySelector('.icon.menu')
+        var closeBtn = document.querySelector('.icon.close')
+        menuBtn.onclick = () => {
+            document.querySelector('.menu-overlay').classList.add('active')
+        }
+        closeBtn.onclick = () => {
+            document.querySelector('.menu-overlay').classList.remove('active')
+        }
+    </script>
+</body>
+
+</html>

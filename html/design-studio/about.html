@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/design-studio.css">
+</head>
+
+<body class="page-about">
+    <div class="menu-overlay">
+        <header class="header">
+            <img class="icon close" id="ds-top-menu-close-black"
+                src="https://www.starbucks.com.cn/design-studio/assets/icons/icon-close-white.svg" alt="Close">
+        </header>
+        <div class="body">
+            <a class="stores" href="https://www.starbucks.com.cn/design-studio/stores/" id="ds-top-menu-stores">门店展示</a>
+            <a class="stores" href="https://www.starbucks.com.cn/design-studio/inspirations/"
+                id="ds-top-menu-inspiration">全部灵感</a>
+            <a class="stores" href="https://www.starbucks.com.cn/design-studio/about/" id="ds-top-menu-about">关于我们</a>
+
+            <a href="https://www.starbucks.com.cn/design-studio/en/" id="ds-language" class="language">English</a>
+
+        </div>
+    </div>
+    <header id="header">
+        <a class="logo" href="https://www.starbucks.com.cn/design-studio/en/">
+            <img class="nonie-black" src="https://www.starbucks.com.cn/design-studio/assets/logo.svg" alt="">
+        </a>
+
+        <div class="controls">
+            <button class="icon trigger wechat-share mobile-hidden">
+                <img class="nonie-black" id="ds-wechat-black"
+                    src="https://www.starbucks.com.cn/design-studio/assets/icons/icon-wechat.svg" alt="" title="">
+            </button>
+
+            <button class="icon search trigger" rel="search-overlay">
+                <img class="nonie-black" id="ds-search-box-black"
+                    src="https://www.starbucks.com.cn/design-studio/assets/icons/icon-search.svg" alt="" title="">
+            </button>
+
+
+            <button class="icon menu trigger" rel="menu-overlay">
+                <img class="nonie-black" id="ds-top-menu-open-black"
+                    src="https://www.starbucks.com.cn/design-studio/assets/icons/icon-menu.svg" alt="" title="">
+            </button>
+        </div>
+
+    </header>
+    
+    <div id="content">
+        <h1 class="name">关于我们</h1>
+        “第三空间”承载着星巴克门店设计的理念。
+        我们的门店充满生机，是因为我们使用真材实料，营造温暖色调的温馨环境。
+        经典元素以现代风格呈现，以此向过去致敬并持续推进未来。
+        以咖啡为本，从大自然中汲取色彩的灵感，
+        纹路、图案来展现本源和细节，我们不惜保留匠心的微瑕。
+        以乐观的视角，来颂扬我们的历史传承。
+        <a class="joinus" href="#">工作在星巴克中国</a>
+    </div>
+
+    <footer id="footer">
+        <div class="legal">
+            <span class="copyright">© 2021 LZT</span>
+        </div>
+    </footer>
+    </div>
+    <script>
+        var menuBtn = document.querySelector('.icon.menu')
+        var closeBtn = document.querySelector('.icon.close')
+        menuBtn.onclick = () => {
+            document.querySelector('.menu-overlay').classList.add('active')
+        }
+        closeBtn.onclick = () => {
+            document.querySelector('.menu-overlay').classList.remove('active')
+        }
+    </script>
+</body>
+
+</html>
