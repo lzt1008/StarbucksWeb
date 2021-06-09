@@ -301,6 +301,19 @@ img {
                 }
             }
         }
+        .back {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            color: rgba(0, 0, 0, 0.56);
+            font-weight: bold;
+            margin-bottom: 12px;
+            img {
+                // float: left;
+                margin-top: -1px;
+                margin-right: -4px;
+            }
+        }
     }
 }
 
@@ -1367,12 +1380,14 @@ table {
         }
         .grid {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             position: relative;
             .warpper {
                 position: relative;
             }
             .item {
+                margin-top: 10px;
+                width: 50%;
                 text-align: center;
                 h2 {
                     font-size: 22px;
@@ -1388,7 +1403,7 @@ table {
                     margin: 0 auto 24px;
                     display: block;
                 }
-                &::after {
+                &:last-of-type:after {
                     content: " ";
                     display: block;
                     position: absolute;
@@ -1396,7 +1411,7 @@ table {
                     width: 1px;
                     top: 0px;
                     background-color: rgba(0, 0, 0, 0.56);
-                    left: 50%;
+                    // left: 50%;
                 }
             }
         }
@@ -1507,4 +1522,74 @@ table {
         border: 0;
         height: 1px;
     }
+
+}
+
+.button.search {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    border-radius: 48px;
+    padding: 12px 24px;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 38%);
+    background-color: #00a862;
+    color: white;
+    border: none;
+    outline: none;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.r2 {
+    .row {
+        .col {
+            padding: 30px 50px;
+            h3 {
+                margin-top: 0;
+                word-wrap: break-word;
+                word-break: break-word;
+                font-family: AvenirLight, HelveticaNeue-Light, Helvetica Neue, arial, Hiragino Sans GB, 冬青黑体,
+                    Microsoft YaHei New, Microsoft Yahei, 微软雅黑, 宋体, SimSun, STXihei, 华文细黑, sans-serif;
+                font-weight: 300;
+                font-size: 28.8px;
+                line-height: 1.44;
+                margin-bottom: 1em;
+                color: #525252;
+            }
+            p {
+                font-size: 16px;
+                margin: 0 0 14px;
+            }
+
+            &.img {
+                padding: 0 15px;
+            }
+        }
+        &.text {
+            align-items: center;
+            p {
+                text-align: left;
+            }
+        }
+        &.image {
+            align-items: flex-start;
+            .col {
+                padding: 0 15px;
+            }
+            p {
+                text-align: center;
+            }
+        }
+    }
+}
+.whitespace {
+    height: 100px;
+}
+.tips {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 0 0 24px;
+    margin-top: 48px;
+    color: rgba(0, 0, 0, 0.38);
+    font-size: 1.4rem;
 }

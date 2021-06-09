@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="lang-zh">
+    <div class="container-fluid">
+        <div class="row no-gutter justify-content-end">
+
+            <!-- 左边内容 -->
+            <div class="position-fixed left-box bg-white">
+                <div class="main">
+                    <!-- 导航栏 -->
+                    <header class="navbar header">
+                        <a href="/" class="navbar-brand logo"><img src="/images/logo.svg"></a>
+                        <ul class="nav mr-auto">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link text-dark font-weight-bold">门店</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/html/account/index.html" class="nav-link text-dark font-weight-bold">我的账户</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/html/menu/index.html" class="nav-link text-dark font-weight-bold">菜单</a>
+                            </li>
+                        </ul>
+                        <span class="icon menu"><img src="/images/icon-hamburger.svg"></span>
+                    </header>
+
+                    <!-- 标题与登录注册 -->
+                    <div class="login">
+                        <div class="">
+                            <a href="../index.html" class="back">
+                                <img src="/images/icon-chevron-left.svg">
+                                <div>菜单</div>
+                            </a>
+                            <div class="tabs-title">
+                                <span>美食</span>
+                            </div>
+                            <div class="tabs-wrapper">
+                                <ul class="subcategories">
+                                    <li><a class="active" href="#"><span>全部</span></a></li>
+                                    <li><a class="false" href="/html/menu/food/bakery.html"><span>烘焙</span></a></li>
+                                    <li><a class="false" href="/html/menu/food/cake-dessert.html"><span>蛋糕&甜品</span></a>
+                                    </li>
+                                    <li><a class="false" href="/html/menu/food/sandwich.html"><span>三明治、帕尼尼、卷</span></a>
+                                    </li>
+                                    <li><a class="false" href="/html/menu/food/yoghurt.html"><span>酸奶</span></a></li>
+                                    <li><a class="false"
+                                            href="/html/menu/food/great-breakfast.html"><span>早安新一天</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 菜单 -->
+                <div class="overlay" id="nav-overlay">
+                    <div class="menu">
+                        <header class="header">
+                            <a class="logo" href="/">
+                                <img src="/images/logo.svg" alt="星巴克">
+                            </a>
+                            <button class="icon close"><img src="/images/icon-close.svg" alt=""></button>
+                        </header>
+                        <section class="body">
+                            <div class="middle">
+                                <ul>
+                                    <li>
+                                        <a id="stores-overlay" href="#">
+                                            门店
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="account-overlay" href="/html/account/starbucks-rewards.html"><span
+                                                class="">星享俱乐部</span></a>
+                                    </li>
+                                    <li>
+                                        <a id="menu-overlay" href="/html/menu/index.html">
+                                            菜单
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <hr>
+                                    </li>
+                                    <li>
+                                        <a id="apps-overlay" href="#">
+                                            星巴克移动应用
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="svc-overlay" href="#">
+                                            星礼卡
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="starbucks_reserve-overlay" href="#">
+                                            星巴克臻选™
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="starbucks_mop-overlay" href="/html/starbucks-now/index.html">
+                                            啡快™ － 在线点 到店取
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="starbucks_delivery-overlay" href="#">
+                                            专星送™
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="coffeehouse-overlay" href="/html/coffee-blog/index.html" target="_blank">
+                                            咖啡星讲堂
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="roastery-overlay" href="#" target="_blank">
+                                            上海烘焙工坊
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="about-overlay" href="#">
+                                            关于星巴克
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="help-overlay" href="/help/index.html">
+                                            帮助中心
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <hr>
+                                    </li>
+                                </ul>
+                                <footer class="account">
+                                    <div class="">
+                                        <a href="/html/account/index.html"><button
+                                                class="btn btn-outline-success btn-lg register">登录</button></a>
+                                        <a href="/html/account/register.html"><button href="/account/register.html"
+                                                class="btn btn-outline-success btn-lg register">注册</button></a>
+                                    </div>
+                                </footer>
+                            </div>
+                        </section>
+                        <footer class="footer">
+                            <div class="holder">
+                                <a id="en-collapse" class="lang" href="/html/index-en.html">
+                                    English
+                                </a>
+                                |
+                                <a id="privacy-collapse" href="/help/legal/privacy-policy">
+                                    隐私政策
+                                </a>
+                                |
+                                <a id="terms-collapse" href="/help/legal/terms-of-starbucks-website/">
+                                    使用条款
+                                </a>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右边内容 -->
+            <div class="right-box">
+                <div class="menu-list wrapper">
+                    <ul class="grid padded-3 product">
+                        <li>
+                            <a href="/menu/food/bakery/american-style-pancakes/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/american-style-pancakes.jpg)">
+                                </div>
+                                <strong>美式松饼</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/bakery/blueberry-muffin/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/blueberry-muffin.jpg)">
+                                </div>
+                                <strong>蓝莓麦芬</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/bakery/chocolate-muffin/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/chocolate-muffin.jpg)">
+                                </div>
+                                <strong>香浓巧克力麦芬</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/bakery/cinnamon-swirl/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/cinnamon-swirl.jpg)">
+                                </div>
+                                <strong>旋风玉桂酥</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/bakery/french-butter-croissant/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/french-butter-croissant.jpg)">
+                                </div>
+                                <strong>法式香酥可颂</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/bakery/french-caramel-bread/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/french-caramel-bread.jpg)">
+                                </div>
+                                <strong>法式焦糖酥</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/bakery/hazelnut-croissant/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/hazelnut-croissant.jpg)">
+                                </div>
+                                <strong>层层榛子果仁酥</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/bakery/honey-raisin-scone/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/honey-raisin-scone.jpg)">
+                                </div>
+                                <strong>蜂蜜提子司康</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/bakery/oat-caramel-pudding-bread/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/oat-caramel-pudding-bread.jpg)">
+                                </div>
+                                <strong>燕麦焦糖布丁面包</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/bakery/premium-chocolate-croissant/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/premium-chocolate-croissant.jpg)">
+                                </div>
+                                <strong>香浓巧克力可颂</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/bakery/raisin-scone/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/raisin-scone.jpg)"></div>
+                                <strong>提子干松饼</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/bakery/raisins-walnut-bread/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/raisins-walnut-bread.jpg)">
+                                </div>
+                                <strong>核桃提子软法面包</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/bakery/red-bean-oats-scone/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/red-bean-oats-scone.jpg)">
+                                </div>
+                                <strong>红豆燕麦松饼</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/bakery/whole-wheat-walnut-muffin/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/whole-wheat-walnut-muffin.jpg)">
+                                </div>
+                                <strong>全麦核桃麦芬</strong>
+                            </a>
+                        </li>
+                        <h3 class="caption">烘焙</h3>
+                    </ul>
+                    <hr>
+                    <ul class="grid padded-3 product">
+                        <li>
+                            <a href="/menu/food/cake-dessert/blueberry-cheesecake/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/blueberry-and-cookie-style-cheesecake.jpg)">
+                                </div>
+                                <strong>蓝莓曲奇风轻乳酪蛋糕</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/cake-dessert/classic-swiss-roll-cake/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/classic-swiss-roll-cake.jpg)">
+                                </div>
+                                <strong>经典瑞士卷</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/cake-dessert/dark-chocolate-cake/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/triple-dark-chocolate-cake.jpg)">
+                                </div>
+                                <strong>浓醇三重黑巧克力蛋糕</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/cake-dessert/eclair/" class="thumbnail">
+                                <div class="preview circle" style="background-image: url(/images/products/eclair.jpg)">
+                                </div>
+                                <strong>法式闪电泡芙</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/cake-dessert/italian-tiramisu/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/starbucks-coffee-tiramisu.jpg)">
+                                </div>
+                                <strong>星巴克咖啡提拉米苏蛋糕</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/cake-dessert/macaron/" class="thumbnail">
+                                <div class="preview circle" style="background-image: url(/images/products/macaron.jpg)">
+                                </div>
+                                <strong>法式马卡龙</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/cake-dessert/new-york-cheesecake/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/new-york-style-creamy-cheesecake.jpg)">
+                                </div>
+                                <strong>纽约风浓郁重芝士蛋糕</strong>
+                            </a>
+                        </li>
+                        <h3 class="caption">蛋糕&amp;甜品</h3>
+                    </ul>
+                    <hr>
+                    <ul class="grid padded-3 product">
+                        <li>
+                            <a href="/menu/food/package/cashews/" class="thumbnail">
+                                <div class="preview circle" style="background-image: url(/images/products/cashews.jpg)">
+                                </div>
+                                <strong>腰果</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/package/english-butter-shortbread/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/shortbread.png)"></div>
+                                <strong>英伦风味黄油饼干</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/package/fruit-and-nuts/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/fruitnnuts.jpg)"></div>
+                                <strong>混合果仁果脯</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/package/fruit-salad/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/fruit-salad.jpg)"></div>
+                                <strong>水果沙拉</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/package/lollipops-cherry-cerise-cola-orange-lemon-citron-strawberry-frais/"
+                                class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/lollipops.jpg)"></div>
+                                <strong>棒棒糖</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/package/starbucks-coffee-wafer-rolls/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/waferrolls.jpg)"></div>
+                                <strong>咖啡味蛋卷</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/package/sugar-free-chewing-gum-peppermint/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/starbucks-chewing-gum.jpg)">
+                                </div>
+                                <strong>薄荷味口香糖（无糖）</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/package/sugar-free-classic-mints-peppermint/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/Starbucks-mints.jpg)">
+                                </div>
+                                <strong>薄荷味硬糖（无糖）</strong>
+                            </a>
+                        </li>
+                        <h3 class="caption">其他美食</h3>
+                    </ul>
+                    <hr>
+                    <ul class="grid padded-3 product">
+                        <li>
+                            <a href="/menu/food/sandwich/avocado-and-chicken-bagel/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/avocado-and-chicken-bagel.jpg)">
+                                </div>
+                                <strong>牛油果鸡肉焙果</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/sandwich/bacon-and-egg-croissant-bun/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/bacon-and-egg-croissant-bun.jpg)">
+                                </div>
+                                <strong>培根蛋可颂堡</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/sandwich/bacon-and-egg-wrap/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/bacon-and-egg-wrap.jpg)">
+                                </div>
+                                <strong>蜜汁培根蛋卷</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/sandwich/beef-baguette/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/beef-baguette.jpg)"></div>
+                                <strong>层层牛肉法棍 </strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/sandwich/beef-cheese-croissant/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/beef-cheese-croissant.jpg)">
+                                </div>
+                                <strong>牛肉芝士可颂</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/sandwich/caesar-chicken-wrap/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/caesar-chicken-wrap.jpg)">
+                                </div>
+                                <strong>凯撒鸡肉卷</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/sandwich/chicken-panini/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/chicken-panini.jpg)">
+                                </div>
+                                <strong>鸡肉芝香帕尼尼</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/sandwich/eggs-mushroom-shrimp-wrap/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/eggs-mushroom-shrimp-wrap.jpg)">
+                                </div>
+                                <strong>炒蛋菌菇虾仁卷</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/sandwich/ham-and-cheese-croissant/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/ham-and-cheese-croissant.jpg)">
+                                </div>
+                                <strong>火腿芝士可颂</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/sandwich/ham-and-double-cheese-croque-monsieur/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/ham-and-double-cheese-croque-monsieur.jpg)">
+                                </div>
+                                <strong>双重芝士火腿吐司</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/sandwich/ham-and-gouda-sandwich/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/ham-and-gouda-sandwich.jpg)">
+                                </div>
+                                <strong>高达芝士火腿星明治</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/sandwich/pastrami-sandwich/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/pastrami-sandwich.jpg)">
+                                </div>
+                                <strong>帕斯雀牛肉三明治</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/sandwich/roasted-french-ham-egg-sandwich/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/roasted-french-ham-egg-sandwich.jpg)">
+                                </div>
+                                <strong>烤法式火腿鸡蛋三明治</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/sandwich/slow-roasted-ham-cheese-ciabatta/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/slow-roasted-ham-cheese-ciabatta.jpg)">
+                                </div>
+                                <strong>慢烤火腿芝士恰巴特</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/sandwich/tuna-panini/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/tuna-panini.jpg)"></div>
+                                <strong>金枪鱼帕尼尼</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/sandwich/turkey-bacon-english-muffin/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/turkey-bacon-english-muffin.jpg)">
+                                </div>
+                                <strong>火鸡培根英式麦芬</strong>
+                            </a>
+                        </li>
+                        <h3 class="caption">三明治、帕尼尼、卷</h3>
+                    </ul>
+                    <hr>
+                    <ul class="grid padded-3 product">
+                        <li>
+                            <a href="/menu/food/yoghurt/greek-flavored-yoghurt-mixed-berry/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/greek-flavored-yoghurt-mixed-berry.jpg)">
+                                </div>
+                                <strong>谷物组合希腊式风味酸奶（混合莓果）</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/menu/food/yoghurt/greek-flavored-yoghurt-yellow-peach/" class="thumbnail">
+                                <div class="preview circle"
+                                    style="background-image: url(/images/products/greek-flavored-yoghurt-yellow-peach.jpg)">
+                                </div>
+                                <strong>谷物组合希腊式风味酸奶（黄桃）</strong>
+                            </a>
+                        </li>
+                        <h3 class="caption">酸奶</h3>
+                    </ul>
+                </div>
+                <span class="tips">实际产品以门店供应为准。</span>
+                <button class="button search">搜索菜单</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        var menuBtn = document.querySelector('.icon.menu')
+        var closeBtn = document.querySelector('.icon.close')
+        var menu = document.querySelector('.overlay')
+        var main = document.querySelector('.main')
+        menuBtn.addEventListener('click', () => {
+            menu.classList.add('active')
+            // main.style.opacity = '0'
+        })
+
+        closeBtn.addEventListener('click', () => {
+            console.log('close')
+            menu.classList.remove('active')
+            // main.style.opacity = '1'
+        })
+        var actionForm = document.querySelector('form')
+        var txtUser = actionForm.querySelector('#username')
+        var txtEmail = actionForm.querySelector('#email')
+        var txtPasswd = actionForm.querySelector('#password')
+        var txtRePasswd = actionForm.querySelector('#re-password')
+        var txtVerify = actionForm.querySelector('#verify-code')
+        var registerAgree = actionForm.querySelector('#register-agree')
+        var loginBtn = actionForm.querySelector('.actions .login')
+        var registerBtn = actionForm.querySelector('.actions .register')
+        judgeLoginEnabled = () => {
+            if (loginBtn.attributes['disabled']) {
+                if (txtUser.value !== '' && txtPasswd.value !== '') {
+                    loginBtn.attributes.removeNamedItem('disabled')
+                }
+            } else if (txtUser.value === '' || txtPasswd.value === '') {
+                loginBtn.setAttribute('disabled', '')
+            }
+        }
+
+        judgeRegisterEnabled = () => {
+            if (registerBtn.attributes['disabled'] && txtUser.value !== '' && txtEmail.value !== '' && txtPasswd.value.length >= 6 && txtPasswd.value === txtRePasswd.value && txtVerify.value.length >= 6 && registerAgree.checked) {
+                registerBtn.attributes.removeNamedItem('disabled')
+            } else if (registerBtn.attributes['disabled']) {
+
+            } else {
+                registerBtn.setAttribute('disabled', '')
+            }
+        }
+
+
+        if (txtRePasswd) {
+            txtEmail.addEventListener('input', judgeRegisterEnabled)
+            txtRePasswd.addEventListener('input', judgeRegisterEnabled)
+            txtVerify.addEventListener('input', judgeRegisterEnabled)
+            txtPasswd.addEventListener('input', judgeRegisterEnabled)
+            txtUser.addEventListener('input', judgeRegisterEnabled)
+        } else {
+            txtPasswd.addEventListener('input', judgeLoginEnabled)
+            txtUser.addEventListener('input', judgeLoginEnabled)
+        }
+
+        var codeSender = document.querySelector('#send-verify-code')
+        codeSender.addEventListener('click', () => {
+
+            if (!codeSender.classList.contains('disabled')) {
+                codeSender.classList.add('disabled')
+                var dispalyer = codeSender.querySelector('span')
+                let i = 60
+                dispalyer.style.color = 'gray'
+                setTimeout(() => codeSender.classList.remove('disabled'), 60000)
+                setInterval(() => {
+                    dispalyer.innerText = `${i--}秒后重试`
+                }, 1000)
+
+            }
+        })
+    </script>
+</body>
+
+</html>
