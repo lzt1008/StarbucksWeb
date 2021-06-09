@@ -1,28 +1,75 @@
-html/account/activity.html
-html/account/index.html
-html/account/profile.html
-html/account/register.html
-html/account/rewards.html
-html/account/starbucks-rewards.html
-html/account/view.html
-html/coffee-blog/coffee-tasting.html
-html/coffee-blog/iced-pour-over.html
-html/coffee-blog/index.html
-html/coffee-blog/pour-over.html
-html/design-studio/index.html
-index.html
-html\menu\index.html
-html\menu\food\great-breakfast.html
-html\menu\food\index.html
-html\menu\food\sandwich.html
-html\menu\food\yoghurt.html
-html\design-studio\stores.html
-html\design-studio\inspirations.html
-html\starbucks-now\index.html
-html/menu/beverages/nitro-cold-brew.html
-html/menu/beverages/signature-chocolate-beverage.html
-html/menu/beverages/teavana.html
-forgot
-help
-privacy
-terms
+Starbucks
+├─index.html
+├─sass
+|  ├─_color.scss
+|  ├─coffe-blog.scss
+|  ├─design-studio.scss
+|  └style.scss
+├─js
+| ├─bootstrap.js
+| ├─bootstrap.js.map
+| ├─coffee-blog.js
+| └jquery-3.5.1.min.js
+├─html
+|  ├─starbucks-now
+|  |       └index.html
+|  ├─menu
+|  |  ├─index.html
+|  |  ├─py.py
+|  |  ├─result.txt
+|  |  ├─food
+|  |  |  ├─great-breakfast.html
+|  |  |  ├─index.html
+|  |  |  └yoghurt.html
+|  |  ├─beverages
+|  |  |     ├─coffee-plus-ice-cream.html
+|  |  |     ├─cold-brew.html
+|  |  |     ├─index.html
+|  |  |     └nitro-cold-brew.html
+|  ├─help
+|  |  ├─index.html
+|  |  ├─privacy-policy.html
+|  |  └terms-of-starbucks-website.html
+|  ├─design-studio
+|  |       ├─about.html
+|  |       ├─index.html
+|  |       ├─inspirations.html
+|  |       └stores.html
+|  ├─coffee-blog
+|  |      ├─coffee-tasting.html
+|  |      ├─index.html
+|  |      ├─the-4-fundamentals.html
+|  |      └the-origin-of-coffee-and-its-cultivation.html
+|  ├─account
+|  |    ├─activity.html
+|  |    ├─forgot-password.html
+|  |    ├─index.html
+|  |    ├─profile.html
+|  |    ├─register.html
+|  |    ├─rewards.html
+|  |    ├─starbucks-rewards.html
+|  |    └view.html
+├─fonts
+|   ├─acaslonpro-regular.woff
+|   ├─avenirnext-bold.woff
+|   ├─avenirnext-regular.woff
+|   ├─brandongrotesque-bold.woff
+|   ├─gotham-bold.woff
+|   ├─gotham-book.woff
+|   ├─gotham-medium.woff
+|   └icon.woff
+├─css
+|  ├─bootstrap.css
+|  ├─bootstrap.css.map
+|  ├─coffe-blog.css
+|  ├─coffe-blog.css.map
+|  ├─coffe-blog.min.css
+|  ├─coffe-blog.min.css.map
+|  ├─design-studio.css
+|  ├─design-studio.css.map
+|  ├─design-studio.min.css
+|  ├─design-studio.min.css.map
+|  ├─style.css
+|  ├─style.css.map
+|  ├─style.min.css
+|  └style.min.css.map

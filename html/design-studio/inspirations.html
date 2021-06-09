@@ -17,10 +17,9 @@
             <a class="stores" href="/html/design-studio/stores.html">门店展示</a>
             <a class="stores" href="/html/design-studio/inspirations.html">全部灵感</a>
             <a class="stores" href="/html/design-studio/about.html">关于我们</a>
-            <a href="#" id="ds-language" class="language">English</a>
+            <a href="https://www.starbucks.com.cn/design-studio/en/" id="ds-language" class="language">English</a>
         </div>
     </div>
-
     <header id="header">
         <a class="logo" href="/html/design-studio/index.html">
             <img src="https://www.starbucks.com.cn/design-studio/assets/logo.svg" alt="">
@@ -40,7 +39,7 @@
     </header>
 
     <div id="content">
-        <div class="city-filter">
+        <!-- <div class="city-filter">
             <a id="city-toggle" class="active">
                 <span>所有门店</span>
                 <img src="https://www.starbucks.com.cn/design-studio/assets/icons/icon-dropdown.svg">
@@ -58,7 +57,7 @@
                 <li><a id="苏州">苏州门店</a></li>
                 <li><a id="长沙">长沙门店</a></li>
             </ul>
-        </div>
+        </div> -->
         <ul class="grid padded inspirations featured">
 
             <li class="card">
@@ -238,24 +237,24 @@
         window.onscroll = function (e) { animations(e); }
 
         function animations(e) {
-
             var index;
             var newIndex = 0;
-            cards.forEach((card) => {
-                var offsetCard = offset(card);
-                if ((offsetCard.top <= window.pageYOffset + window.innerHeight) && !card.classList.contains('revealed')) {
-                    card.setAttribute('style', 'transition-delay: ' + 0.1 * newIndex + 's');
-                    card.classList.add('revealed');
+            for (index = 0; index < cards.length; ++index) {
+                var offsetCard = offset(cards[index]);
+                if ((offsetCard.top <= window.pageYOffset + window.innerHeight) && !cards[index].classList.contains('revealed')) {
+                    cards[index].setAttribute('style', 'transition-delay: ' + 0.1 * newIndex + 's');
+                    cards[index].classList.add('revealed');
                     newIndex++;
                 }
-            })
-            function offset(el) {
-                var rect = el.getBoundingClientRect(),
-                    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-                    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
             }
-            animations()
+        }
+        function offset(el) {
+            var rect = el.getBoundingClientRect(),
+                scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+                scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+        }
+        animations()
 
     </script>
 </body>
