@@ -1542,8 +1542,15 @@ table {
 }
 
 .r2 {
+    font-size: 16px;
+    .content {
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
     .row {
         .col {
+            text-align: center;
             padding: 30px 50px;
             h3 {
                 margin-top: 0;

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="lang-zh">
+    <div class="container-fluid">
+        <div class="row no-gutter justify-content-end">
+
+            <!-- 左边内容 -->
+            <div class="position-fixed left-box bg-white">
+                <div class="main">
+                    <!-- 导航栏 -->
+                    <header class="navbar header">
+                        <a href="/" class="navbar-brand logo"><img src="/images/logo.svg"></a>
+                        <ul class="nav mr-auto">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link text-dark font-weight-bold">门店</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/html/account/index.html" class="nav-link text-dark font-weight-bold">我的账户</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/html/menu/index.html" class="nav-link text-dark font-weight-bold">菜单</a>
+                            </li>
+                        </ul>
+                        <span class="icon menu"><img src="/images/icon-hamburger.svg"></span>
+                    </header>
+
+                    <!-- 标题与登录注册 -->
+                    <div class="login">
+                        <div class="">
+                            <a href="../index.html" class="back">
+                                <img src="/images/icon-chevron-left.svg">
+                                <div>菜单</div>
+                            </a>
+                            <div class="tabs-title">
+                                <span>饮料</span>
+                            </div>
+                            <div class="tabs-wrapper">
+                                <ul class="subcategories">
+                                    <li><a class="false"
+                                            href="/html/menu/beverages/coffee-plus-ice-cream.html"><span>咖啡融合冰淇淋</span></a>
+                                    </li>
+                                    <li><a class="active"
+                                            href="/html/menu/beverages/cold-brew.html"><span>星巴克冷萃咖啡系列</span></a></li>
+                                    <li><a class="false"
+                                            href="/html/menu/beverages/nitro-cold-brew.html"><span>气致™冷萃咖啡</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 菜单 -->
+                <div class="overlay" id="nav-overlay">
+                    <div class="menu">
+                        <header class="header">
+                            <a class="logo" href="/">
+                                <img src="/images/logo.svg" alt="星巴克">
+                            </a>
+                            <button class="icon close"><img src="/images/icon-close.svg" alt=""></button>
+                        </header>
+                        <section class="body">
+                            <div class="middle">
+                                <ul>
+                                    <li>
+                                        <a id="stores-overlay" href="#">
+                                            门店
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="account-overlay" href="/html/account/starbucks-rewards.html"><span
+                                                class="">星享俱乐部</span></a>
+                                    </li>
+                                    <li>
+                                        <a id="menu-overlay" href="/html/menu/index.html">
+                                            菜单
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <hr>
+                                    </li>
+                                    <li>
+                                        <a id="apps-overlay" href="#">
+                                            星巴克移动应用
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="svc-overlay" href="#">
+                                            星礼卡
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="starbucks_reserve-overlay" href="#">
+                                            星巴克臻选™
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="starbucks_mop-overlay" href="/html/starbucks-now/index.html">
+                                            啡快™ － 在线点 到店取
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="starbucks_delivery-overlay" href="#">
+                                            专星送™
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="coffeehouse-overlay" href="/html/coffee-blog/index.html" target="_blank">
+                                            咖啡星讲堂
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="roastery-overlay" href="#" target="_blank">
+                                            上海烘焙工坊
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="about-overlay" href="#">
+                                            关于星巴克
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="help-overlay" href="/help/index.html">
+                                            帮助中心
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <hr>
+                                    </li>
+                                </ul>
+                                <footer class="account">
+                                    <div class="">
+                                        <a href="/html/account/index.html"><button
+                                                class="btn btn-outline-success btn-lg register">登录</button></a>
+                                        <a href="/html/account/register.html"><button href="/account/register.html"
+                                                class="btn btn-outline-success btn-lg register">注册</button></a>
+                                    </div>
+                                </footer>
+                            </div>
+                        </section>
+                        <footer class="footer">
+                            <div class="holder">
+                                <a id="en-collapse" class="lang" href="/html/index-en.html">
+                                    English
+                                </a>
+                                |
+                                <a id="privacy-collapse" href="/help/legal/privacy-policy">
+                                    隐私政策
+                                </a>
+                                |
+                                <a id="terms-collapse" href="/help/legal/terms-of-starbucks-website/">
+                                    使用条款
+                                </a>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右边内容 -->
+            <div class="right-box">
+                <div class="r2">
+                    <div class=" -row image-row--full images--">
+                        <div class="image">
+                            <img src="/images/legacy/cold-brew/cold-brew-desktop.jpg" class="hidden-xs">
+                        </div>
+                    </div>
+
+                    <div class="content">
+
+
+
+                        <div class="whitespace">
+
+                        </div>
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <p>星巴克冷萃咖啡系列，<br>
+                                        倾注了星级咖啡师的咖啡热情与耐心，<br>
+                                        全国门店限量供应中。</p>
+                                    <img src="/images/legacy/cold-brew/smooth.gif" class="center-block gif-size">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="whitespace">
+
+                        </div>
+
+                        <div class="container">
+                            <figure class="row">
+                                <div class="col">
+                                    <img src="/images/legacy/cold-brew/1-cn.png" class="center-block">
+                                    <br>
+                                </div>
+                            </figure>
+                        </div>
+
+                        <div class="whitespace">
+
+                        </div>
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="/images/legacy/cold-brew/steeping.gif">
+                                </div>
+                                <div class="col">
+                                    <p>我们用热情与时间，<br>
+                                        静候这一杯冷萃冰咖啡的甘醇与本味。<br>
+                                        咖啡豆在新鲜研磨后，<br>
+                                        我们颠覆以往冰咖啡的萃取方式，<br>
+                                        用冷过滤水在星巴克冷萃专用器具中慢速萃取，<br>
+                                        更好地带出咖啡沁甘顺滑的口感与本味。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="whitespace">
+
+                        </div>
+
+                        <div class="  container">
+                            <figure class="row">
+                                <div class="col">
+                                    <img src="/images/legacy/cold-brew/2-cn.png" class="center-block">
+                                    <br>
+                                </div>
+                            </figure>
+                        </div>
+
+                        <div class="whitespace">
+
+                        </div>
+
+                        <div class="container">
+                            <div class="row image">
+                                <div class="col">
+                                    <img src="/images/legacy/cold-brew/coffee-beans.gif">
+                                </div>
+                                <div class="col">
+                                    <p>不是所有的咖啡豆都能做星巴克冷萃咖啡。<br>西雅图的星巴克咖啡研发团队，经过数十次不同尝试，精心拼配并烘焙出这款专属的冷萃综合咖啡豆。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="whitespace"></div>
+
+                        <div class="container">
+                            <figure class="row">
+                                <div class="col ">
+                                    <img src="/images/legacy/cold-brew/3-cn.png" class="center-block">
+                                    <br>
+                                </div>
+                            </figure>
+                        </div>
+
+                        <div class="whitespace"></div>
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col">
+                                            <img src="/images/products/cold-brew.jpg" alt="冷萃冰咖啡">
+                                        </div>
+                                        <div class="col">
+                                            <h3></h3>
+                                            <h3 style="color:#b89f7a">冷萃冰咖啡</h3>
+                                            <p>10多个小时的慢速萃取，带出微甜的巧克力般风味，与特别的柑橘般风味，为你奉上沁甘顺滑的味觉感受。</p>
+                                            <p><a href="https://detail.tmall.com/item.htm?id=548683653879"
+                                                    class="btn btn-outline-success">前往天猫购买</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <img src="/images/products/vanilla-flavor-sweet-cream-cold-brew.jpg"
+                                                alt="轻甜奶油冷萃">
+                                        </div>
+                                        <div class="col">
+                                            <h3></h3>
+                                            <h3 style="color:#b89f7a">轻甜奶油冷萃</h3>
+                                            <p>在冷萃冰咖啡的基础上，添加香草风味轻奶油。每份轻奶油都是根据西雅图的星巴克咖啡研发团队精心研发的配方新鲜手工调制而成，
+                                                使用脱脂奶也更符合现代人的健康生活理念。</p>
+                                            <p><a href="https://detail.tmall.com/item.htm?id=548708314252"
+                                                    class="btn btn-outline-success">前往天猫购买</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <img src="" alt="">
+                                        </div>
+                                        <div class="col"></div>
+                                        <div class="col">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="whitespace"></div> -->
+
+                        <div class="container">
+                            <figure class="row">
+                                <div class="col ">
+                                    <img src="/images/legacy/cold-brew/1-cn.png" class="center-block">
+                                    <br>
+                                </div>
+                            </figure>
+                        </div>
+                        <div class="whitespace"></div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="/images/legacy/cold-foam-cold-brew/cold-foam-cold-brew-filling.gif"
+                                        style="max-width: 370px">
+                                </div>
+                                <div class="col">
+                                    <p>星巴克咖啡研发团队打破常规，<br>
+                                        制作新鲜搅打的“脱脂奶冷奶沫”，冷萃咖啡注入其中，<br>
+                                        带来全新冰咖啡体验。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="whitespace"></div>
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="/images/legacy/cold-foam-cold-brew/cold-foam-cold-brew-splash.gif"
+                                        style="max-width: 370px">
+                                </div>
+                                <div class="col">
+                                    <p>将冷萃咖啡注入新鲜搅打的脱脂奶冷奶沫中，<br>
+                                        冷奶沫在冷萃咖啡中轻盈浮起，绵云般轻盈绵密口感伴随沁甘顺滑的冷萃咖啡，<br>
+                                        最后以新鲜研磨的冷萃咖啡粉点缀，带来多重咖啡风味体验。<br>
+                                        <b>专属特调的大杯比例和特别研发的直饮杯盖，让绵云冷萃冰咖啡的体验更完整。</b>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="whitespace"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        var menuBtn = document.querySelector('.icon.menu')
+        var closeBtn = document.querySelector('.icon.close')
+        var menu = document.querySelector('.overlay')
+        var main = document.querySelector('.main')
+        menuBtn.addEventListener('click', () => {
+            menu.classList.add('active')
+            // main.style.opacity = '0'
+        })
+
+        closeBtn.addEventListener('click', () => {
+            console.log('close')
+            menu.classList.remove('active')
+            // main.style.opacity = '1'
+        })
+    </script>
+</body>
+
+</html>
