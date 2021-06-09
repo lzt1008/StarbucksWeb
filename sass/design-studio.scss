@@ -1,6 +1,33 @@
 $main-height: 60vh;
 $minor-height: 20vh;
 
+/*** FONTS ***/
+@font-face {
+    font-family: "Gotham";
+    src: url("/fonts/gotham-bold.eot");
+    src: url("/fonts/gotham-bold.eot?#iefix") format("embedded-opentype"), url("/fonts/gotham-bold.woff") format("woff"),
+        url("/fonts/gotham-bold.ttf") format("truetype"), url("/fonts/gotham-bold.svg#Icons") format("svg");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Gotham";
+    src: url("/fonts/gotham-medium.eot");
+    src: url("/fonts/gotham-medium.eot?#iefix") format("embedded-opentype"),
+        url("/fonts/gotham-medium.woff") format("woff"), url("/fonts/gotham-medium.ttf") format("truetype"),
+        url("/fonts/gotham-medium.svg#Icons") format("svg");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Gotham";
+    src: url("/fonts/gotham-book.eot");
+    src: url("/fonts/gotham-book.eot?#iefix") format("embedded-opentype"), url("/fonts/gotham-book.woff") format("woff"),
+        url("/fonts/gotham-book.ttf") format("truetype"), url("/fonts/gotham-book.svg#Icons") format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     background: #f2f2f2;
@@ -39,9 +66,10 @@ a {
 .menu-overlay {
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.92);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
     display: flex;
@@ -95,14 +123,11 @@ a {
         transition: 0.5s;
         visibility: visible;
         opacity: 1;
-        & {
-            transition: 0.5s;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            backdrop-filter: blur(20px);
-        }
+        transition: 0.5s;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        backdrop-filter: blur(20px);
         .body {
             transform: scale(1);
         }
@@ -200,14 +225,12 @@ a {
     }
 }
 #footer {
-    position: absolute;
-    bottom: 0;
     color: rgba(0, 0, 0, 0.3);
     font-size: 12px;
     line-height: 140%;
     opacity: 0.6;
-    padding: 16px 18px;
-    text-align: right;
+    padding: 36px 48px;
+    text-align: left;
     a {
         text-decoration: none;
         color: rgba(0, 0, 0, 0.3);
@@ -313,6 +336,91 @@ body.page-about {
     }
 }
 
+.grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    > * {
+        position: relative;
+        box-sizing: border-box;
+        clear: none;
+        float: left;
+        margin: 0;
+        padding: 0;
+        width: 33.3333333333%;
+    }
+    > *:nth-child(3n + 1) {
+        clear: right;
+    }
+    &.padded {
+        margin: -3px;
+        > * {
+            padding: 3px;
+        }
+    }
+    &:after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+    > * .cover {
+        display: block;
+        height: 0;
+        position: relative;
+        width: 100%;
+        padding-top: 60%;
+        &:before {
+            z-index: 998;
+            background: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+            opacity: 0;
+            transition-duration: 0.2s;
+            // transition-property: opacity, visibility;
+            visibility: hidden;
+            bottom: 0;
+            content: "";
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        h2 {
+            font-weight: 400;
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
+            left: 50%;
+            letter-spacing: 2px;
+            margin: auto;
+            text-shadow: 0 0 3px rgb(0 0 0 / 50%);
+            position: absolute;
+            padding: 0;
+            z-index: 999;
+            bottom: auto;
+            opacity: 0;
+            top: 50%;
+            transform: translate(-50%, -75%);
+            transition-duration: 0.2s;
+            // transition-property: opacity, transform, visibility;
+            visibility: hidden;
+        }
+        &:hover:before,
+        &:hover h2 {
+            opacity: 1;
+            visibility: visible;
+        }
+        &:hover h2 {
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+.cover {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.page-inspirations,
 .page-stores {
     overflow-y: scroll;
     .city-filter {
@@ -320,79 +428,28 @@ body.page-about {
             display: none;
         }
     }
+    #content {
+        padding: 0 48px;
+    }
+}
+
+.card {
+    opacity: 0;
+    transition-duration: 0.2s;
+    transform: translateY(48px);
+    &.revealed {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-stores {
     .grid {
-        list-style: none;
-        margin: 0;
-        padding: 0;
         > * {
-            position: relative;
-            box-sizing: border-box;
-            clear: none;
-            float: left;
-            margin: 0;
-            padding: 0;
-            width: 33.3333333333%;
-        }
-        &:after {
-            clear: both;
-            content: "";
-            display: table;
-        }
-        > *:nth-child(3n + 1) {
-            clear: right;
-        }
-        &.padded {
-            margin: -3px;
-            > * {
-                padding: 3px;
-            }
+            width: 20%;
         }
         > * .cover {
-            padding-top: 60%;
-            
-            &:before {
-                z-index: 998;
-                background: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
-                opacity: 0;
-                transition-duration: 0.2s;
-                transition-property: opacity, visibility;
-                visibility: hidden;
-                bottom: 0;
-                content: '';
-                left: 0;
-                position: absolute;
-                right: 0;
-                top: 0;
-            }
-            &:hover:before {
-                opacity: 1;
-                visibility: visible;
-            }
-            h2 {
-                z-index: 999;
-                bottom: auto;
-                opacity: 0;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                transition-duration: 0.2s;
-                transition-property: opacity, transform, visibility;
-                visibility: hidden;
-
-            }
+            padding-top: 100%;
         }
-    }
-    .cover {
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        overflow: hidden;
-    }
-    .revealed {
-        opacity: 1;
-        -webkit-transform: translateY(0);
-        -moz-transform: translateY(0);
-        -ms-transform: translateY(0);
-        -o-transform: translateY(0);
-        transform: translateY(0);
     }
 }
