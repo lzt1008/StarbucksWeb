@@ -127,7 +127,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a id="help-overlay" href="/help/index.html">
+                                        <a id="help-overlay" href="/html/help/index.html">
                                             帮助中心
                                         </a>
                                     </li>
@@ -236,62 +236,13 @@
             menu.classList.remove('active')
             // main.style.opacity = '1'
         })
-        var actionForm = document.querySelector('form')
-        var txtUser = actionForm.querySelector('#username')
-        var txtEmail = actionForm.querySelector('#email')
-        var txtPasswd = actionForm.querySelector('#password')
-        var txtRePasswd = actionForm.querySelector('#re-password')
-        var txtVerify = actionForm.querySelector('#verify-code')
-        var registerAgree = actionForm.querySelector('#register-agree')
-        var loginBtn = actionForm.querySelector('.actions .login')
-        var registerBtn = actionForm.querySelector('.actions .register')
-        judgeLoginEnabled = () => {
-            if (loginBtn.attributes['disabled']) {
-                if (txtUser.value !== '' && txtPasswd.value !== '') {
-                    loginBtn.attributes.removeNamedItem('disabled')
-                }
-            } else if (txtUser.value === '' || txtPasswd.value === '') {
-                loginBtn.setAttribute('disabled', '')
-            }
-        }
-
-        judgeRegisterEnabled = () => {
-            if (registerBtn.attributes['disabled'] && txtUser.value !== '' && txtEmail.value !== '' && txtPasswd.value.length >= 6 && txtPasswd.value === txtRePasswd.value && txtVerify.value.length >= 6 && registerAgree.checked) {
-                registerBtn.attributes.removeNamedItem('disabled')
-            } else if (registerBtn.attributes['disabled']) {
-
-            } else {
-                registerBtn.setAttribute('disabled', '')
-            }
-        }
-
-
-        if (txtRePasswd) {
-            txtEmail.addEventListener('input', judgeRegisterEnabled)
-            txtRePasswd.addEventListener('input', judgeRegisterEnabled)
-            txtVerify.addEventListener('input', judgeRegisterEnabled)
-            txtPasswd.addEventListener('input', judgeRegisterEnabled)
-            txtUser.addEventListener('input', judgeRegisterEnabled)
-        } else {
-            txtPasswd.addEventListener('input', judgeLoginEnabled)
-            txtUser.addEventListener('input', judgeLoginEnabled)
-        }
-
-        var codeSender = document.querySelector('#send-verify-code')
-        codeSender.addEventListener('click', () => {
-
-            if (!codeSender.classList.contains('disabled')) {
-                codeSender.classList.add('disabled')
-                var dispalyer = codeSender.querySelector('span')
-                let i = 60
-                dispalyer.style.color = 'gray'
-                setTimeout(() => codeSender.classList.remove('disabled'), 60000)
-                setInterval(() => {
-                    dispalyer.innerText = `${i--}秒后重试`
-                }, 1000)
-
-            }
+        var loginInfo = {}
+        decodeURI(location.search).substring(1).split('&').forEach(info => {
+            loginInfo[info.split('=')[0]] = info.split('=')[1]
         })
+        if (loginInfo['username'])
+            document.querySelector('div.tabs-title > span').innerText = '下午好！' + loginInfo['username'] + '☕'
+
     </script>
 </body>
 

@@ -370,7 +370,6 @@ body.page-about {
             background: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
             opacity: 0;
             transition-duration: 0.2s;
-            // transition-property: opacity, visibility;
             visibility: hidden;
             bottom: 0;
             content: "";
@@ -396,7 +395,6 @@ body.page-about {
             top: 50%;
             transform: translate(-50%, -75%);
             transition-duration: 0.2s;
-            // transition-property: opacity, transform, visibility;
             visibility: hidden;
         }
         &:hover:before,

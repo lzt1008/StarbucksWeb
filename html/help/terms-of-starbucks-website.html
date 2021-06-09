@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="lang-zh page-help">
+    <div class="container-fluid">
+        <div class="row no-gutter justify-content-end">
+
+            <!-- 左边内容 -->
+            <div class="position-fixed left-box bg-white">
+                <div class="main">
+                    <!-- 导航栏 -->
+                    <header class="navbar header">
+                        <a href="/" class="navbar-brand logo"><img src="/images/logo.svg"></a>
+                        <ul class="nav mr-auto">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link text-dark font-weight-bold">门店</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/html/account/index.html" class="nav-link text-dark font-weight-bold">我的账户</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/html/menu/index.html" class="nav-link text-dark font-weight-bold">菜单</a>
+                            </li>
+                        </ul>
+                        <span class="icon menu"><img src="/images/icon-hamburger.svg"></span>
+                    </header>
+
+                    <!-- 标题与登录注册 -->
+                    <div class="login">
+                        <div class="">
+                            <div class="tabs-title">
+                                <span>帮助中心</span>
+                            </div>
+                            <div class="tabs-wrapper">
+                                <ul class="subcategories">
+                                    <li><a class="false" href="/html/help/index.html"><span>全部</span></a></li>
+                                    <li><a class="false" href="/html/help/privacy-policy.html"><span>隐私权政策</span></a>
+                                    </li>
+                                    <li><a class="active"
+                                            href="#"><span>其他条款与规定</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 菜单 -->
+                <div class="overlay" id="nav-overlay">
+                    <div class="menu">
+                        <header class="header">
+                            <a class="logo" href="/">
+                                <img src="/images/logo.svg" alt="星巴克">
+                            </a>
+                            <button class="icon close"><img src="/images/icon-close.svg" alt=""></button>
+                        </header>
+                        <section class="body">
+                            <div class="middle">
+                                <ul>
+                                    <li>
+                                        <a id="stores-overlay" href="#">
+                                            门店
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="account-overlay" href="/html/account/starbucks-rewards.html"><span
+                                                class="">星享俱乐部</span></a>
+                                    </li>
+                                    <li>
+                                        <a id="menu-overlay" href="/html/menu/index.html">
+                                            菜单
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <hr>
+                                    </li>
+                                    <li>
+                                        <a id="apps-overlay" href="#">
+                                            星巴克移动应用
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="svc-overlay" href="#">
+                                            星礼卡
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="starbucks_reserve-overlay" href="#">
+                                            星巴克臻选™
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="starbucks_mop-overlay" href="/html/starbucks-now/index.html">
+                                            啡快™ － 在线点 到店取
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="starbucks_delivery-overlay" href="#">
+                                            专星送™
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="coffeehouse-overlay" href="/html/coffee-blog/index.html" target="_blank">
+                                            咖啡星讲堂
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="roastery-overlay" href="#" target="_blank">
+                                            上海烘焙工坊
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="about-overlay" href="#">
+                                            关于星巴克
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="help-overlay" href="/html/help/index.html">
+                                            帮助中心
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <hr>
+                                    </li>
+                                </ul>
+                                <footer class="account">
+                                    <div class="">
+                                        <a href="/html/account/index.html"><button
+                                                class="btn btn-outline-success btn-lg register">登录</button></a>
+                                        <a href="/html/account/register.html"><button href="/account/register.html"
+                                                class="btn btn-outline-success btn-lg register">注册</button></a>
+                                    </div>
+                                </footer>
+                            </div>
+                        </section>
+                        <footer class="footer">
+                            <div class="holder">
+                                <a id="en-collapse" class="lang" href="/html/index-en.html">
+                                    English
+                                </a>
+                                |
+                                <a id="privacy-collapse" href="/help/legal/privacy-policy">
+                                    隐私政策
+                                </a>
+                                |
+                                <a id="terms-collapse" href="/help/legal/terms-of-starbucks-website/">
+                                    使用条款
+                                </a>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右边内容 -->
+            <div class="right-box">
+                <section class="terms wrapper section-legal">
+                    <h1 class="center margin-2 black-3">其他条款与规定</h1>
+
+                    <h2 id="1-与星享俱乐部相关的规定">1. 与星享俱乐部相关的规定</h2>
+
+                    <!-- - [2019年1月11日星享俱乐部指定金星级会员双倍积星活动细则](/help/legal/double-star-day-promotion/) -->
+
+                    <ul>
+                        <li><a href="/help/legal/starbucks-rewards-program-terms-and-conditions-2020/">星享俱乐部活动的条款和条件（于
+                                2020 年 5 月 13 日最新修订，并于 2020 年 6 月 9 日起生效）</a></li>
+                        <li><a href="/help/legal/star-gift-exchange-terms/">好礼星星兑换规则（自2021年6月8日起生效）</a>
+                            <!-- - [星享俱乐部活动的条款和条件（于 2019 年 8 月 16 日最新修订，并于 2019 年 9 月 16 日起生效）](/help/legal/starbucks-rewards-program-terms-and-conditions-2019/) -->
+                            <!-- - [星享俱乐部活动的条款和条件（于2018年11月1日最新修订，并于2018年12月5日起生效）](/help/legal/starbucks-rewards-program-terms-and-conditions/) -->
+                        </li>
+                        <li><a href="/help/legal/msr-migration/">新、旧版《星享俱乐部活动的条款和条件》的衔接安排（自 2018 年 12 月 5 日起生效）</a>
+                            <!-- - [星享俱乐部活动的条款和条件（自2018年6月19日起生效）](/help/legal/terms-of-my-starbucks-rewards/) -->
+                        </li>
+                        <li><a href="/help/legal/terms-of-starbucks-rewards-kit/">星享俱乐部会员星礼包的规定</a>
+                            <!-- - [星享俱乐部会员星礼包（电子版）的特别规定（于 2019 年 6 月 18 日起生效）](/help/legal/terms-of-digital-starbucks-rewards-kit/) -->
+                        </li>
+                        <li><a href="/help/legal/special-conditions-for-lto-my-starbucks-rewards-card/">限量版星享卡使用条款</a>
+                        </li>
+                        <li><a href="/help/legal/web-rule-msr-3pp-account-bundling/">星享俱乐部帐户与指定平台账户绑定协议</a></li>
+                        <li><a href="/help/legal/starbucks-account-bind-apple-account-terms/">星享俱乐部帐户与 Apple ID 绑定协议</a>
+                        </li>
+                        <li><a href="/help/legal/starbucks-account-bind-wechat-account-terms/">星享俱乐部帐户与微信帐号绑定协议</a></li>
+                    </ul>
+
+                    <h2 id="2-与星礼卡等预付卡券相关的规定">2. 与星礼卡等预付卡券相关的规定</h2>
+
+                    <ul>
+                        <li><a href="/help/legal/terms-of-starbucks-gift-card/">星巴克单用途商业预付卡章程（于 2019 年 11 月 15
+                                日最新修订）</a></li>
+                        <li><a
+                                href="/help/legal/seasonal-single-purpose-prepaid-card-terms-and-conditions/">星巴克季节性单用途商业预付卡章程</a>
+                        </li>
+                        <li><a href="/help/legal/special-provisions-for-the-use-of-starbucks-gift-cards/">星礼卡使用的特别规定</a>
+                        </li>
+                        <li><a href="/help/legal/special-terms-nfc-svc/">炫黑原木拼接手机壳星礼卡的特别规定</a></li>
+                        <li><a href="/help/legal/special-terms-bracelet-svc/">经典皮质手环星礼卡的特别规定</a></li>
+                        <li><a
+                                href="/help/legal/old-starbucks-gift-card-terms-and-conditions-all-the-cards-issued-by-property-and-credit-electronic-payment-co-ltd-before-29th-december-2014/">旧版星礼卡章程（2014
+                                年 12 月 29 日前发行的由资和信发行的星礼卡）</a></li>
+                        <li><a href="/help/legal/special-terms-cup-sleeve-svc/">醇意环保杯套星礼卡的特别规定</a></li>
+                        <li><a href="/help/legal/special-terms-520-svc/">用星说爱录音星礼卡的特别规定（2018 年 4 月 25 日起实施）</a></li>
+                        <li><a href="/help/legal/special-terms-520-svc-2019/">用星说爱录音星礼卡的特别规定（2019 年 4 月 25 日起实施）</a>
+                        </li>
+                        <li><a href="#" class="trigger" rel="issue-content-overlay">
+                                单用途预付卡联网发行经营者公示
+                            </a></li>
+                        <li><a href="/help/legal/520-special-terms-for-star-gift-2021">520暖熊店长星礼卡套装的特别规定</a></li>
+                        <li><a href="/help/legal/night-srkit-terms">星享俱乐部会员星礼包的说明手册-晚间欢聚版</a></li>
+                        <li><a href="/help/legal/srkit-terms">星享俱乐部会员星礼包的说明手册-常规版</a></li>
+                        <li><a href="/help/legal/2019-cold-brew-srkit-terms">星享俱乐部2019冷萃会员星礼包的说明手册</a></li>
+                        <li><a href="/help/legal/2021-digital-member-srkit-terms">电子会员星礼包说明手册——2021新年档星享俱乐部特别款</a></li>
+                        <li><a
+                                href="/help/legal/2021-monthly-charging-member-srkit-terms">电子会员星礼包说明手册——2021包月充电会员星礼包</a>
+                        </li>
+                        <li><a href="/help/legal/2021-shanghai-member-srkit-terms">电子会员星礼包说明手册——2021臻选VIP会员星礼包（申城专享）</a>
+                        </li>
+                    </ul>
+
+                    <h2 id="3-与退换货相关的规定">3. 与退换货相关的规定</h2>
+
+                    <ul>
+                        <li><a
+                                href="/help/legal/return-and-exchange-policy-for-inedible-products-of-shanghai-roastery/">星巴克臻选上海烘焙工坊的指定类别商品（食品类除外）退换货规定</a>
+                        </li>
+                        <li><a
+                                href="/help/legal/return-and-exchange-policy-for-inedible-products-of-starbucks-reserve/">部分星巴克臻选店的指定类别商品退换货规定</a>
+                        </li>
+                    </ul>
+
+                    <h2 id="4-星巴克网站的使用条款">4. 星巴克网站的使用条款</h2>
+
+                    <ul>
+                        <li><a href="/help/legal/terms-of-starbucks-website/">星巴克网站使用条款</a></li>
+                    </ul>
+
+                    <h2 id="5-星巴克移动应用使用条款">5. 星巴克移动应用使用条款</h2>
+
+                    <ul>
+                        <li><a href="/help/legal/terms-of-starbucks-mobile-app/">星巴克移动应用使用条款</a></li>
+                    </ul>
+
+                    <h2 id="6-星巴克专星送网络订餐服务使用条款">6. 星巴克专星送网络订餐服务使用条款</h2>
+
+                    <ul>
+                        <li><a href="/help/legal/terms-of-starbucks-delivers-services/">星巴克专星送网络订餐服务使用条款</a></li>
+                        <li><a href="/help/legal/starbucks-delivers-rule/">专星送 X 准时达须知</a></li>
+                    </ul>
+
+                    <h2 id="7-星巴克啡快服务使用条款">7. 星巴克啡快服务使用条款</h2>
+
+                    <ul>
+                        <li><a href="/help/legal/terms-of-starbucks-mobile-order-pay/">星巴克啡快服务使用条款</a></li>
+                    </ul>
+
+                    <h2 id="8-星冰粽月饼礼盒蛋糕礼盒等产品配送服务使用条款">8. 星冰粽、月饼礼盒、蛋糕礼盒等产品配送服务使用条款</h2>
+
+                    <ul>
+                        <li><a href="/help/legal/special-product-for-delivery/">星巴克指定产品配送服务使用条款</a></li>
+                    </ul>
+
+                    <h2 id="9-星巴克门店线下活动服务条款">9. 星巴克门店线下活动服务条款</h2>
+
+                    <ul>
+                        <li><a href="/help/legal/terms-of-service-for-offline-events/">星巴克门店线下活动服务条款</a></li>
+                    </ul>
+
+                    <h2 id="10-历史版本">10. 历史版本</h2>
+
+                    <ul>
+                        <li><a href="/help/legal/historical-version-legal-provisions/">星享俱乐部活动的条款和条件的历史版本</a></li>
+                    </ul>
+                    <div class="frap">
+                        <button class="button secondary" href="/about/contact">还有问题吗？ 联系我们。</button>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </div>
+    <script>
+        var menuBtn = document.querySelector('.icon.menu')
+        var closeBtn = document.querySelector('.icon.close')
+        var menu = document.querySelector('.overlay')
+        var main = document.querySelector('.main')
+        menuBtn.addEventListener('click', () => {
+            menu.classList.add('active')
+            // main.style.opacity = '0'
+        })
+
+        closeBtn.addEventListener('click', () => {
+            console.log('close')
+            menu.classList.remove('active')
+            // main.style.opacity = '1'
+        })
+
+        var loginInfo = {}
+        decodeURI(location.search).substring(1).split('&').forEach(info => {
+            loginInfo[info.split('=')[0]] = info.split('=')[1]
+        })
+        if (loginInfo['username'])
+            document.querySelector('div.tabs-title > span').innerText = '下午好！' + loginInfo['username'] + '☕'
+
+
+    </script>
+</body>
+
+</html>

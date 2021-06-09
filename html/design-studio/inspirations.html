@@ -17,7 +17,7 @@
             <a class="stores" href="/html/design-studio/stores.html">门店展示</a>
             <a class="stores" href="/html/design-studio/inspirations.html">全部灵感</a>
             <a class="stores" href="/html/design-studio/about.html">关于我们</a>
-            <a href="https://www.starbucks.com.cn/design-studio/en/" id="ds-language" class="language">English</a>
+            <a href="#" id="ds-language" class="language">English</a>
         </div>
     </div>
 
@@ -238,25 +238,24 @@
         window.onscroll = function (e) { animations(e); }
 
         function animations(e) {
-            // Animated cards
+
             var index;
             var newIndex = 0;
-            for (index = 0; index < cards.length; ++index) {
-                var offsetCard = offset(cards[index]);
-                if ((offsetCard.top <= window.pageYOffset + window.innerHeight) && !cards[index].classList.contains('revealed')) {
-                    cards[index].setAttribute('style', 'transition-delay: ' + 0.1 * newIndex + 's');
-                    cards[index].classList.add('revealed');
+            cards.forEach((card) => {
+                var offsetCard = offset(card);
+                if ((offsetCard.top <= window.pageYOffset + window.innerHeight) && !card.classList.contains('revealed')) {
+                    card.setAttribute('style', 'transition-delay: ' + 0.1 * newIndex + 's');
+                    card.classList.add('revealed');
                     newIndex++;
                 }
+            })
+            function offset(el) {
+                var rect = el.getBoundingClientRect(),
+                    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+                    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
             }
-        }
-        function offset(el) {
-            var rect = el.getBoundingClientRect(),
-                scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-                scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
-        }
-        animations()
+            animations()
 
     </script>
 </body>

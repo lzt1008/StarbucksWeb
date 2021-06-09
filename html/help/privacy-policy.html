@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="lang-zh page-help">
+    <div class="container-fluid">
+        <div class="row no-gutter justify-content-end">
+
+            <!-- 左边内容 -->
+            <div class="position-fixed left-box bg-white">
+                <div class="main">
+                    <!-- 导航栏 -->
+                    <header class="navbar header">
+                        <a href="/" class="navbar-brand logo"><img src="/images/logo.svg"></a>
+                        <ul class="nav mr-auto">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link text-dark font-weight-bold">门店</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/html/account/index.html" class="nav-link text-dark font-weight-bold">我的账户</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/html/menu/index.html" class="nav-link text-dark font-weight-bold">菜单</a>
+                            </li>
+                        </ul>
+                        <span class="icon menu"><img src="/images/icon-hamburger.svg"></span>
+                    </header>
+
+                    <!-- 标题与登录注册 -->
+                    <div class="login">
+                        <div class="">
+                            <div class="tabs-title">
+                                <span>帮助中心</span>
+                            </div>
+                            <div class="tabs-wrapper">
+                                <ul class="subcategories">
+                                    <li><a class="false" href="/html/help/index.html"><span>全部</span></a></li>
+                                    <li><a class="active" href="#"><span>隐私权政策</span></a>
+                                    </li>
+                                    <li><a class="false"
+                                            href="/html/help/terms-of-starbucks-website.html"><span>其他条款与规定</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 菜单 -->
+                <div class="overlay" id="nav-overlay">
+                    <div class="menu">
+                        <header class="header">
+                            <a class="logo" href="/">
+                                <img src="/images/logo.svg" alt="星巴克">
+                            </a>
+                            <button class="icon close"><img src="/images/icon-close.svg" alt=""></button>
+                        </header>
+                        <section class="body">
+                            <div class="middle">
+                                <ul>
+                                    <li>
+                                        <a id="stores-overlay" href="#">
+                                            门店
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="account-overlay" href="/html/account/starbucks-rewards.html"><span
+                                                class="">星享俱乐部</span></a>
+                                    </li>
+                                    <li>
+                                        <a id="menu-overlay" href="/html/menu/index.html">
+                                            菜单
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <hr>
+                                    </li>
+                                    <li>
+                                        <a id="apps-overlay" href="#">
+                                            星巴克移动应用
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="svc-overlay" href="#">
+                                            星礼卡
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="starbucks_reserve-overlay" href="#">
+                                            星巴克臻选™
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="starbucks_mop-overlay" href="/html/starbucks-now/index.html">
+                                            啡快™ － 在线点 到店取
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="starbucks_delivery-overlay" href="#">
+                                            专星送™
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="coffeehouse-overlay" href="/html/coffee-blog/index.html" target="_blank">
+                                            咖啡星讲堂
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="roastery-overlay" href="#" target="_blank">
+                                            上海烘焙工坊
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="about-overlay" href="#">
+                                            关于星巴克
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="help-overlay" href="/html/help/index.html">
+                                            帮助中心
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <hr>
+                                    </li>
+                                </ul>
+                                <footer class="account">
+                                    <div class="">
+                                        <a href="/html/account/index.html"><button
+                                                class="btn btn-outline-success btn-lg register">登录</button></a>
+                                        <a href="/html/account/register.html"><button href="/account/register.html"
+                                                class="btn btn-outline-success btn-lg register">注册</button></a>
+                                    </div>
+                                </footer>
+                            </div>
+                        </section>
+                        <footer class="footer">
+                            <div class="holder">
+                                <a id="en-collapse" class="lang" href="/html/index-en.html">
+                                    English
+                                </a>
+                                |
+                                <a id="privacy-collapse" href="/help/legal/privacy-policy">
+                                    隐私政策
+                                </a>
+                                |
+                                <a id="terms-collapse" href="/help/legal/terms-of-starbucks-website/">
+                                    使用条款
+                                </a>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右边内容 -->
+            <div class="right-box">
+                <div id="app" class="privacy">
+                    <div class="content">
+                        <p style="text-align:center;"><span style="font-size: 24px;">隐私权政策</span></p>
+                        <p></p>
+                        <p><span style="font-size: 16px;">于2020年7月13日最新修订，并于2020年7月14日生效。</span></p>
+                        <p><span
+                                style="font-size: 16px;">星巴克企业管理（中国）有限公司（以下简称“<strong>星巴克中国</strong>”）及其关联公司（以下统称“<strong>星巴克</strong>”或“<strong>我们</strong>”）非常重视您的隐私和个人信息保护。</span>
+                        </p>
+                        <p><span style="font-size: 16px;">在下列情形中，我们可能会收集、使用和保存您的信息：</span></p>
+                        <p><span style="font-size: 16px;">(1) 当您购买及/或使用星巴克在中国大陆地区提供的产品和/或服务；</span></p>
+                        <p><span style="font-size: 16px;">(2) 当您访问、浏览及/或使用：</span></p>
+                        <p><span style="font-size: 16px;">(a)
+                                网址为www.starbucks.com.cn（也可通过www.starbucks.cn登录）的星巴克中国官方网站（以下简称“<strong>星巴克中国官网</strong>”）及星巴克在中国大陆地区运营和管理的其他网站（以下统称为“<strong>星巴克网站</strong>”）；</span>
+                        </p>
+                        <p><span style="font-size: 16px;">(b)
+                                星巴克在中国大陆地区运营和管理的星巴克移动应用（以下简称“<strong>星巴克App</strong>”）；</span></p>
+                        <p><span style="font-size: 16px;">(c)
+                                星巴克在任何第三方网站、移动应用或社交媒体平台（以下简称“<strong>第三方平台</strong>”）上建立并经营的线上渠道（以下统称“<strong>星巴克线上渠道</strong>”），包括但不限于Starbucks星巴克天猫官方旗舰店（starbucks.tmall.com，以下简称“<strong>星巴克天猫旗舰店</strong>”）、星巴克用星说社交礼品平台（以下简称“<strong>星巴克用星说平台</strong>”）、星巴克微信小程序（以下简称“<strong>星巴克微信小程序</strong>”）等；以及</span>
+                        </p>
+                        <p><span style="font-size: 16px;">(3) 当您参与星享俱乐部活动和/或星巴克在中国大陆地区开展的其他活动。</span></p>
+                        <p><span
+                                style="font-size: 16px;">我们希望通过本隐私权政策（以下简称“<strong>本政策</strong>”）向您说明：我们会收集您的哪些个人信息，如何使用、处理、保存、转让和分享这些个人信息，以及我们为您提供的访问、修改和保护这些信息的方式。我们也希望本政策可以帮助您决定是否向我们提供您的个人信息。</span>
+                        </p>
+                        <p><span
+                                style="font-size: 16px;"><strong><ins>如果您购买、使用星巴克在中国大陆地区提供的产品和/或服务，访问、浏览和/或使用星巴克网站、星巴克App和/或任何星巴克线上渠道，参与星享俱乐部活动和/或星巴克在中国大陆地区开展的其他活动，您将被视为已充分理解并完全同意本政策。</ins></strong></span>
+                        </p>
+                        <p><span style="font-size: 16px;"><strong>星巴克收集您的哪些个人信息？</strong></span></p>
+                        <p><span
+                                style="font-size: 16px;">个人信息是指以电子或者其他方式记录的，能够单独或者与其他信息结合识别特定自然人身份或者反映特定自然人活动情况的各种信息。</span>
+                        </p>
+                        <p><span style="font-size: 16px;">除非星巴克另有特别说明，星巴克会在以下场景中收集您的个人信息：</span></p>
+                        <p><span style="font-size: 16px;">(1) 如果您有意注册星享俱乐部帐户，</span></p>
+                        <p><span style="font-size: 16px;">(a)
+                                当您通过星巴克App或星巴克中国官网注册帐户时，我们会向您收集您的信息，包括但不限于您的用户名、姓名、密码、出生日期、性别、移动电话号码、电子邮箱、偏好语言等；或者</span>
+                        </p>
+                        <p><span style="font-size: 16px;">(b)
+                                当您使用您在第三方平台上已注册的账号以及该账号下所保存的个人信息注册星享俱乐部帐户时，我们会在获得您授权同意的前提下，从该第三方平台处取得您的信息，包括但不限于您的姓名、您在该第三方平台上设置的用户名、该第三方平台的用户唯一标识（例如：open
+                                ID或者openuid）、出生日期、移动电话号码、性别等。如果以上信息有部分缺失，我们可能会按照上述(a)段的规定向您补充收集信息。</span></p>
+                        <p><span
+                                style="font-size: 16px;">在您成功注册了星享俱乐部帐户之后，我们还会在您使用星享俱乐部帐户及/或参与星享俱乐部活动的过程中持续地向您收集相关信息；</span>
+                        </p>
+                        <p><span style="font-size: 16px;">(2)
+                                如果您已经注册了星享俱乐部帐户，并有意将您在该第三方平台上已注册的账号与您的星享俱乐部帐户进行绑定，我们会在获得您授权同意的前提下，从该第三方平台获得您的信息，包括但不限于您的姓名、您在该第三方平台上设置的用户名、该第三方平台的用户唯一标识、出生日期、移动电话号码、性别等；</span>
+                        </p>
+                        <p><span style="font-size: 16px;">(3)
+                                如果您通过星巴克用星说平台购买及/或接受了预付卡券，我们会向您收集相关信息，包括但不限于您所购买及/或接受的卡券名称、您购买及/或接受卡券的频率、您消费的金额、您购买及/或接受卡券的日期、您的卡券使用信息、您的用户名等；</span>
+                        </p>
+                        <p><span style="font-size: 16px;">(4)
+                                如果您通过星巴克天猫旗舰店和/或其他星巴克线上渠道购买及/或接受了产品和/或服务，我们会向您收集相关信息，包括但不限于您所购买及/或接受的产品和/或服务的名称、您购买及/或接受产品和/或服务的频率、您消费的金额、日期、您所使用的第三方平台账号以及用户唯一标识（在您使用了您的第三方平台账号的情形下）、您或者您指定的收件人的姓名、邮寄地址、联系方式、您登录和访问星巴克线上渠道时的使用信息（例如：您所访问网页的URL以及所浏览或使用的具体服务和功能、访问日期和时间等）等。<strong><ins>在您向星巴克提供指定收件人的上述信息之前，您应确保您已获得该收件人的授权同意；</ins></strong></span>
+                        </p>
+                        <p><span style="font-size: 16px;">(5)
+                                如果您通过星巴克门店或星巴克指定的其他渠道（不包括星巴克线上渠道）购买和/或使用了产品和/或服务，我们会向您收集相关信息，包括但不限于您所购买和/或使用的产品和/或服务的名称、您购买和/或使用的频率、您消费的金额、日期、您获得的好礼和奖励、您的星享卡和/或星礼卡的使用信息等；</span>
+                        </p>
+                        <p><span style="font-size: 16px;">(6)
+                                如果您使用星巴克网站、星巴克App和/或星巴克微信小程序，我们会向您收集相关信息，包括但不限于您使用网站、星巴克App和/或星巴克微信小程序而产生的信息（例如：您登录星巴克网站、星巴克App和/或星巴克微信小程序时的IP地址、您互联网服务提供商的信息、所使用的浏览器类型、操作系统信息、将您链接至星巴克网站的网址、您的地理位置信息、所访问网页的URL以及所浏览或使用的具体服务和功能、使用的语言、访问日期和时间等）以及您登录及访问星巴克网站、星巴克App和/或星巴克微信小程序所使用的设备信息（例如：设备的序列号、唯一设备标识符以及包括电话号码在内的移动网络信息、您的移动设备中软件装机列表等）；</span>
+                        </p>
+                        <p><span style="font-size: 16px;">(7)
+                                如果您向星巴克申请开具发票，我们会向您收集相关信息，包括但不限于您的电子邮箱、姓名、开票单位名称、购买日期和支付的金额等；</span></p>
+                        <p><span style="font-size: 16px;">(8)
+                                如果您通过星巴克App或第三方平台使用了星巴克专星送线上订餐服务，我们会向您收集您的用户名、您所使用的第三方平台账号以及用户唯一标识（在您使用了您的第三方平台账号的情形下）、您使用星巴克App时的地理位置信息以及您的订单相关信息，包括但不限于您或您指定的收件人的姓名、移动电话号码、送餐地址、所购买的产品的名称、金额和日期、您的星礼卡的使用信息等。<strong><ins>在您向星巴克提供指定收件人的上述信息之前，您应确保您已获得该收件人的授权同意；</ins></strong></span>
+                        </p>
+                        <p><span style="font-size: 16px;">(9)
+                                如果您参与了一项调查或与我们以其他各种方式互动，我们会向您收集您的相关信息，包括但不限于您的用户名、收入、婚姻状态、工作、教育背景等人口统计信息以及与您可能感兴趣的主题相关的信息；及</span>
+                        </p>
+                        <p><span style="font-size: 16px;">(10) 与某个特定事件或活动相关的其他信息（例如为申请在星巴克工作而在线提交的简历）。</span></p>
+                        <p><span style="font-size: 16px;"><strong>我们如何处理和使用您的个人信息？</strong></span></p>
+                        <p><span style="font-size: 16px;">星巴克可以出于下列目的，处理、使用收集到的个人信息：</span></p>
+                        <p><span style="font-size: 16px;">(1) 接受和处理您的订单和付款并交付相应产品和/或服务；</span></p>
+                        <p><span style="font-size: 16px;">(2)
+                                处理和分析您购买、使用的星巴克产品和/或服务的信息和消费行为，包括记录在您星享俱乐部帐户中的消费信息或与任何其他星巴克活动相关的消费，设计个性化的促销活动；</span>
+                        </p>
+                        <p><span style="font-size: 16px;">(3) 与您联系并获取您对星巴克产品和/或服务、星巴克网站、星巴克App或任何其他星巴克活动的意见；</span></p>
+                        <p><span style="font-size: 16px;">(4)
+                                处理您就星巴克产品和/或服务、星巴克网站、星巴克App或任何其他星巴克活动提出的查询、疑问，并予以回应或与您进行交流；</span></p>
+                        <p><span style="font-size: 16px;">(5) 对您访问星巴克网站、星巴克App和/或星巴克线上渠道的情况进行分析和数据统计；</span></p>
+                        <p><span style="font-size: 16px;">(6)
+                                如果您已向我们提供了您的个人资料或已在线提交了您的简历，与您就有关星巴克的工作机会、具体职位等情况进行交流；</span></p>
+                        <p><span style="font-size: 16px;">(7)
+                                出于维护您的星享俱乐部帐户安全或其他合理的目的（例如当您需要重置您的星享俱乐部帐户密码时），核实您的身份和更新我们的记录；</span></p>
+                        <p><span style="font-size: 16px;">(8)
+                                星巴克及供应商通过您提供的电子邮箱地址或其他联系方式，向您发送与品牌、产品、活动、促销计划相关的通信，与您就这些通信和通信的相关事项进行交流；</span></p>
+                        <p><span style="font-size: 16px;">(9) 根据您的要求和您提供的有关信息，为您开具发票；</span></p>
+                        <p><span style="font-size: 16px;">(10)
+                                当您有意用您在第三方平台上已注册的账号以及该账号下所保存的个人信息注册星享俱乐部帐户时，或者在您已经注册了星享俱乐部帐户的前提下，当您有意将您在第三方平台上已注册的账号与您的星享俱乐部帐户进行绑定时，星巴克会首先使用第三方平台提供的您的个人信息，与现有的星享俱乐部会员个人信息进行匹配并验证您是否已经是星享俱乐部会员。</span>
+                        </p>
+                        <p><span
+                                style="font-size: 16px;">如果验证结果显示您还不是星享俱乐部会员，星巴克会为您创建星享俱乐部帐户，并将您新注册的星享俱乐部账户和您在该第三方平台上已注册的账号绑定；如果验证结果显示您已是星享俱乐部会员，星巴克会请您根据页面上显示的操作指引识别您既有的星享俱乐部帐户，并将您的帐户和您在该第三方平台上已注册的账号绑定；及</span>
+                        </p>
+                        <p><span style="font-size: 16px;">(11) 将我们收集到的您的个人信息与我们从第三方（例如我们所聘请的第三方调研机构等）处获取的信息相结合。</span>
+                        </p>
+                        <p><span
+                                style="font-size: 16px;">您可以拒绝向星巴克提供您的个人信息。但在这种情况下，我们可能无法向您提供您所需要的某些产品和/或服务，或者您可能无法使用星巴克网站、星巴克App和/或星巴克线上渠道的部分功能。例如，当您在星巴克天猫旗舰店购买了产品和/或服务时，您的订单中至少会载明您的淘宝账号信息、订单号、您所购买的产品和/或服务信息、您应支付的价款金额及所使用的支付方式。再例如，您在注册您的星享俱乐部帐户时，您只有在同意接受本政策以及《星享俱乐部活动的条款和条件》项下有关个人信息使用的规定时，您的星享俱乐部帐户才可以注册成功。</span>
+                        </p>
+                        <p><span
+                                style="font-size: 16px;">若星巴克有需要将您的个人信息用于本政策未载明的其他目的或用途时，星巴克会在使用和处理您的个人信息前另行征求您的同意（但法律法规另有不同规定的情形除外）。</span>
+                        </p>
+                        <p><span style="font-size: 16px;"><strong>我们如何使用Cookie技术、网站信标以及类似技术？</strong></span></p>
+                        <p><span style="font-size: 16px;">我们可能使用cookies、网站信标等类似技术来收集星巴克网站和/或星巴克App的使用信息。</span></p>
+                        <p><span
+                                style="font-size: 16px;">cookies是网站存储在您的硬盘上的很小的数据文档。在其诸多功能之中，cookies可帮助我们改进我们的网站以及您的体验。我们使用cookies来判断哪些领域和功能受到欢迎，并且计算您访问我们网站的次数。除cookies外，我们还会使用网站信标等其他同类技术。网站信标是可能用在我们的网站或电子邮件中的电子图像。我们使用网站信标来传送cookies，计算访问次数，了解使用情况和活动成效，以及判断一封电子邮件是否被打开及是否对其采取了操作。</span>
+                        </p>
+                        <p><span
+                                style="font-size: 16px;">如果您不愿意接受cookies，请您将网络浏览器设置为关闭接受cookies，或者设置为在接收到cookies的时候通知使用者。当cookies被禁用时，您可能无法使用星巴克网站的部分功能。</span>
+                        </p>
+                        <p><span style="font-size: 16px;"><strong>星巴克如何与第三方共享、向第三方转让或公开披露您的个人信息？</strong></span></p>
+                        <p><span style="font-size: 16px;">星巴克中国可以与其关联公司共享您的个人信息，并按本政策使用这些信息。</span></p>
+                        <p><span
+                                style="font-size: 16px;">我们可能会聘请第三方合作伙伴（以下统称“合作伙伴”）向我们提供服务（例如邮递机构、数据存储服务商、网络安全服务机构），或帮助我们推广产品和/或服务（例如电子邮件服务商、协助进行市场推广和调查的机构），或为您购买产品和/或服务提供服务（例如第三方平台、网络订餐服务中的配送服务机构）。星巴克在使用该等合作伙伴的服务或者在与该等合作伙伴开展所约定的合作时，可能会与这些合作伙伴共享我们收集到您的个人信息。星巴克没有、也不会许可合作伙伴将我们与之共享的信息用于任何其他用途。</span>
+                        </p>
+                        <p><span style="font-size: 16px;">为提供和优化我们的服务，星巴克App中内嵌了第三方的SDK。这些第三方SDK在配合我们向您提供更全面的服务的同时，可能会收集您的个人信息，<strong><ins>前述所有信息均将采用去标识化传输</ins></strong>。我们将采取必要方式控制该等第三方SDK对您个人信息的收集与使用，确保您的个人信息得到有效保护。关于第三方的身份、SDK的类型、收集的个人信息的类型、收集目的以及第三方的隐私政策链接等，请详见本政策<strong><ins>附件一
+                                        第三方SDK说明。</ins></strong></span></p>
+                        <p><span style="font-size: 16px;">除上述情形外，星巴克亦有权在以下情况下，与第三方共享或披露我们收集到的您的全部或部分个人信息：</span></p>
+                        <p><span style="font-size: 16px;">(1)
+                                <strong><ins>当某人使用与您星享俱乐部帐户中已登记的同一手机号码注册帐户时，我们会通过您的用户名（隐去中间字段）与您帐户中所记录的最后一次消费日期来核实该人的身份。在此情形下，如果该人并非您本人，该人会因此得知您的用户名（隐去中间字段）与帐户中所记录的最后一次消费日期；</ins></strong></span>
+                        </p>
+                        <p><span style="font-size: 16px;">(2) 出于维护国家安全、国防安全、公共安全、公共卫生、重大公共利益有关的目的；</span></p>
+                        <p><span style="font-size: 16px;">(3)
+                                根据适用的法律、法规的要求，或者为了协助有关行政机关、司法机关的调查、司法程序，或者配合有关行政机关、司法机关的强制性要求；</span></p>
+                        <p><span style="font-size: 16px;">(4) 为了保护您或他人的生命、财产等重大合法权益，但又难以获得您的事先同意的；</span></p>
+                        <p><span style="font-size: 16px;">(5) 当您的相关个人信息已经通过合法、公开的渠道（包括但不限于新闻报道、政府信息公开渠道等）被对外披露的；</span>
+                        </p>
+                        <p><span style="font-size: 16px;">(6) 在适用的法律、法规允许的范围内，为了维护星巴克或合作伙伴的合法权益；或</span></p>
+                        <p><span style="font-size: 16px;">(7) 法律、法规规定的其他情形。</span></p>
+                        <p><span style="font-size: 16px;">未经您的事先同意，星巴克不会向第三方转让我们收集到的您的个人信息，但以下情况除外：</span></p>
+                        <p><span style="font-size: 16px;">(1)
+                                根据适用的法律、法规的要求，或者为了协助有关行政机关、司法机关的调查、司法程序，配合有关行政机关、司法机关的强制性要求；及</span></p>
+                        <p><span style="font-size: 16px;">(2)
+                                因其它原因参与到兼并、收购、资产出售或重组中，星巴克可向参与上述交易的当事人转让您的个人信息。如果此类事件发生，我们会要求受让并持有您个人信息的交易当事人继续受本政策的约束。</span>
+                        </p>
+                        <p><span style="font-size: 16px;"><strong><ins>未成年人保护</ins></strong></span></p>
+                        <p><span
+                                style="font-size: 16px;">星巴克重视并致力于保护18周岁以下未成年人（以下简称“<strong><ins>未成年人</ins></strong>”）的隐私，且无意收集未成年人的个人信息。除非征得其法定监护人的同意，未成年人请不要注册帐户（包括星享俱乐部帐户）或向我们提供自己的姓名、联系地址、电话等个人信息。</span>
+                        </p>
+                        <p><span style="font-size: 16px;"><strong><ins>星享俱乐部会员将收到哪些通信？</ins></strong></span></p>
+                        <p><span
+                                style="font-size: 16px;">如果您是星享俱乐部会员，为了保证星享俱乐部活动的正常运营并保护您在星享卡和星享俱乐部帐户项下的权益，我们会发送给您关于您的星享卡、星享俱乐部帐户和/或仅针对星享俱乐部会员的通信（详情请见《星享俱乐部活动的条款和条件》）（以下简称“星享俱乐部通信”）。如果您拒绝接受此等通信，根据您在注册星享俱乐部帐户时同意的条款和条件，请您向星巴克申请终止该星享俱乐部帐户。</span>
+                        </p>
+                        <p><span
+                                style="font-size: 16px;">如果您是星享俱乐部会员，并且您通过您的星享俱乐部帐户“通信订阅选择”设置，确认您愿意接收星巴克或星巴克的供应商向您所提供的联系方式发送的、除星享俱乐部通信以外的其他通信（包括与星巴克产品和/或服务有关的促销信息）时，我们才会发送给您该等其他通信。如果您不希望收到该等其他通信，请通过星巴克中国官方网站或星巴克App，登录您的星享俱乐部帐户，进入相关网页来相应设置您的“通信订阅选择”，以不再接受该等其他通信。</span>
+                        </p>
+                        <p><span style="font-size: 16px;"><strong><ins>您如何查询及/或修改自己的个人信息？</ins></strong></span></p>
+                        <p><span
+                                style="font-size: 16px;">如果您已经注册了星享俱乐部帐户，您可以通过星巴克中国官网和星巴克App登录您的帐户，以查询和/或修改您的个人信息（包括用户名、姓名、密码、出生日期、性别、移动电话号码、电子邮箱、邮寄地址、偏好语言以及与该星享俱乐部帐户或其相关活动的运作有关的其他信息）。请注意，您的生日信息以您在注册星享俱乐部帐户时提供的信息为准，一旦完成注册后您将无法修改您的生日信息。每位星享俱乐部会员仅可修改帐户的用户名一次。</span>
+                        </p>
+                        <p><span
+                                style="font-size: 16px;">其他星巴克活动也可能允许您查询及/或更改个人信息。可查询、修改的信息以及查询、修改的方式以您参与该星巴克活动时同意的条款和条件的规定为准。</span>
+                        </p>
+                        <p><span style="font-size: 16px;"><strong><ins>您的个人信息储存时间</ins></strong></span></p>
+                        <p><span style="font-size: 16px;">我们会根据适用的法律、法规的要求，存储我们收集到的您的个人信息。</span></p>
+                        <p><span
+                                style="font-size: 16px;">如果您是星享俱乐部会员，我们会在您的星享俱乐部帐户存续期间及其后合理的时间内，储存您与星享俱乐部有关的个人信息。如果您向星巴克申请注销您的星享俱乐部帐户，我们会在您的帐户被注销后的合理时间内对您的该等个人信息进行匿名化处理。</span>
+                        </p>
+                        <p><span style="font-size: 16px;"><strong><ins>您的个人信息储存在哪？</ins></strong></span></p>
+                        <p><span style="font-size: 16px;">我们在中国大陆地区收集到的您的个人信息将储存在中国大陆地区内。</span></p>
+                        <p><span
+                                style="font-size: 16px;">我们可能会将我们收集到的个人信息传送到中国大陆地区以外的国家和地区，储存在中国大陆地区的个人信息也可能受到来自中国大陆地区以外的国家和地区的访问。<strong><ins>您同意并允许我们可以在法律允许的最大限度内，在遵守适用的法律的强制性要求的前提下，基于本政策的规定向中国大陆地区以外的国家和地区传送您的相关个人信息，以及接受来自中国大陆地区以外的国家和地区对您的相关个人信息的访问。</ins></strong></span>
+                        </p>
+                        <p><span style="font-size: 16px;"><strong>信息安全</strong></span></p>
+                        <p><span
+                                style="font-size: 16px;">星巴克高度重视并承诺保护您的个人信息。我们会采取符合业界标准、合理可行的安全防护措施来保护您的个人信息以防止您的个人信息在未经授权的情况下被修改、被访问、被披露、被使用或被删除。</span>
+                        </p>
+                        <p><span style="font-size: 16px;">如果发生信息安全事件，我们会按照法律法规的要求，采取合适、必要的处置措施。</span></p>
+                        <p><span style="font-size: 16px;"><strong>隐私权政策的修订</strong></span></p>
+                        <p><span
+                                style="font-size: 16px;">我们可能不时修订本政策。如果我们对本政策进行修订，我们将在星巴克网站上发布修订后的隐私权政策。我们鼓励您经常查看本政策，以便了解任何修订的内容。</span>
+                        </p>
+                        <p><span
+                                style="font-size: 16px;">如果对本政策的修订可能对我们使用或披露您个人信息的方式产生实质性影响，在您已经向我们提供了您的电子邮箱的情形下，您同意我们可以通过电子邮件的形式告知该等修订内容。</span>
+                        </p>
+                        <p><span
+                                style="font-size: 16px;"><strong><ins>自本政策修订生效之日起，您购买、使用星巴克在中国大陆地区提供的产品和/或服务，访问、浏览和/或使用星巴克网站、星巴克App和/或任何星巴克线上渠道，参与星享俱乐部活动和/或星巴克在中国大陆地区开展的其他活动，将被视为您已充分理解并完全同意修订后的本政策。</ins></strong></span>
+                        </p>
+                        <p><span style="font-size: 16px;"><strong>关联公司</strong></span></p>
+                        <p><span
+                                style="font-size: 16px;">本政策所称“关联公司”指的是直接或者间接控制星巴克中国，或受星巴克中国控制，或者与星巴克中国一起受共同控制的任何机构。</span>
+                        </p>
+                        <p><span style="font-size: 16px;"><strong>与其他网站的链接</strong></span></p>
+                        <p><span
+                                style="font-size: 16px;">请注意，星巴克网站可能包含了可连接至其他网站的链接。这些网站并不一定遵循本政策的规定。请您查阅并了解这些网站各自对于隐私权保护的相关规定。</span>
+                        </p>
+                        <p><span style="font-size: 16px;"><strong>问题和反馈</strong></span></p>
+                        <p><span
+                                style="font-size: 16px;">如果您对本政策存在任何疑问或您还有其他顾虑无法在此找到解答，您可通过以下方式联系我们：客户服务热线：400-820-6998，电话：</span><span
+                                style="color: rgb(55,214,122);font-size: 16px;">86-21-24125888</span><span
+                                style="font-size: 16px;">，传真：</span><span
+                                style="color: rgb(55,214,122);font-size: 16px;">86-21-24125999</span><span
+                                style="font-size: 16px;">，邮箱：</span><span
+                                style="color: rgb(55,214,122);font-size: 16px;">customercarecn@starbucks.cn</span><span
+                                style="font-size: 16px;">。</span></p>
+
+                        <style>
+                            table {
+                                border: 1px solid rgba(0, 0, 0, 0.12);
+                                margin: 0 0 24px;
+                                text-align: left;
+                                font-size: 0.25rem !important;
+                            }
+
+                            table th,
+                            table td {
+                                border-right: 1px solid #eee;
+                                padding: 5px;
+                            }
+
+                            table th:last-child,
+                            table td:last-child {
+                                border-right: 0;
+                            }
+
+                            table thead {
+                                background: #eee;
+                                color: #333333;
+                            }
+
+                            table thead th {
+                                font-weight: normal;
+                                white-space: nowrap;
+                            }
+
+                            table tbody tr {
+                                border-top: 1px solid rgba(0, 0, 0, 0.12);
+                                transition-property: border;
+                                transition-duration: 0.1s;
+                            }
+
+                            p {
+                                font-size: 12pt;
+                            }
+                        </style>
+
+                        <h3 style="text-align: center;">附件一</h3>
+                        <h3 style="text-align: center;">第三方 <strong>SDK</strong> 说明</h3>
+                        <p>
+                            为提供和优化我们的服务，星巴克 App 中内嵌了第三方的 SDK，包括但不限于
+                            高德地图、极光推送、神策、阿里云、支付宝和淘宝等。这些第三方 SDK 在配
+                            合我们向您提供更全面的服务的同时，可能会收集您的个人信息。
+                        </p>
+                        <p>
+                            以下逐一列举了我们目前采用的第三方 SDK 名称、收集个人信息的类型、收集
+                            使用目的以及数据是否去标识化后传输。如您对第三方通过 SDK 收集您的个人
+                            信息有所疑问的，请参见该等第三方的隐私政策。
+                        </p>
+                        <p>(1) 星巴克 App（iOS 版）内嵌第三方 SDK 详情</p>
+
+                        <table border="1" style="
+                                width: 100%;
+                                text-align: left;
+                                border-collapse: collapse;
+                                word-break: break-all;
+                                font-size: 10pt;
+                              ">
+                            <tbody>
+                                <tr style="background-color: #d5dce4; text-align: center;">
+                                    <th style="width: 17%">SDK 名称</th>
+                                    <th style="width: 15%">场景描述</th>
+                                    <th style="width: 30%">收集个人信息的类型</th>
+                                    <th style="width: 10%">第三方机构名称</th>
+                                    <th style="width: 10%">数据是否去标识化传输</th>
+                                    <th style="width: 18%">第三方隐私政策链接</th>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: bold">JPUSH</td>
+                                    <td>向您推送系统通知或重要消息</td>
+                                    <td>
+                                        设备信息（手机时区、设备型号、分辨率、语言、系统版本、deviceToken、IDFA）；网络类型；通知权限；<u
+                                            style="font-weight: bold">地理位置信息</u>。
+                                    </td>
+                                    <td>深圳市和讯华谷信息技术有限公司</td>
+                                    <td style="text-align: center">是</td>
+                                    <td>
+                                        <a href=" https://www.jiguang.cn/license/privacy" target="_blank"
+                                            style="color: black; text-decoration: none;">
+                                            https://www.jiguang.cn/license/privacy
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: bold">AMapSDK</td>
+                                    <td>
+                                        向您提供地图服务，以便您能获知周围星巴克门店信息、查找路线并进行导航等
+                                    </td>
+                                    <td>
+                                        设备信息（设备型号、操作系统版本、设备设置、唯一设备标识符、设备应用软件列表等软硬件特征信息）；<u
+                                            style="font-weight: bold">地理位置信息</u>（GPS
+                                        位置以及WLAN 接入点、蓝牙和基站等传感器信息）；IP
+                                        地址、电信运营商、使用语言、访问日期和时间。
+                                    </td>
+                                    <td>高德软件有限公司</td>
+                                    <td style="text-align: center">是</td>
+                                    <td>
+                                        <a href="http://cache.amap.com/h5/h5/publish/238/index.html" target="_blank"
+                                            style="color: black; text-decoration: none;">http://cache.amap.com/h5/h5/publish/238/index.html
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: bold">AliyunOSSiOS</td>
+                                    <td>用于您向星巴克客服上传图片等内容</td>
+                                    <td>
+                                        <u style="font-weight: bold">地理位置信息</u>；设备信息（设备型号、操作系统版本、设备设置、唯一设备标识符等软硬件特征信息）。
+                                    </td>
+                                    <td>阿里云计算有限公司</td>
+                                    <td style="text-align: center">是</td>
+                                    <td>
+                                        <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201710161525_98396.html?spm=5176.7933691.7y9jhqsfz.84.2e392a661HNpID&amp;aly_as=e2utEXib"
+                                            target="_blank" style="color: black; text-decoration: none;">
+                                            https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201710161525_98396.html?spm=5176.7933691.7y9jhqsfz.84.2e392a661HNpID&amp;aly_as=e2utEXib
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: bold">SensorsAnalyticsSDK</td>
+                                    <td>采集您的行为信息，用于分析并改善我们的服务</td>
+                                    <td>
+                                        <u style="font-weight: bold">定位信息</u>；设备信息（设备型号、操作系统版本、设备设置、唯一设备标识符等软硬件特征信息）。
+                                    </td>
+                                    <td>神策网络科技（北京）有限公司</td>
+                                    <td style="text-align: center">是</td>
+                                    <td>
+                                        <a href="https://manual.sensorsdata.cn/sa/latest/" target="_blank"
+                                            style="color: black; text-decoration: none;">
+                                            https://manual.sensorsdata.cn/sa/latest/
+                                        </a>
+                                        “神策分析如何保证客户数据的安全性？”部分
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: bold">AliWindmillSDK</td>
+                                    <td>为方便您使用支付宝账户或淘宝账户进行帐户绑定或一键快速登录</td>
+                                    <td>
+                                        设备信息（设备型号、操作系统版本、设备设置、唯一设备标识符、设备环境、移动应用列表等软硬件特征信息）；<u
+                                            style="font-weight: bold">地理位置信息</u>（您授权的GPS位置以及WLAN接入点、蓝牙和基站等传感器信息）。
+                                    </td>
+                                    <td>阿里巴巴集团</td>
+                                    <td style="text-align: center">是</td>
+                                    <td>
+                                        <a href="https://terms.alicdn.com/legal-agreement/terms/suit_bu1_taobao/suit_bu1_taobao201703241622_61002.html?spm=a213z.1825425.2014091600.25.5f38ae1c6gMd79"
+                                            target="_blank" style="color: black; text-decoration: none;">
+                                            https://terms.alicdn.com/legal-agreement/terms/suit_bu1_taobao/suit_bu1_taobao201703241622_61002.html?spm=a213z.1825425.2014091600.25.5f38ae1c6gMd79
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: bold">银联手机支付控件</td>
+                                    <td>为方便您使用银联移动端支付</td>
+                                    <td>
+                                        设备信息（设备型号、操作系统版本、设备设置、唯一设备标识符等软硬件特征信息）；<u
+                                            style="font-weight: bold">本地金融域卡片信息</u>；HCE信息；手机支付数据。
+                                    </td>
+                                    <td>中国银联股份有限公司</td>
+                                    <td style="text-align: center">是</td>
+                                    <td>
+                                        <a href="https://open.unionpay.com/tjweb/acproduct/list?apiSvcId=450"
+                                            target="_blank" style="color: black; text-decoration: none;">
+                                            https://open.unionpay.com/tjweb/acproduct/list?apiSvcId=450
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p>(2) 星巴克App（Android版）内嵌第三方SDK详情</p>
+
+                        <table border="1" style="
+                                width: 100%;
+                                text-align: left;
+                                border-collapse: collapse;
+                                word-break: break-all;
+                                font-size: 10pt;
+                              ">
+                            <tbody>
+                                <tr style="background-color: #d5dce4; text-align: center;">
+                                    <th style="width: 17%">SDK 名称</th>
+                                    <th style="width: 15%">场景描述</th>
+                                    <th style="width: 30%">收集个人信息的类型</th>
+                                    <th style="width: 10%">第三方机构名称</th>
+                                    <th style="width: 10%">数据是否去标识化传输</th>
+                                    <th style="width: 18%">第三方隐私政策链接</th>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: bold">JPUSH SDK</td>
+                                    <td>向您推送系统通知或重要消息</td>
+                                    <td>
+                                        设备信息，包括设备标识符（IMEI、SN码、MAC地址、SDK生产随机数、Android_id、设备ID、IMSI、ICCID、设备编译唯一识别）；应用信息（应用崩溃信息、通知开关状态、软件列表、后台进程信息、集成SDK的应用信息）；设备参数及系统信息（设备厂商信息、设备类型、设备型号、操作系统及硬件信息（ROM/RAM、基带版本、手机时区、CPU信息、屏幕尺寸、手机电量信息、设备语言、设备系统版本、手机系统版本、国家识别码））；网络类型；<u
+                                            style="font-weight: bold">地理位置信息</u>。
+                                    </td>
+                                    <td>深圳市和讯华谷信息技术有限公司</td>
+                                    <td style="text-align: center">是</td>
+                                    <td>
+                                        <a href="https://www.jiguang.cn/license/privacy" target="_blank"
+                                            style="color: black; text-decoration: none;">
+                                            https://www.jiguang.cn/license/privacy
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: bold">mipush</td>
+                                    <td>
+                                        向您推送系统通知或重要消息
+                                    </td>
+                                    <td>
+                                        Space ID（若使用分身空间功能）；设备相关信息（IMEI号，SerialNumber，Android ID，Google Advertising ID,
+                                        手机Region设置，设备型号，手机电量，手机操作系统版本及语言等）；使用推送服务的应用信息（APP包名及版本号，是否在运行，是否在前台等）；推送sdk版本号；网络相关信息（IP或域名连接结果，当前网络类型）；消息发送结果；通知栏状态（如是否允许通知栏通知、用户点击行为）；锁屏状态（如是否锁屏，是否允许锁屏通知）。
+                                    </td>
+                                    <td>小米集团</td>
+                                    <td style="text-align: center">是</td>
+                                    <td>
+                                        <a href="https://dev.mi.com/console/doc/detail?pId=1822" target="_blank"
+                                            style="color: black; text-decoration: none;">https://dev.mi.com/console/doc/detail?pId=1822
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: bold">AMapSDK</td>
+                                    <td>向您提供地图服务，以便您能获知周围星巴克门店信息、查找路线并进行导航等</td>
+                                    <td>
+                                        设备信息（设备型号、操作系统版本、设备设置、唯一设备标识符、设备应用软件列表等软硬件特征信息）；设备使用信息（IP地址、电信运营商、使用语言、访问日期和时间）；<u
+                                            style="font-weight: bold">地理位置信息</u>（GPS位置以及WLAN接入点、蓝牙和基站等传感器信息）；加载的地图数据。
+                                    </td>
+                                    <td>高德软件有限公司</td>
+                                    <td style="text-align: center">是</td>
+                                    <td>
+                                        <a href="http://cache.amap.com/h5/h5/publish/238/index.html" target="_blank"
+                                            style="color: black; text-decoration: none;">
+                                            http://cache.amap.com/h5/h5/publish/238/index.html
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: bold">AliyunOSSANDROID</td>
+                                    <td>用于您向星巴克在线客服上传图片等内容</td>
+                                    <td>
+                                        设备信息（设备型号、操作系统版本、设备设置、唯一设备标识符等软硬件特征信息）；<u
+                                            style="font-weight: bold">地理位置信息</u>（例如IP地址、GPS位置以及能够提供相关信息的Wi-Fi接入点、蓝牙和基站等传感器信息）；服务日志信息（服务的详细使用情况，并作为有关网络日志保存）。
+                                    </td>
+                                    <td>阿里云计算有限公司</td>
+                                    <td style="text-align: center">是</td>
+                                    <td>
+                                        <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201710161525_98396.html?spm=5176.7933691.7y9jhqsfz.84.2e392a661HNpID&amp;aly_as=e2utEXib"
+                                            target="_blank" style="color: black; text-decoration: none;">
+                                            https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201710161525_98396.html?spm=5176.7933691.7y9jhqsfz.84.2e392a661HNpID&amp;aly_as=e2utEXib
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: bold">ShareSDK</td>
+                                    <td>主动获取您的位置信息，方便您在进行社交分享时可以标注您所在的地理位置。</td>
+                                    <td>
+                                        设备信息（SDK版本、运营商信息、IP地址、系统平台、系统版本、应用包名及版本、应用前后置时间、独立设备标识、iOS广告标识符（IDFA）、网卡（MAC）地址、国际移动设备识别码（IMEI）、匿名设备标识符(
+                                        OAID)、国际移动用户识别码（IMSI）、设备产商、设备型号、设备语言、应用列表信息、基站信息、传感器信息、蓝牙信息、WIFI状态信息、CPU信息、内存信息、电池使用情况）；<u
+                                            style="font-weight: bold">地理位置信息</u>。
+                                    </td>
+                                    <td>上海游昆信息技术有限公司</td>
+                                    <td style="text-align: center">是</td>
+                                    <td>
+                                        <a href="http://www.mob.com/about/policy" target="_blank"
+                                            style="color: black; text-decoration: none;">
+                                            http://www.mob.com/about/policy
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: bold">SensorsAnalyticsSDK</td>
+                                    <td>采集您的行为信息，用于分析并改善我们的服务</td>
+                                    <td>
+                                        <u style="font-weight: bold">定位信息</u>；设备信息（设备型号、操作系统版本、设备设置、唯一设备标识符等软硬件特征信息）。
+                                    </td>
+                                    <td>神策网络科技（北京）有限公司</td>
+                                    <td style="text-align: center">是</td>
+                                    <td>
+                                        <a href="https://manual.sensorsdata.cn/sa/latest/" target="_blank"
+                                            style="color: black; text-decoration: none;">
+                                            https://manual.sensorsdata.cn/sa/latest/
+                                        </a>
+                                        “神策分析如何保证客户数据的安全性？”部分
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: bold">AliWindmillSDK</td>
+                                    <td>为方便您使用支付宝账户或淘宝账户进行帐户绑定或一键快速登录</td>
+                                    <td>
+                                        设备信息（设备型号、操作系统版本、设备设置、唯一设备标识符、设备环境、移动应用列表等软硬件特征信息）；<u
+                                            style="font-weight: bold">地理位置信息</u>（您授权的GPS位置以及WLAN接入点、蓝牙和基站等传感器信息）；与您绑定的支付宝及淘宝相关的账号信息；<u
+                                            style="font-weight: bold">操作信息</u>（您在软件安装及/或使用中的具体操作）；服务日志信息（服务的详细使用情况，并作为有关网络日志保存）。
+                                    </td>
+                                    <td>阿里巴巴集团</td>
+                                    <td style="text-align: center">是</td>
+                                    <td>
+                                        <a href="https://terms.alicdn.com/legal-agreement/terms/suit_bu1_taobao/suit_bu1_taobao201703241622_61002.html?spm=a213z.1825425.2014091600.25.5f38ae1c6gMd79"
+                                            target="_blank" style="color: black; text-decoration: none;">
+                                            https://terms.alicdn.com/legal-agreement/terms/suit_bu1_taobao/suit_bu1_taobao201703241622_61002.html?spm=a213z.1825425.2014091600.25.5f38ae1c6gMd79
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: bold">银联手机支付控件</td>
+                                    <td>为方便您使用银联移动端支付</td>
+                                    <td>
+                                        <u style="font-weight: bold">手机号码</u>；设备信息（设备型号、操作系统版本、设备设置、唯一设备标识符等软硬件特征信息）；<u
+                                            style="font-weight: bold">本地金融域卡片信息</u>；HCE信息；手机支付数据。
+                                    </td>
+                                    <td>中国银联股份有限公司</td>
+                                    <td style="text-align: center">是</td>
+                                    <td>
+                                        <a href="https://open.unionpay.com/tjweb/acproduct/list?apiSvcId=450"
+                                            target="_blank" style="color: black; text-decoration: none;">
+                                            https://open.unionpay.com/tjweb/acproduct/list?apiSvcId=450
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: bold">TBS腾讯浏览服务SDK</td>
+                                    <td>用于您在使用星巴克啡快服务或专星送服务时进行产品或服务的客制化</td>
+                                    <td>
+                                        设备信息，包括设备标识符（IMEI、MAC地址、设备ID、IMSI、ICCID、设备编译唯一识别）。
+                                    </td>
+                                    <td>深圳市腾讯计算机系统有限公司</td>
+                                    <td style="text-align: center">是</td>
+                                    <td>
+                                        <a href="https://www.tencent.com/zh-cn/privacy-policy.html" target="_blank"
+                                            style="color: black; text-decoration: none;">
+                                            https://www.tencent.com/zh-cn/privacy-policy.html
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var menuBtn = document.querySelector('.icon.menu')
+        var closeBtn = document.querySelector('.icon.close')
+        var menu = document.querySelector('.overlay')
+        var main = document.querySelector('.main')
+        menuBtn.addEventListener('click', () => {
+            menu.classList.add('active')
+            // main.style.opacity = '0'
+        })
+
+        closeBtn.addEventListener('click', () => {
+            console.log('close')
+            menu.classList.remove('active')
+            // main.style.opacity = '1'
+        })
+
+        var loginInfo = {}
+        decodeURI(location.search).substring(1).split('&').forEach(info => {
+            loginInfo[info.split('=')[0]] = info.split('=')[1]
+        })
+        if (loginInfo['username'])
+            document.querySelector('div.tabs-title > span').innerText = '下午好！' + loginInfo['username'] + '☕'
+
+
+    </script>
+</body>
+
+</html>
