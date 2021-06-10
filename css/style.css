@@ -384,8 +384,57 @@ img {
 .star-lecture {
   background: white;
   overflow: hidden;
+  position: relative;
+}
+.star-lecture .container {
+  position: relative;
+}
+.star-lecture .container .scroll-arrow {
+  border-radius: 50%;
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  background: white;
+  cursor: pointer;
+  height: 28px;
+  margin-top: -16px;
+  position: absolute;
+  transition: 0.2s;
+  text-align: center;
+  top: 50%;
+  width: 28px;
+  z-index: 1;
+}
+.star-lecture .container .scroll-arrow img {
+  margin: 3px;
+  width: 18px;
+}
+.star-lecture .container .scroll-arrow.scroll-arrow-left {
+  left: 24px;
+}
+.star-lecture .container .scroll-arrow.scroll-arrow-right {
+  right: 24px;
+}
+.star-lecture .container .scroll-arrow:hover {
+  box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.12);
+}
+.star-lecture .container .scroll-arrow:hover.scroll-arrow-left {
+  left: 20px;
+}
+.star-lecture .container .scroll-arrow:hover.scroll-arrow-right {
+  right: 20px;
+}
+.star-lecture .container .scroll-arrow:active {
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
+  background: white;
+}
+.star-lecture .container .scroll-arrow:active.scroll-arrow-left {
+  left: 18px;
+}
+.star-lecture .container .scroll-arrow:active.scroll-arrow-right {
+  right: 18px;
 }
 .star-lecture .lecture-card {
+  transition: 0.5s;
   display: flex;
   justify-content: center;
   margin-top: 24px;

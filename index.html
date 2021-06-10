@@ -140,8 +140,7 @@
                         </section>
                         <footer class="footer">
                             <div class="holder">
-                                <a id="en-collapse" class="lang"
-                                    href="/html/index-en.html">
+                                <a id="en-collapse" class="lang" href="/html/index-en.html">
                                     English
                                 </a>
                                 |
@@ -208,7 +207,7 @@
                             </a>
                         </div>
                         <div class="col px-3">
-                            <a href="/html/design-studio/index.html">
+                            <a href="/html/design-studio/index.html" target="_blank">
                                 <img src="/images/img_02.jpg" class="float-card rounded img-fluid" alt="">
                             </a>
                         </div>
@@ -225,11 +224,14 @@
                     <div class="club-text">
                         <h2>星享俱乐部</h2>
                         <p class="">开启您的星享之旅，星星越多、会员等级越高、好礼越丰富。
-                            <a href="/html/account/starbucks-rewards.html" class="text-gold text-decoration-none">了解更多 ›</a>
+                            <a href="/html/account/starbucks-rewards.html" class="text-gold text-decoration-none">了解更多
+                                ›</a>
                         </p>
                         <div>
-                            <a href="/html/account/register.html"><button class="btn btn-outline-success btn-lg register">注册</button></a>
-                            <a href="/html/account/index.html"><button class="btn btn-outline-success btn-lg register ml-1">登录</button></a>
+                            <a href="/html/account/register.html"><button
+                                    class="btn btn-outline-success btn-lg register">注册</button></a>
+                            <a href="/html/account/index.html"><button
+                                    class="btn btn-outline-success btn-lg register ml-1">登录</button></a>
                         </div>
                     </div>
                     <div class="club-img">
@@ -293,28 +295,44 @@
                     </div>
 
                     <!-- 滚动卡片 -->
-                    <div class="lecture-card">
-                        <a href="/html/coffee-blog/the-origin-of-coffee-and-its-cultivation.html" class="float-card rounded text-decoration-none">
-                            <span class="">咖啡知识</span>
-                            <img src="/images/scroll_img_01.jpg" class="">
-                            <h4 class="text-dark">咖啡的起源与培植</h4>
+                    <div class="container">
+                        <div class="scroll-arrow scroll-arrow-left hidden">
+                            <img
+                                src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-scroll-left.svg">
+                        </div>
 
-                        </a>
-                        <a href="/html/coffee-blog/the-4-fundamentals.html" class="float-card rounded text-decoration-none">
-                            <span class="">咖啡品鉴</span>
-                            <img src="/images/scroll_img_02.jpg" class="">
-                            <h4 class="text-dark">咖啡调制</h4>
-                        </a>
-                        <a href="/html/coffee-blog/roast-story.html" class="float-card rounded text-decoration-none">
-                            <span class="">咖啡知识</span>
-                            <img src="/images/scroll_img_03.jpg" class="">
-                            <h4 class="text-dark">咖啡烘焙</h4>
-                        </a>
-                        <a href="/html/coffee-blog/pour-over.html" class="float-card rounded text-decoration-none">
-                            <span class="">咖啡品鉴</span>
-                            <img src="/images/scroll_img_04.jpg" class="">
-                            <h4 class="text-dark">手冲咖啡</h4>
-                        </a>
+                        <div class="lecture-card">
+
+                            <a href="/html/coffee-blog/the-origin-of-coffee-and-its-cultivation.html"
+                                class="float-card rounded text-decoration-none">
+                                <span class="">咖啡知识</span>
+                                <img src="/images/scroll_img_01.jpg" class="">
+                                <h4 class="text-dark">咖啡的起源与培植</h4>
+
+                            </a>
+                            <a href="/html/coffee-blog/the-4-fundamentals.html"
+                                class="float-card rounded text-decoration-none">
+                                <span class="">咖啡品鉴</span>
+                                <img src="/images/scroll_img_02.jpg" class="">
+                                <h4 class="text-dark">咖啡调制</h4>
+                            </a>
+                            <a href="/html/coffee-blog/roast-story.html"
+                                class="float-card rounded text-decoration-none">
+                                <span class="">咖啡知识</span>
+                                <img src="/images/scroll_img_03.jpg" class="">
+                                <h4 class="text-dark">咖啡烘焙</h4>
+                            </a>
+                            <a href="/html/coffee-blog/pour-over.html" class="float-card rounded text-decoration-none">
+                                <span class="">咖啡品鉴</span>
+                                <img src="/images/scroll_img_04.jpg" class="">
+                                <h4 class="text-dark">手冲咖啡</h4>
+                            </a>
+
+                        </div>
+                        <div class="scroll-arrow scroll-arrow-right">
+                            <img
+                                src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-scroll-right.svg">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -329,12 +347,22 @@
             menu.classList.add('active')
             // main.style.opacity = '0'
         })
-    
+
         closeBtn.addEventListener('click', () => {
             console.log('close')
             menu.classList.remove('active')
             // main.style.opacity = '1'
         })
+
+        var arrowRight = document.querySelector('.scroll-arrow.scroll-arrow-right')
+        var arrowLeft = document.querySelector('.scroll-arrow.scroll-arrow-left')
+        var cards = document.querySelector('.lecture-card')
+        arrowRight.onclick = () => {
+            cards.style.transform = 'translateX(-200px)'
+        }
+        arrowLeft.onclick = () => {
+            cards.style.transform = 'translateX(200px)'
+        }
     </script>
 </body>
 
