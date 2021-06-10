@@ -1,0 +1,88 @@
+Starbucks
+├─.DS_Store
+├─README.md
+├─index.html
+├─sass
+|  ├─_color.scss
+|  ├─coffe-blog.scss
+|  ├─design-studio.scss
+|  └style.scss
+├─js
+| ├─bootstrap.js
+| ├─bootstrap.js.map
+| ├─coffee-blog.js
+| └jquery-3.5.1.min.js
+├─html
+|  ├─.DS_Store
+|  ├─index-en.html
+|  ├─starbucks-now
+|  |       └index.html
+|  ├─menu
+|  |  ├─index.html
+|  |  ├─py.py
+|  |  ├─result.txt
+|  |  ├─food
+|  |  |  ├─bakery.html
+|  |  |  ├─cake-dessert.html
+|  |  |  ├─great-breakfast.html
+|  |  |  ├─index.html
+|  |  |  ├─sandwich.html
+|  |  |  └yoghurt.html
+|  |  ├─beverages
+|  |  |     ├─coffee-plus-ice-cream.html
+|  |  |     ├─cold-brew.html
+|  |  |     ├─index.html
+|  |  |     └nitro-cold-brew.html
+|  ├─help
+|  |  ├─index.html
+|  |  ├─privacy-policy.html
+|  |  └terms-of-starbucks-website.html
+|  ├─design-studio
+|  |       ├─about.html
+|  |       ├─index.html
+|  |       ├─inspirations.html
+|  |       └stores.html
+|  ├─coffee-blog
+|  |      ├─coffee-tasting.html
+|  |      ├─iced-pour-over.html
+|  |      ├─index.html
+|  |      ├─pour-over.html
+|  |      ├─roast-story.html
+|  |      ├─the-4-fundamentals.html
+|  |      └the-origin-of-coffee-and-its-cultivation.html
+|  ├─account
+|  |    ├─activity.html
+|  |    ├─forgot-password.html
+|  |    ├─index.html
+|  |    ├─profile.html
+|  |    ├─register.html
+|  |    ├─rewards.html
+|  |    ├─starbucks-rewards.html
+|  |    └view.html
+|  ├─about
+|  |   ├─contact.html
+|  |   └index.html
+├─fonts
+|   ├─acaslonpro-regular.woff
+|   ├─avenirnext-bold.woff
+|   ├─avenirnext-regular.woff
+|   ├─brandongrotesque-bold.woff
+|   ├─gotham-bold.woff
+|   ├─gotham-book.woff
+|   ├─gotham-medium.woff
+|   └icon.woff
+├─css
+|  ├─bootstrap.css
+|  ├─bootstrap.css.map
+|  ├─coffe-blog.css
+|  ├─coffe-blog.css.map
+|  ├─coffe-blog.min.css
+|  ├─coffe-blog.min.css.map
+|  ├─design-studio.css
+|  ├─design-studio.css.map
+|  ├─design-studio.min.css
+|  ├─design-studio.min.css.map
+|  ├─style.css
+|  ├─style.css.map
+|  ├─style.min.css
+|  └style.min.css.map
