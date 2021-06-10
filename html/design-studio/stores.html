@@ -188,22 +188,19 @@
     closeBtn.onclick = () => {
       document.querySelector('.menu-overlay').classList.remove('active')
     }
-    var cards = document.getElementsByClassName('card');
+    var cards = document.querySelectorAll('.card');
     window.onscroll = function (e) { animations(e); }
 
     function animations(e) {
-      
-      var index;
-      var newIndex = 0;
-      for (index = 0; index < cards.length; ++index) {
-        var offsetCard = offset(cards[index]);
-        if ((offsetCard.top <= window.pageYOffset + window.innerHeight) && !cards[index].classList.contains('revealed')) {
-          cards[index].setAttribute('style', 'transition-delay: ' + 0.1 * newIndex + 's');
-          cards[index].classList.add('revealed');
-          newIndex++;
+            var index = 0
+            cards.forEach((card)=>{
+                var offsetCard = offset(card);
+                if ((offsetCard.top <= window.pageYOffset + window.innerHeight) && !card.classList.contains('revealed')) {
+                    card.setAttribute('style', 'transition-delay: ' + 0.1 * index++ + 's');
+                    card.classList.add('revealed');
+                }
+            })
         }
-      }
-    }
     function offset(el) {
       var rect = el.getBoundingClientRect(),
         scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,

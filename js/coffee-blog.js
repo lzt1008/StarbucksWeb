@@ -7,7 +7,7 @@ window.onscroll = function (e) {
 }
 
 function animations(e) {
-    // 导航栏
+
     var boxDistance = boxOffset - window.pageYOffset;
     if (boxDistance <= 0) {
         box.classList.add('fixed');
@@ -16,7 +16,6 @@ function animations(e) {
         box.classList.remove('fixed');
     }
 
-    // 卡片动画
     var index;
     var newIndex = 0;
     for (index = 0; index < cards.length; ++index) {
@@ -28,14 +27,13 @@ function animations(e) {
         }
     }
 
-    // 进度条
-    var s = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+    var s = window.pageYOffset ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
     var body = document.body;
     var html = document.documentElement;
     var d = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
     var c = window.innerHeight;
     var position = (s / (d - c)) * 100;
-    document.getElementById('progress').style.width = position + '%';
+    document.getElementById('progress').setAttribute('style', 'width: ' + position + '%');
     // document.getElementById('progress').style.display = 'block';
 }
 
